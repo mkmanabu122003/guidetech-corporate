@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>お問い合わせ | Guide Tech</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0066cc",
+                        "primary-dark": "#004c99",
+                        "background-light": "#ffffff",
+                        "background-alt": "#f3f7fa",
+                        "background-dark": "#0f1923",
+                        "text-main": "#0c141d",
+                        "text-muted": "#4b5563",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Sans JP", "Inter", "sans-serif"],
+                        "sans": ["Noto Sans JP", "Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .circle-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 9999px;
+            background-color: #0066cc;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .group:hover .circle-arrow {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light text-text-main antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 border-b border-gray-100">
+<div class="mx-auto flex h-20 items-center justify-between px-6 lg:px-12 max-w-[1400px]">
+<div class="flex items-center gap-2">
+<a href="index.html" class="text-xl font-black tracking-tight text-slate-900">GUIDE TECH</a>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-xs font-bold tracking-widest text-slate-800 hover:text-primary transition-colors" href="company.html">COMPANY</a>
+<a class="text-xs font-bold tracking-widest text-slate-800 hover:text-primary transition-colors" href="index.html#service">SERVICE</a>
+<div class="flex gap-4 ml-4">
+<a class="rounded-full bg-primary px-6 py-2.5 text-xs font-bold text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary-dark" href="contact.html">
+                        お問い合わせ
+                    </a>
+</div>
+</nav>
+<div class="md:hidden">
+<button class="text-slate-800" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+
+<!-- Page Header -->
+<section class="relative w-full bg-primary pt-24 pb-16 lg:pt-32 lg:pb-24">
+<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+<div class="flex items-center gap-2 text-sm text-blue-200 mb-8">
+<a href="index.html" class="hover:text-white transition-colors">TOP</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-white font-bold">お問い合わせ</span>
+</div>
+<h1 class="text-4xl lg:text-6xl font-black tracking-tight text-white mb-6">
+お問い合わせ
+</h1>
+<p class="text-sm font-bold tracking-[0.2em] text-blue-200 uppercase">
+CONTACT
+</p>
+</div>
+</section>
+
+<!-- Contact Form -->
+<section class="py-20 lg:py-32 bg-white">
+<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+<div class="max-w-3xl mx-auto">
+<div class="mb-12 text-center">
+<p class="text-slate-600 text-base lg:text-lg leading-relaxed">
+サービスに関するご質問や、取材・パートナーシップのご相談など、<br class="hidden lg:block"/>
+お気軽にお問い合わせください。
+</p>
+</div>
+
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-bold text-slate-900 mb-2" for="company">
+会社名 <span class="text-red-500">*</span>
+</label>
+<input type="text" id="company" name="company" required
+class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+placeholder="株式会社〇〇">
+</div>
+<div>
+<label class="block text-sm font-bold text-slate-900 mb-2" for="name">
+お名前 <span class="text-red-500">*</span>
+</label>
+<input type="text" id="name" name="name" required
+class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+placeholder="山田 太郎">
+</div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-bold text-slate-900 mb-2" for="email">
+メールアドレス <span class="text-red-500">*</span>
+</label>
+<input type="email" id="email" name="email" required
+class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+placeholder="example@company.com">
+</div>
+<div>
+<label class="block text-sm font-bold text-slate-900 mb-2" for="phone">
+電話番号
+</label>
+<input type="tel" id="phone" name="phone"
+class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+placeholder="03-1234-5678">
+</div>
+</div>
+
+<div>
+<label class="block text-sm font-bold text-slate-900 mb-2" for="subject">
+お問い合わせ種別 <span class="text-red-500">*</span>
+</label>
+<select id="subject" name="subject" required
+class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+<option value="">選択してください</option>
+<option value="service">サービスについて</option>
+<option value="estimate">お見積りのご依頼</option>
+<option value="partnership">パートナーシップについて</option>
+<option value="press">取材について</option>
+<option value="other">その他</option>
+</select>
+</div>
+
+<div>
+<label class="block text-sm font-bold text-slate-900 mb-2" for="message">
+お問い合わせ内容 <span class="text-red-500">*</span>
+</label>
+<textarea id="message" name="message" rows="6" required
+class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-none"
+placeholder="お問い合わせ内容をご記入ください"></textarea>
+</div>
+
+<div class="flex items-start gap-3">
+<input type="checkbox" id="privacy" name="privacy" required
+class="mt-1 w-5 h-5 text-primary border-slate-300 rounded focus:ring-primary">
+<label class="text-sm text-slate-600" for="privacy">
+<a href="#privacy" class="text-primary hover:underline">プライバシーポリシー</a>に同意する <span class="text-red-500">*</span>
+</label>
+</div>
+
+<div class="text-center pt-4">
+<button type="submit"
+class="inline-flex items-center gap-3 bg-primary hover:bg-primary-dark text-white font-bold px-12 py-4 rounded-full shadow-lg shadow-primary/30 transition-all hover:scale-105">
+<span>送信する</span>
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</form>
+
+<div class="mt-16 pt-16 border-t border-slate-200">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-background-alt rounded-2xl p-8">
+<div class="flex items-center gap-4 mb-4">
+<span class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined">location_on</span>
+</span>
+<h3 class="text-lg font-bold text-slate-900">所在地</h3>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">
+〒150-0012<br>
+東京都渋谷区広尾1丁目2番地1号<br>
+ヒカリビル4階
+</p>
+</div>
+<div class="bg-background-alt rounded-2xl p-8">
+<div class="flex items-center gap-4 mb-4">
+<span class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined">schedule</span>
+</span>
+<h3 class="text-lg font-bold text-slate-900">営業時間</h3>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">
+平日 9:00 - 18:00<br>
+土日祝日は休業
+</p>
+</div>
+</div>
+</div>
+
+<div class="mt-12 text-center">
+<a class="group inline-flex items-center gap-4 text-sm font-bold text-slate-900 hover:text-primary transition-colors" href="index.html">
+<span class="circle-arrow">
+<span class="material-symbols-outlined">arrow_back</span>
+</span>
+TOPへ戻る
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-[#05090d] text-white pt-20 pb-10">
+<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+<div class="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16">
+<div>
+<h2 class="text-2xl font-black tracking-tight mb-6">GUIDE TECH</h2>
+<div class="text-xs text-slate-400 space-y-2">
+<p>株式会社GUIDE TECH</p>
+<p>〒150-0012</p>
+<p>東京都渋谷区広尾1丁目2番地1号</p>
+<p>ヒカリビル4階</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-8 lg:gap-16">
+<div class="flex flex-col gap-4">
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="company.html">企業情報</a>
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="index.html#service">事業内容</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="#privacy">プライバシーポリシー</a>
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="contact.html">お問い合わせ</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-slate-500">
+<p>GUIDE TECH Inc.</p>
+<p>&copy; 2024 Guide Tech Inc. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+</body></html>
