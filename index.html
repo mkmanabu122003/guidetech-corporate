@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guide Tech - Corporate Website</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0066cc",
+                        "primary-dark": "#004c99",
+                        "background-light": "#ffffff",
+                        "background-alt": "#f3f7fa",
+                        "background-dark": "#0f1923",
+                        "text-main": "#0c141d",
+                        "text-muted": "#4b5563",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Sans JP", "Inter", "sans-serif"],
+                        "sans": ["Noto Sans JP", "Inter", "sans-serif"],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80')",
+                        'contact-pattern': "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80')",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .circle-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 9999px;
+            background-color: #0066cc;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .group:hover .circle-arrow {
+            transform: scale(1.1);
+        }
+        .text-vertical {
+            writing-mode: vertical-rl;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light text-text-main antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 border-b border-gray-100">
+<div class="mx-auto flex h-20 items-center justify-between px-6 lg:px-12 max-w-[1400px]">
+<div class="flex items-center gap-2">
+<span class="text-xl font-black tracking-tight text-slate-900">GUIDE TECH</span>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-xs font-bold tracking-widest text-slate-800 hover:text-primary transition-colors" href="#company">COMPANY</a>
+<a class="text-xs font-bold tracking-widest text-slate-800 hover:text-primary transition-colors" href="#service">SERVICE</a>
+<a class="text-xs font-bold tracking-widest text-slate-800 hover:text-primary transition-colors" href="#case">CASE</a>
+<a class="text-xs font-bold tracking-widest text-slate-800 hover:text-primary transition-colors" href="#news">NEWS</a>
+<div class="flex gap-4 ml-4">
+<a class="rounded-full bg-black px-6 py-2.5 text-xs font-bold text-white transition-all hover:bg-slate-800" href="#recruit">
+                        採用情報
+                    </a>
+<a class="rounded-full bg-primary px-6 py-2.5 text-xs font-bold text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary-dark" href="#contact">
+                        お問い合わせ
+                    </a>
+</div>
+</nav>
+<div class="md:hidden">
+<button class="text-slate-800" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<section class="relative w-full bg-white pt-24 pb-12 lg:pt-32 lg:pb-0 overflow-hidden">
+<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+<div class="relative z-10 mb-16 lg:mb-24">
+<h1 class="text-5xl font-black tracking-tight text-slate-900 sm:text-7xl lg:text-8xl leading-[1.1] lg:leading-[1.1]">
+                    テクノロジーで、<br/>
+                    ビジネスを前へ。
+                </h1>
+<p class="mt-6 text-sm font-bold tracking-[0.2em] text-primary uppercase">
+                    Technology Drives Your Business Forward.
+                </p>
+<div class="absolute right-0 top-1/2 hidden lg:block z-20">
+<a class="group flex h-32 w-32 items-center justify-center rounded-full bg-primary text-white shadow-xl transition-all hover:scale-110 hover:bg-primary-dark" href="#contact">
+<span class="material-symbols-outlined text-4xl animate-bounce">arrow_downward</span>
+</a>
+</div>
+</div>
+<div class="relative w-full aspect-[16/9] lg:aspect-[21/9] overflow-hidden rounded-t-[3rem] lg:rounded-t-[5rem]">
+<img alt="Modern office interior" class="absolute inset-0 h-full w-full object-cover transform hover:scale-105 transition-transform duration-[2000ms] ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDKVtlTCNs0rpkglNLWwWE1qpLjcYeOK9OO8SdkAuo-rOl2lhawneSCGMqizCOcoXp91m3VcCE9tr8meQQxzh7KZEPuWqYlWPh4wSWHhjyiqqQDCg3VgMtU9jr-FClGPAQyJ5d19lG5xRY_G7jHBJdvMvXIiVLagWfE-tyy8TCgkWSRyzdpY-NmoLFguZuz3AwHuVIfrBtYIxYuY-JYTAsLZZ5Jj1XsOs2Nkdqe5xDail5g0oYqdBkcm-YmhPbk6DkB1exyf8LIBvw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+</div>
+</section>
+<section class="py-24 lg:py-40 bg-background-alt" id="company">
+<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+<div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+<div class="lg:w-1/2">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">COMPANY</h2>
+<h3 class="text-3xl lg:text-5xl font-bold text-slate-900 mb-8 leading-tight">
+                        すべてのクライアントに<br/>
+                        課題解決策と成長を
+                    </h3>
+<p class="text-slate-600 text-base lg:text-lg leading-relaxed mb-10 text-justify">
+                        私たちは、ヒトとITのチカラで働く人たちを応援する企業です。働くすべての人を幸せにする支援を多角的に展開しています。採用/人事制度/DX推進/システム導入/新規事業企画/業務改善などをご支援しています。
+                    </p>
+<a class="group inline-flex items-center gap-4 text-sm font-bold text-slate-900 hover:text-primary transition-colors" href="#company-detail">
+<span class="circle-arrow">
+<span class="material-symbols-outlined">arrow_forward</span>
+</span>
+                        会社概要をみる
+                    </a>
+</div>
+<div class="lg:w-1/2 w-full">
+<div class="relative h-[500px] lg:h-[600px] w-full lg:w-[80%] ml-auto overflow-hidden rounded-[2rem]">
+<img alt="Company meeting" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBggOMrPsjo9qxB__wCn-6nJEXGiVrR-yJRrR5m4agA5Krw9HkhcB1_zMRFcgqByUgQJUwfZ-g2vxnqT5v_v2ubf5FgFKFQKARCBeaAK63u-IngcfMJW82fjvR_iRDY3PPbnqfn4x3Un9YjU0-rBvYkn_8TOrzUS53AOXDRZkVWoDZcDGZ2ZuByGXabkhVPWjwTnk1I6HrCgqA3j1L9FKTq2-S_a4ndvN2ABoqWlLihxoKyZAo6lLYSwNWvgmAz7e5JvxU9V4PRBsV3"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 lg:py-40 bg-white" id="service">
+<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+<div class="mb-20">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">SERVICE</h2>
+<h3 class="text-3xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                    あらゆる力を、進化のために。
+                </h3>
+<p class="text-slate-500 text-sm">
+                    GUIDE TECHの提供しているサービスはこちらからご覧ください。<br/>
+                    多角的に対応しています。
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
+<img alt="System Development" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa2VuzRyoQHwU7uqSlib5x0ouerM5T9imbAcdSsJWA0lPEDvKLAL-XGdM0LUPPadPyTNe0DVf_GBROw4TKyO8S46RcXQl8Hm8CakWnDT9ZA-IwGTZ1ctZx4LCYs6Q7b-OiIwdWEaP9Kh6QZfMA4cENnsqn-IGjSmJrZXisbePD--bhrHBO3F6WAFt1mlVu89y-IH3jAlRdZoEPHHzfr5RA0qMk_4S9w5DARPPnv0SDniJprpU8EobYiHXD3g3EJGZKJPBkkXdCtvU8"/>
+</div>
+<div class="px-2">
+<p class="text-xs font-bold text-primary mb-2 uppercase tracking-wider">System Development</p>
+<h4 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">システム開発</h4>
+<p class="text-sm text-slate-500 leading-relaxed line-clamp-2">
+                            お客様のビジネスニーズに合わせた最適なアプリケーション開発。最新技術を活用し、拡張性と保守性の高いシステムを構築します。
+                        </p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
+<img alt="DX Consulting" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkCb71_G42jjBNeudfD-oZ9QUd0PNRaAW--5-HkpV07Kns3Krg4NtevRicdzkR8sIVw8CCD8IgTFxYN0ZhhHuRGsgyguQxJGYtfN95UoyAXiWWk3NKUr73VCC-AIinDhmMuN0ssAcDfE-WTAONx70Ep3wQSPWjcKj2ReaYReXF3iZQ9wrvVgXSnc8JiFCBFElm4FHpvzZvCDCHKCtBAh5vNys49JPX1OJYhGwqx7TifF-WAXvrCDrHH9g0ZhZ4ZlEn91Vt4e92l1Y-"/>
+</div>
+<div class="px-2">
+<p class="text-xs font-bold text-primary mb-2 uppercase tracking-wider">DX Consulting</p>
+<h4 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">DXコンサルティング</h4>
+<p class="text-sm text-slate-500 leading-relaxed line-clamp-2">
+                            デジタル技術を活用した業務改革の戦略立案から実行まで伴走支援。組織の生産性向上と新たな価値創造を実現します。
+                        </p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
+<img alt="IT Support" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXlrrouxVM3aFOQK9eogripTApmuMEtbjW3g57aiJwYl0wADxLIgzbP1Xvq8dpWReaTnNXbc1fRwh70E3FEaQo1II-j-9ev443wTuTQ_P3TeBsQjCNCNLMEVTFkLtj7HYJC8HY6fsemBFoST3K5mIOk3C5H3aVLIO27W0wpkacuJh29IwSNXifkUB6r4z3OpPWWZg1INIQHBu1-gVBdk-FSis1xo16qwQEcrTnQPZ_v90PeXOrwLSQG-1ZlXx7bZ6_9VJhnbf56MXK"/>
+</div>
+<div class="px-2">
+<p class="text-xs font-bold text-primary mb-2 uppercase tracking-wider">IT Support</p>
+<h4 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">ITサポート・保守</h4>
+<p class="text-sm text-slate-500 leading-relaxed line-clamp-2">
+                            システム稼働後の安定運用を包括的にサポート。トラブルシューティングから定期メンテナンスまで、ビジネスの継続性を保証します。
+                        </p>
+</div>
+</div>
+</div>
+<div class="mt-16 text-right">
+<a class="group inline-flex items-center gap-4 text-sm font-bold text-slate-900 hover:text-primary transition-colors" href="#services">
+<span class="circle-arrow">
+<span class="material-symbols-outlined">add</span>
+</span>
+                    事業内容をみる
+                </a>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-alt" id="case">
+<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+<div class="mb-16">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">CASE STUDY</h2>
+<h3 class="text-3xl lg:text-4xl font-bold text-slate-900">
+                    GUIDE TECHの事例をご紹介。
+                </h3>
+</div>
+<div class="relative overflow-hidden rounded-[2rem] bg-white shadow-sm mb-12 group">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="relative h-64 lg:h-auto overflow-hidden">
+<img alt="Case Study Main" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc2qFFAW_lqU_a14cL0eCqbaYpwlVZd5Cv1JMO7uImbSU1Jqses5FYGnoSnmqF5zrpQAOcwv1n8oWAESaBUhkta_w3mZ9bB8Xkacicd7ERk0ELrKPtMM40uYK9nWCNZQm-fuKPrkFhKi_Xn7_sIZ71-Brngfn6wHMVN7GJZiKXtCmEhroH9GQtpDULiUlnOz6zGyXxDeiszvtYy3Dgkrh5ER3m-9vi2qHS-30tXPr6EZoC9B9_fk5h2S9zOH1vYTVdIngFJN6HTfhA"/>
+</div>
+<div class="p-8 lg:p-16 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded text-xs font-bold">製造業A社様</span>
+<span class="text-slate-400 text-xs">2023.12.01</span>
+</div>
+<h4 class="text-2xl font-bold text-slate-900 mb-6 leading-snug">
+                             サプライチェーン最適化プロジェクト。<br/>
+                             AI需要予測で在庫ロスを30%削減。
+                         </h4>
+<p class="text-slate-600 text-sm mb-8 leading-relaxed">
+                             長年の課題であった在庫管理の非効率性を、AI主導の需要予測システム導入により解消。現場のオペレーション負担を軽減しつつ、利益率の向上に貢献しました。
+                         </p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                             詳しく見る <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm group cursor-pointer border border-slate-100">
+<div class="aspect-video overflow-hidden">
+<img alt="Case 2" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYDC9D0F1Y6rbESvuwSS0S0ZfbT_UvSe4uE0RG3q_3WgSZ7ZcL-Z_LHsVQP5pwJ7rOlPwAUWpT4wu8aSNMN0gGwNrykDYVXGJaH_jfWcKKYriPPFgfLvF-0po6hXVvbOLM-GpuyzwmaWbHcwq0K9xU46-xmuMoF0AwZ4p55eR_gOsrh_Am23PygUANxYFkemcZIpITRNuwLPr4dxZ-YxagcHqPMSg8BuL3xprD2u9-qXfENFtUga3BX9JK4oEaTf67gU5NmqRQOUvT"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded text-[10px] font-bold">小売業B社様</span>
+</div>
+<h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">ECプラットフォーム刷新</h4>
+<p class="text-xs text-slate-500 line-clamp-2">モバイルファーストなUI/UXへの転換でCVR改善。</p>
+</div>
+</div>
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm group cursor-pointer border border-slate-100">
+<div class="aspect-video overflow-hidden">
+<img alt="Case 3" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrMXRS606cyIutxjsvXTyDzcngiCAugnaQLoa54D_T5l_iz2ph0kd0JBxA75AP0lpxw7nQqAhop3kFmDcwkqD677a9VQzuLMQb3afT448T71VZu_T4cGjCe2UxuHNyeUMqdsYd67WSF4gdQRxKvf3Nvgw700IYYA7fgtcRUCQDw9ghwWePP2DLQatCUainrO2C0mhYSnGZJy5DbKsu8hb_sH32oKu57qMGV5H4njNet7WCO8bTai781O0lBIb45zQYxz6BMQXEOn0i"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded text-[10px] font-bold">サービス業C社様</span>
+</div>
+<h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">CRM統合プロジェクト</h4>
+<p class="text-xs text-slate-500 line-clamp-2">顧客データの一元管理でマーケティング効率化。</p>
+</div>
+</div>
+<div class="flex items-center justify-center md:justify-start lg:justify-center">
+<a class="group inline-flex items-center gap-4 text-sm font-bold text-slate-900 hover:text-primary transition-colors" href="#cases">
+<span class="circle-arrow">
+<span class="material-symbols-outlined">add</span>
+</span>
+                        実績紹介をみる
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white" id="news">
+<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/4">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">NEWS</h2>
+<h3 class="text-3xl lg:text-4xl font-bold text-slate-900">お知らせ</h3>
+<div class="mt-8 border-t-2 border-primary w-12"></div>
+</div>
+<div class="lg:w-3/4">
+<div class="divide-y divide-slate-100">
+<a class="group flex flex-col md:flex-row gap-4 md:items-center py-6 hover:bg-slate-50 transition-colors px-4 rounded-lg" href="#">
+<div class="text-slate-400 text-sm font-medium w-32">2024.11.08</div>
+<div class="bg-primary text-white text-[10px] px-2 py-1 rounded font-bold w-fit">お知らせ</div>
+<div class="flex-1 font-bold text-slate-900 group-hover:text-primary transition-colors">コーポレートサイトをリニューアルオープンしました。</div>
+<div class="text-slate-300 group-hover:text-primary transition-colors"><span class="material-symbols-outlined">arrow_forward</span></div>
+</a>
+<a class="group flex flex-col md:flex-row gap-4 md:items-center py-6 hover:bg-slate-50 transition-colors px-4 rounded-lg" href="#">
+<div class="text-slate-400 text-sm font-medium w-32">2024.10.15</div>
+<div class="bg-primary text-white text-[10px] px-2 py-1 rounded font-bold w-fit">お知らせ</div>
+<div class="flex-1 font-bold text-slate-900 group-hover:text-primary transition-colors">本社オフィス移転のお知らせ</div>
+<div class="text-slate-300 group-hover:text-primary transition-colors"><span class="material-symbols-outlined">arrow_forward</span></div>
+</a>
+<a class="group flex flex-col md:flex-row gap-4 md:items-center py-6 hover:bg-slate-50 transition-colors px-4 rounded-lg" href="#">
+<div class="text-slate-400 text-sm font-medium w-32">2024.10.01</div>
+<div class="bg-slate-800 text-white text-[10px] px-2 py-1 rounded font-bold w-fit">イベント</div>
+<div class="flex-1 font-bold text-slate-900 group-hover:text-primary transition-colors">DX推進セミナー登壇のお知らせ</div>
+<div class="text-slate-300 group-hover:text-primary transition-colors"><span class="material-symbols-outlined">arrow_forward</span></div>
+</a>
+</div>
+<div class="mt-8 text-right">
+<a class="group inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-primary transition-colors" href="#news-all">
+                            一覧をみる <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="bg-white">
+<section class="relative h-[500px] lg:h-[600px] w-full overflow-hidden" id="recruit">
+<div class="absolute inset-0">
+<img alt="Office Culture" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCHJIS_Uy4GuBtSbd84gMJgU600E6x5INyk-cx-1N7HsUOwfwsJeZxfiWC8HDVb4WTM9XoG9WQrQsFxLmSae1kh-8_4RyyGTUs_Os3us2UPZZqpRD9VhjEvPGqecfNSy9Mx_hNadvR6BD_Wp4VTn0a_yAp-sDTRXqyw77zSzchE1kDmDbofcRUdIJvVP0qVR8optMTSshTI4oo8pVdI0t9Ep4_XEYn8vwAxxv4JYeLzAv4aqobDvsqxWt2laPRc1wRcbGCwCx0OTcA"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+</div>
+<div class="relative z-10 h-full mx-auto max-w-[1400px] px-6 lg:px-12 flex flex-col justify-center">
+<h2 class="text-white font-bold tracking-widest uppercase text-sm mb-4">CAREER</h2>
+<h3 class="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                     私たちと一緒に働く<br/>
+                     メンバーを探しています。
+                 </h3>
+<p class="text-white/80 text-sm lg:text-base max-w-xl mb-10 leading-relaxed">
+                     私たちはミッション・価値観への共感を何よりも大切に考え、一緒に働くメンバーを探しています。<br/>
+                     ご興味をお持ちの方は、こちらから採用情報をご覧ください。
+                 </p>
+<a class="group inline-flex items-center gap-4 text-sm font-bold text-white hover:text-primary-300 transition-colors" href="#recruit-detail">
+<span class="circle-arrow bg-white text-primary group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined">arrow_forward</span>
+</span>
+                    採用情報について
+                </a>
+<div class="absolute bottom-0 right-0 pointer-events-none select-none opacity-20">
+<span class="text-[10rem] lg:text-[15rem] font-black text-white leading-none tracking-tighter">WORK</span>
+</div>
+</div>
+</section>
+<section class="bg-primary text-white py-20 lg:py-24" id="contact">
+<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 divide-y md:divide-y-0 md:divide-x divide-white/20">
+<div class="pr-0 md:pr-12">
+<h3 class="text-2xl font-bold mb-4">お問い合わせ</h3>
+<p class="text-sm text-blue-100 mb-8 leading-relaxed">
+                            サービスに関するご質問や、取材・パートナーシップのご相談などはこちらからお気軽にご連絡ください。
+                        </p>
+<a class="group flex items-center gap-4 w-full bg-white/10 hover:bg-white text-white hover:text-primary rounded-lg p-4 transition-all duration-300" href="#">
+<span class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">mail</span>
+</span>
+<span class="font-bold">お問い合わせはこちら</span>
+<span class="material-symbols-outlined ml-auto">arrow_forward</span>
+</a>
+</div>
+<div class="pt-12 md:pt-0 pl-0 md:pl-12">
+<h3 class="text-2xl font-bold mb-4">採用について</h3>
+<p class="text-sm text-blue-100 mb-8 leading-relaxed">
+                            チームのビジョンに共感し、共に前進できる仲間を探しています。一緒に働いてみませんか？
+                        </p>
+<a class="group flex items-center gap-4 w-full bg-white/10 hover:bg-white text-white hover:text-primary rounded-lg p-4 transition-all duration-300" href="#">
+<span class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">group_add</span>
+</span>
+<span class="font-bold">採用情報はこちら</span>
+<span class="material-symbols-outlined ml-auto">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<footer class="bg-[#05090d] text-white pt-20 pb-10">
+<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+<div class="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16">
+<div>
+<h2 class="text-2xl font-black tracking-tight mb-6">GUIDE TECH</h2>
+<div class="text-xs text-slate-400 space-y-2">
+<p>株式会社GUIDE TECH</p>
+<p>〒100-0000</p>
+<p>東京都渋谷区〇〇町 0-00-0</p>
+<p>テックビルディング 3F</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-8 lg:gap-16">
+<div class="flex flex-col gap-4">
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="#company">企業情報</a>
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="#service">事業内容</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="#case">導入事例</a>
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="#news">お知らせ</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="#recruit">採用情報</a>
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="#privacy">プライバシーポリシー</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="#contact">お問い合わせ</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-slate-500">
+<p>GUIDE TECH Inc.</p>
+<p>&copy; 2024 Guide Tech Inc. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+</body></html>
