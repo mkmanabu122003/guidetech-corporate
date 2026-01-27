@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>送信完了 | Guide Tech</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0066cc",
+                        "primary-dark": "#004c99",
+                        "background-light": "#ffffff",
+                        "background-alt": "#f3f7fa",
+                        "background-dark": "#0f1923",
+                        "text-main": "#0c141d",
+                        "text-muted": "#4b5563",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Sans JP", "Inter", "sans-serif"],
+                        "sans": ["Noto Sans JP", "Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .circle-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 9999px;
+            background-color: #0066cc;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .group:hover .circle-arrow {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light text-text-main antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 border-b border-gray-100">
+<div class="mx-auto flex h-20 items-center justify-between px-6 lg:px-12 max-w-[1400px]">
+<div class="flex items-center gap-2">
+<a href="index.html" class="text-xl font-black tracking-tight text-slate-900">GUIDE TECH</a>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-xs font-bold tracking-widest text-slate-800 hover:text-primary transition-colors" href="company.html">COMPANY</a>
+<a class="text-xs font-bold tracking-widest text-slate-800 hover:text-primary transition-colors" href="index.html#service">SERVICE</a>
+<div class="flex gap-4 ml-4">
+<a class="rounded-full bg-primary px-6 py-2.5 text-xs font-bold text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary-dark" href="contact.html">
+                        お問い合わせ
+                    </a>
+</div>
+</nav>
+<div class="md:hidden">
+<button class="text-slate-800" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+
+<!-- Thank You Content -->
+<section class="py-32 lg:py-48 bg-white">
+<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+<div class="max-w-2xl mx-auto text-center">
+<div class="mb-8">
+<span class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600">
+<span class="material-symbols-outlined text-4xl">check_circle</span>
+</span>
+</div>
+<h1 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+送信が完了しました
+</h1>
+<p class="text-slate-600 text-base lg:text-lg leading-relaxed mb-12">
+お問い合わせいただきありがとうございます。<br/>
+内容を確認の上、担当者より折り返しご連絡いたします。<br/>
+通常2〜3営業日以内にご返信いたします。
+</p>
+<a class="group inline-flex items-center gap-4 text-sm font-bold text-slate-900 hover:text-primary transition-colors" href="index.html">
+<span class="circle-arrow">
+<span class="material-symbols-outlined">arrow_back</span>
+</span>
+TOPへ戻る
+</a>
+</div>
+</div>
+</section>
+
+<footer class="bg-[#05090d] text-white pt-20 pb-10">
+<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+<div class="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16">
+<div>
+<h2 class="text-2xl font-black tracking-tight mb-6">GUIDE TECH</h2>
+<div class="text-xs text-slate-400 space-y-2">
+<p>株式会社GUIDE TECH</p>
+<p>〒150-0012</p>
+<p>東京都渋谷区広尾1丁目2番地1号</p>
+<p>ヒカリビル4階</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-8 lg:gap-16">
+<div class="flex flex-col gap-4">
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="company.html">企業情報</a>
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="index.html#service">事業内容</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="#privacy">プライバシーポリシー</a>
+<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="contact.html">お問い合わせ</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-slate-500">
+<p>GUIDE TECH Inc.</p>
+<p>&copy; 2024 Guide Tech Inc. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+</body></html>
