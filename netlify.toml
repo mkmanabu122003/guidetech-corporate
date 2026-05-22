@@ -4,12 +4,6 @@
   # Directory to publish (root since we have a simple static site)
   publish = "."
 
-# Redirects for SPA-like behavior (optional)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 # Headers for better security and caching
 [[headers]]
   for = "/*"
