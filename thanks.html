@@ -1,130 +1,248 @@
 <!DOCTYPE html>
-<html class="light" lang="ja"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>送信完了 | Guide Tech</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0066cc",
-                        "primary-dark": "#004c99",
-                        "background-light": "#ffffff",
-                        "background-alt": "#f3f7fa",
-                        "background-dark": "#0f1923",
-                        "text-main": "#0c141d",
-                        "text-muted": "#4b5563",
-                    },
-                    fontFamily: {
-                        "display": ["Noto Sans JP", "Inter", "sans-serif"],
-                        "sans": ["Noto Sans JP", "Inter", "sans-serif"],
-                    },
-                },
-            },
-        }
-    </script>
-<style>
-        .circle-arrow {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            border-radius: 9999px;
-            background-color: #0066cc;
-            color: white;
-            transition: all 0.3s ease;
-        }
-        .group:hover .circle-arrow {
-            transform: scale(1.1);
-        }
-    </style>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>送信完了 | ガイドテック</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sumi: #17130f;
+      --ink: #29231d;
+      --ai: #24465c;
+      --copper: #b68a57;
+      --washi: #f5f1e8;
+      --paper: #fbfaf6;
+      --line: rgba(41, 35, 29, .16);
+      --muted: #746c62;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Noto Sans JP", "Inter", sans-serif;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 30;
+      background: rgba(251, 250, 246, .94);
+      box-shadow: 0 1px 0 rgba(41,35,29,.08);
+      backdrop-filter: blur(18px);
+    }
+    .header-inner {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 0 32px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(251, 250, 246, .9);
+      padding: 6px 9px;
+    }
+    .brand-logo {
+      width: 204px;
+      height: auto;
+      display: block;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-left: auto;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .header-cta {
+      padding: 11px 16px;
+      color: var(--white);
+      background: var(--ai);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .thanks {
+      min-height: 78vh;
+      padding: 150px 0 96px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(135deg, rgba(36,70,92,.08), transparent 46%),
+        var(--washi);
+    }
+    .thanks-card {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 58px;
+      border: 1px solid var(--line);
+      background: rgba(251,250,246,.82);
+      text-align: center;
+    }
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--copper);
+      font: 800 11px/1 "Inter", sans-serif;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 24px;
+      font: 600 clamp(28px, 3.6vw, 44px)/1.32 "Noto Serif JP", serif;
+    }
+    .thanks-card p {
+      margin: 0 auto 34px;
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 22px;
+      background: var(--ai);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .footer {
+      padding: 48px 0;
+      background: var(--sumi);
+      color: rgba(255,255,255,.72);
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: minmax(240px, 1.3fr) repeat(2, minmax(180px, .8fr));
+      gap: 28px;
+      align-items: start;
+      font-size: 12px;
+    }
+    .footer-brand-block {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .footer-logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      background: var(--paper);
+      padding: 10px 14px;
+    }
+    .footer-logo {
+      width: 218px;
+      height: auto;
+      display: block;
+    }
+    .footer-heading {
+      margin: 4px 0 14px;
+      color: var(--copper);
+      font: 800 11px/1 "Inter", sans-serif;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .footer-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: rgba(255,255,255,.68);
+      line-height: 1.8;
+    }
+    .footer-bottom {
+      margin-top: 34px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.42);
+      font-size: 11px;
+    }
+
+    @media (max-width: 720px) {
+      .header-inner { padding: 0 20px; }
+      .brand-logo { width: 172px; }
+      .nav { display: none; }
+      .thanks { padding: 126px 0 72px; }
+      .thanks-card { padding: 36px 24px; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-<body class="font-display bg-background-light text-text-main antialiased overflow-x-hidden selection:bg-primary selection:text-white">
-<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 border-b border-gray-100">
-<div class="mx-auto flex h-20 items-center justify-between px-6 lg:px-12 max-w-[1400px]">
-<div class="flex items-center gap-2">
-<a href="index.html" class="text-xl font-black tracking-tight text-slate-900">GUIDE TECH</a>
-</div>
-<nav class="hidden md:flex items-center gap-10">
-<a class="text-xs font-bold tracking-widest text-slate-800 hover:text-primary transition-colors" href="company.html">COMPANY</a>
-<a class="text-xs font-bold tracking-widest text-slate-800 hover:text-primary transition-colors" href="index.html#service">SERVICE</a>
-<div class="flex gap-4 ml-4">
-<a class="rounded-full bg-primary px-6 py-2.5 text-xs font-bold text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary-dark" href="contact.html">
-                        お問い合わせ
-                    </a>
-</div>
-</nav>
-<div class="md:hidden">
-<button class="text-slate-800" type="button">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</div>
-</header>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="ガイドテック">
+        <img class="brand-logo" src="assets/logo-guidetech.svg" alt="ガイドテック">
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="header-cta" href="index.html#contact">相談する</a>
+    </div>
+  </header>
 
-<!-- Thank You Content -->
-<section class="py-32 lg:py-48 bg-white">
-<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
-<div class="max-w-2xl mx-auto text-center">
-<div class="mb-8">
-<span class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600">
-<span class="material-symbols-outlined text-4xl">check_circle</span>
-</span>
-</div>
-<h1 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-送信が完了しました
-</h1>
-<p class="text-slate-600 text-base lg:text-lg leading-relaxed mb-12">
-お問い合わせいただきありがとうございます。<br/>
-内容を確認の上、担当者より折り返しご連絡いたします。<br/>
-通常2〜3営業日以内にご返信いたします。
-</p>
-<a class="group inline-flex items-center gap-4 text-sm font-bold text-slate-900 hover:text-primary transition-colors" href="index.html">
-<span class="circle-arrow">
-<span class="material-symbols-outlined">arrow_back</span>
-</span>
-TOPへ戻る
-</a>
-</div>
-</div>
-</section>
+  <main>
+    <section class="thanks">
+      <div class="wrap">
+        <div class="thanks-card">
+          <p class="eyebrow">Message Sent</p>
+          <h1>送信が完了しました</h1>
+          <p>お問い合わせいただきありがとうございます。内容を確認の上、通常2〜3営業日以内にご返信いたします。</p>
+          <a class="button" href="index.html">トップへ戻る</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer class="bg-[#05090d] text-white pt-20 pb-10">
-<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
-<div class="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16">
-<div>
-<h2 class="text-2xl font-black tracking-tight mb-6">GUIDE TECH</h2>
-<div class="text-xs text-slate-400 space-y-2">
-<p>株式会社GUIDE TECH</p>
-<p>〒150-0012</p>
-<p>東京都渋谷区広尾1丁目2番地1号</p>
-<p>ヒカリビル4階</p>
-</div>
-</div>
-<div class="flex flex-wrap gap-8 lg:gap-16">
-<div class="flex flex-col gap-4">
-<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="company.html">企業情報</a>
-<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="index.html#service">事業内容</a>
-</div>
-<div class="flex flex-col gap-4">
-<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="#privacy">プライバシーポリシー</a>
-<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="contact.html">お問い合わせ</a>
-</div>
-</div>
-</div>
-<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-slate-500">
-<p>GUIDE TECH Inc.</p>
-<p>&copy; 2024 Guide Tech Inc. All rights reserved.</p>
-</div>
-</div>
-</footer>
-
-</body></html>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-brand-block">
+          <a class="footer-logo-wrap" href="index.html" aria-label="ガイドテック">
+            <img class="footer-logo" src="assets/logo-guidetech.svg" alt="ガイドテック">
+          </a>
+          <div>AI Consulting & Inbound Travel Coordination</div>
+        </div>
+        <div>
+          <p class="footer-heading">Information</p>
+          <ul class="footer-list">
+            <li>ガイドテック</li>
+            <li>〒150-0012</li>
+            <li>東京都渋谷区広尾1丁目2番地1号<br>ヒカリビル4階</li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Services</p>
+          <ul class="footer-list">
+            <li>AI導入支援・AIコンサルティング</li>
+            <li>訪日ガイド・旅行サービス手配</li>
+            <li><a href="index.html#contact">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Guide Tech. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

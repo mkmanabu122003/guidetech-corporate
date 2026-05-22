@@ -1,0 +1,9 @@
+<svg width="320" height="96" viewBox="0 0 320 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ガイドテック ロゴ</title>
+  <desc id="desc">導の文字をモチーフにしたガイドテックの和モダンロゴ</desc>
+  <rect x="8" y="8" width="80" height="80" fill="#183247"/>
+  <rect x="14" y="14" width="68" height="68" stroke="#B68A57" stroke-width="2"/>
+  <path d="M24 29H52M33 20V49M24 49H56M55 28C61 34 67 38 75 41M57 50C63 57 70 62 78 66M39 66C48 62 55 56 60 48" stroke="#F5F1E8" stroke-width="5" stroke-linecap="square" stroke-linejoin="round"/>
+  <text x="108" y="54" fill="#17130F" font-family="'Noto Serif JP', 'Hiragino Mincho ProN', serif" font-size="31" font-weight="600" letter-spacing="2.4">ガイドテック</text>
+  <text x="109" y="78" fill="#687565" font-family="Inter, sans-serif" font-size="13" font-weight="800" letter-spacing="2.2">GUIDE TECH</text>
+</svg>

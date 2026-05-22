@@ -1,302 +1,888 @@
 <!DOCTYPE html>
-<html class="light" lang="ja"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Guide Tech - Corporate Website</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0066cc",
-                        "primary-dark": "#004c99",
-                        "background-light": "#ffffff",
-                        "background-alt": "#f3f7fa",
-                        "background-dark": "#0f1923",
-                        "text-main": "#0c141d",
-                        "text-muted": "#4b5563",
-                    },
-                    fontFamily: {
-                        "display": ["Noto Sans JP", "Inter", "sans-serif"],
-                        "sans": ["Noto Sans JP", "Inter", "sans-serif"],
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80')",
-                        'contact-pattern': "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80')",
-                    }
-                },
-            },
-        }
-    </script>
-<style>
-        .circle-arrow {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            border-radius: 9999px;
-            background-color: #0066cc;
-            color: white;
-            transition: all 0.3s ease;
-        }
-        .group:hover .circle-arrow {
-            transform: scale(1.1);
-        }
-        .text-vertical {
-            writing-mode: vertical-rl;
-        }
-    </style>
-</head>
-<body class="font-display bg-background-light text-text-main antialiased overflow-x-hidden selection:bg-primary selection:text-white">
-<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 border-b border-gray-100">
-<div class="mx-auto flex h-20 items-center justify-between px-6 lg:px-12 max-w-[1400px]">
-<div class="flex items-center gap-2">
-<span class="text-xl font-black tracking-tight text-slate-900">GUIDE TECH</span>
-</div>
-<nav class="hidden md:flex items-center gap-10">
-<a class="text-xs font-bold tracking-widest text-slate-800 hover:text-primary transition-colors" href="#company">COMPANY</a>
-<a class="text-xs font-bold tracking-widest text-slate-800 hover:text-primary transition-colors" href="#service">SERVICE</a>
-<div class="flex gap-4 ml-4">
-<a class="rounded-full bg-primary px-6 py-2.5 text-xs font-bold text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary-dark" href="contact.html">
-                        お問い合わせ
-                    </a>
-</div>
-</nav>
-<div class="md:hidden">
-<button class="text-slate-800" type="button">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</div>
-</header>
-<section class="relative w-full bg-white pt-24 pb-12 lg:pt-32 lg:pb-0 overflow-hidden">
-<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
-<div class="relative z-10 mb-16 lg:mb-24">
-<h1 class="text-5xl font-black tracking-tight text-slate-900 sm:text-7xl lg:text-8xl leading-[1.1] lg:leading-[1.1]">
-                    テクノロジーで、<br/>
-                    ビジネスを前へ。
-                </h1>
-<p class="mt-6 text-sm font-bold tracking-[0.2em] text-primary uppercase">
-                    Technology Drives Your Business Forward.
-                </p>
-<div class="absolute right-0 top-1/2 hidden lg:block z-20">
-<a class="group flex h-32 w-32 items-center justify-center rounded-full bg-primary text-white shadow-xl transition-all hover:scale-110 hover:bg-primary-dark" href="#contact">
-<span class="material-symbols-outlined text-4xl animate-bounce">arrow_downward</span>
-</a>
-</div>
-</div>
-<div class="relative w-full aspect-[16/9] lg:aspect-[21/9] overflow-hidden rounded-t-[3rem] lg:rounded-t-[5rem]">
-<img alt="Modern office interior" class="absolute inset-0 h-full w-full object-cover transform hover:scale-105 transition-transform duration-[2000ms] ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDKVtlTCNs0rpkglNLWwWE1qpLjcYeOK9OO8SdkAuo-rOl2lhawneSCGMqizCOcoXp91m3VcCE9tr8meQQxzh7KZEPuWqYlWPh4wSWHhjyiqqQDCg3VgMtU9jr-FClGPAQyJ5d19lG5xRY_G7jHBJdvMvXIiVLagWfE-tyy8TCgkWSRyzdpY-NmoLFguZuz3AwHuVIfrBtYIxYuY-JYTAsLZZ5Jj1XsOs2Nkdqe5xDail5g0oYqdBkcm-YmhPbk6DkB1exyf8LIBvw"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-</div>
-</div>
-</section>
-<section class="py-24 lg:py-40 bg-background-alt" id="company">
-<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
-<div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
-<div class="lg:w-1/2">
-<h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">COMPANY</h2>
-<h3 class="text-3xl lg:text-5xl font-bold text-slate-900 mb-8 leading-tight">
-                        すべてのクライアントに<br/>
-                        課題解決策と成長を
-                    </h3>
-<p class="text-slate-600 text-base lg:text-lg leading-relaxed mb-10 text-justify">
-                        私たちは、ヒトとITのチカラで働く人たちを応援する企業です。働くすべての人を幸せにする支援を多角的に展開しています。採用/人事制度/DX推進/システム導入/新規事業企画/業務改善などをご支援しています。
-                    </p>
-<a class="group inline-flex items-center gap-4 text-sm font-bold text-slate-900 hover:text-primary transition-colors" href="company.html">
-<span class="circle-arrow">
-<span class="material-symbols-outlined">arrow_forward</span>
-</span>
-                        会社概要をみる
-                    </a>
-</div>
-<div class="lg:w-1/2 w-full">
-<div class="relative h-[500px] lg:h-[600px] w-full lg:w-[80%] ml-auto overflow-hidden rounded-[2rem]">
-<img alt="Company meeting" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBggOMrPsjo9qxB__wCn-6nJEXGiVrR-yJRrR5m4agA5Krw9HkhcB1_zMRFcgqByUgQJUwfZ-g2vxnqT5v_v2ubf5FgFKFQKARCBeaAK63u-IngcfMJW82fjvR_iRDY3PPbnqfn4x3Un9YjU0-rBvYkn_8TOrzUS53AOXDRZkVWoDZcDGZ2ZuByGXabkhVPWjwTnk1I6HrCgqA3j1L9FKTq2-S_a4ndvN2ABoqWlLihxoKyZAo6lLYSwNWvgmAz7e5JvxU9V4PRBsV3"/>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 lg:py-40 bg-white" id="service">
-<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
-<div class="mb-20">
-<h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">SERVICE</h2>
-<h3 class="text-3xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                    あらゆる力を、進化のために。
-                </h3>
-<p class="text-slate-500 text-sm">
-                    GUIDE TECHの提供しているサービスはこちらからご覧ください。<br/>
-                    多角的に対応しています。
-                </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group cursor-pointer">
-<div class="overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
-<img alt="System Development" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa2VuzRyoQHwU7uqSlib5x0ouerM5T9imbAcdSsJWA0lPEDvKLAL-XGdM0LUPPadPyTNe0DVf_GBROw4TKyO8S46RcXQl8Hm8CakWnDT9ZA-IwGTZ1ctZx4LCYs6Q7b-OiIwdWEaP9Kh6QZfMA4cENnsqn-IGjSmJrZXisbePD--bhrHBO3F6WAFt1mlVu89y-IH3jAlRdZoEPHHzfr5RA0qMk_4S9w5DARPPnv0SDniJprpU8EobYiHXD3g3EJGZKJPBkkXdCtvU8"/>
-</div>
-<div class="px-2">
-<p class="text-xs font-bold text-primary mb-2 uppercase tracking-wider">System Development</p>
-<h4 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">システム開発</h4>
-<p class="text-sm text-slate-500 leading-relaxed line-clamp-2">
-                            お客様のビジネスニーズに合わせた最適なアプリケーション開発。最新技術を活用し、拡張性と保守性の高いシステムを構築します。
-                        </p>
-</div>
-</div>
-<div class="group cursor-pointer">
-<div class="overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
-<img alt="DX Consulting" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkCb71_G42jjBNeudfD-oZ9QUd0PNRaAW--5-HkpV07Kns3Krg4NtevRicdzkR8sIVw8CCD8IgTFxYN0ZhhHuRGsgyguQxJGYtfN95UoyAXiWWk3NKUr73VCC-AIinDhmMuN0ssAcDfE-WTAONx70Ep3wQSPWjcKj2ReaYReXF3iZQ9wrvVgXSnc8JiFCBFElm4FHpvzZvCDCHKCtBAh5vNys49JPX1OJYhGwqx7TifF-WAXvrCDrHH9g0ZhZ4ZlEn91Vt4e92l1Y-"/>
-</div>
-<div class="px-2">
-<p class="text-xs font-bold text-primary mb-2 uppercase tracking-wider">DX Consulting</p>
-<h4 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">DXコンサルティング</h4>
-<p class="text-sm text-slate-500 leading-relaxed line-clamp-2">
-                            デジタル技術を活用した業務改革の戦略立案から実行まで伴走支援。組織の生産性向上と新たな価値創造を実現します。
-                        </p>
-</div>
-</div>
-<div class="group cursor-pointer">
-<div class="overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
-<img alt="IT Support" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXlrrouxVM3aFOQK9eogripTApmuMEtbjW3g57aiJwYl0wADxLIgzbP1Xvq8dpWReaTnNXbc1fRwh70E3FEaQo1II-j-9ev443wTuTQ_P3TeBsQjCNCNLMEVTFkLtj7HYJC8HY6fsemBFoST3K5mIOk3C5H3aVLIO27W0wpkacuJh29IwSNXifkUB6r4z3OpPWWZg1INIQHBu1-gVBdk-FSis1xo16qwQEcrTnQPZ_v90PeXOrwLSQG-1ZlXx7bZ6_9VJhnbf56MXK"/>
-</div>
-<div class="px-2">
-<p class="text-xs font-bold text-primary mb-2 uppercase tracking-wider">IT Support</p>
-<h4 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">ITサポート・保守</h4>
-<p class="text-sm text-slate-500 leading-relaxed line-clamp-2">
-                            システム稼働後の安定運用を包括的にサポート。トラブルシューティングから定期メンテナンスまで、ビジネスの継続性を保証します。
-                        </p>
-</div>
-</div>
-</div>
-<div class="mt-16 text-right">
-<a class="group inline-flex items-center gap-4 text-sm font-bold text-slate-900 hover:text-primary transition-colors" href="#services">
-<span class="circle-arrow">
-<span class="material-symbols-outlined">add</span>
-</span>
-                    事業内容をみる
-                </a>
-</div>
-</div>
-</section>
-<section class="py-24 bg-background-alt" id="case">
-<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
-<div class="mb-16">
-<h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">CASE STUDY</h2>
-<h3 class="text-3xl lg:text-4xl font-bold text-slate-900">
-                    GUIDE TECHの事例をご紹介。
-                </h3>
-</div>
-<div class="relative overflow-hidden rounded-[2rem] bg-white shadow-sm mb-12 group">
-<div class="grid grid-cols-1 lg:grid-cols-2">
-<div class="relative h-64 lg:h-auto overflow-hidden">
-<img alt="Case Study Main" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc2qFFAW_lqU_a14cL0eCqbaYpwlVZd5Cv1JMO7uImbSU1Jqses5FYGnoSnmqF5zrpQAOcwv1n8oWAESaBUhkta_w3mZ9bB8Xkacicd7ERk0ELrKPtMM40uYK9nWCNZQm-fuKPrkFhKi_Xn7_sIZ71-Brngfn6wHMVN7GJZiKXtCmEhroH9GQtpDULiUlnOz6zGyXxDeiszvtYy3Dgkrh5ER3m-9vi2qHS-30tXPr6EZoC9B9_fk5h2S9zOH1vYTVdIngFJN6HTfhA"/>
-</div>
-<div class="p-8 lg:p-16 flex flex-col justify-center">
-<div class="flex items-center gap-3 mb-4">
-<span class="bg-primary/10 text-primary px-3 py-1 rounded text-xs font-bold">製造業A社様</span>
-<span class="text-slate-400 text-xs">2023.12.01</span>
-</div>
-<h4 class="text-2xl font-bold text-slate-900 mb-6 leading-snug">
-                             サプライチェーン最適化プロジェクト。<br/>
-                             AI需要予測で在庫ロスを30%削減。
-                         </h4>
-<p class="text-slate-600 text-sm mb-8 leading-relaxed">
-                             長年の課題であった在庫管理の非効率性を、AI主導の需要予測システム導入により解消。現場のオペレーション負担を軽減しつつ、利益率の向上に貢献しました。
-                         </p>
-<a class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
-                             詳しく見る <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-white rounded-2xl overflow-hidden shadow-sm group cursor-pointer border border-slate-100">
-<div class="aspect-video overflow-hidden">
-<img alt="Case 2" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYDC9D0F1Y6rbESvuwSS0S0ZfbT_UvSe4uE0RG3q_3WgSZ7ZcL-Z_LHsVQP5pwJ7rOlPwAUWpT4wu8aSNMN0gGwNrykDYVXGJaH_jfWcKKYriPPFgfLvF-0po6hXVvbOLM-GpuyzwmaWbHcwq0K9xU46-xmuMoF0AwZ4p55eR_gOsrh_Am23PygUANxYFkemcZIpITRNuwLPr4dxZ-YxagcHqPMSg8BuL3xprD2u9-qXfENFtUga3BX9JK4oEaTf67gU5NmqRQOUvT"/>
-</div>
-<div class="p-6">
-<div class="flex items-center gap-2 mb-3">
-<span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded text-[10px] font-bold">小売業B社様</span>
-</div>
-<h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">ECプラットフォーム刷新</h4>
-<p class="text-xs text-slate-500 line-clamp-2">モバイルファーストなUI/UXへの転換でCVR改善。</p>
-</div>
-</div>
-<div class="bg-white rounded-2xl overflow-hidden shadow-sm group cursor-pointer border border-slate-100">
-<div class="aspect-video overflow-hidden">
-<img alt="Case 3" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrMXRS606cyIutxjsvXTyDzcngiCAugnaQLoa54D_T5l_iz2ph0kd0JBxA75AP0lpxw7nQqAhop3kFmDcwkqD677a9VQzuLMQb3afT448T71VZu_T4cGjCe2UxuHNyeUMqdsYd67WSF4gdQRxKvf3Nvgw700IYYA7fgtcRUCQDw9ghwWePP2DLQatCUainrO2C0mhYSnGZJy5DbKsu8hb_sH32oKu57qMGV5H4njNet7WCO8bTai781O0lBIb45zQYxz6BMQXEOn0i"/>
-</div>
-<div class="p-6">
-<div class="flex items-center gap-2 mb-3">
-<span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded text-[10px] font-bold">サービス業C社様</span>
-</div>
-<h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">CRM統合プロジェクト</h4>
-<p class="text-xs text-slate-500 line-clamp-2">顧客データの一元管理でマーケティング効率化。</p>
-</div>
-</div>
-<div class="flex items-center justify-center md:justify-start lg:justify-center">
-<a class="group inline-flex items-center gap-4 text-sm font-bold text-slate-900 hover:text-primary transition-colors" href="#cases">
-<span class="circle-arrow">
-<span class="material-symbols-outlined">add</span>
-</span>
-                        実績紹介をみる
-                    </a>
-</div>
-</div>
-</div>
-</section>
-<section class="bg-primary text-white py-20 lg:py-24" id="contact">
-<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
-<div class="max-w-2xl mx-auto text-center">
-<h3 class="text-2xl lg:text-3xl font-bold mb-4">お問い合わせ</h3>
-<p class="text-sm text-blue-100 mb-8 leading-relaxed">
-                            サービスに関するご質問や、取材・パートナーシップのご相談などはこちらからお気軽にご連絡ください。
-                        </p>
-<a class="group inline-flex items-center gap-4 bg-white/10 hover:bg-white text-white hover:text-primary rounded-lg px-8 py-4 transition-all duration-300" href="contact.html">
-<span class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-primary group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined">mail</span>
-</span>
-<span class="font-bold">お問い合わせはこちら</span>
-<span class="material-symbols-outlined ml-4">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-<footer class="bg-[#05090d] text-white pt-20 pb-10">
-<div class="mx-auto max-w-[1400px] px-6 lg:px-12">
-<div class="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16">
-<div>
-<h2 class="text-2xl font-black tracking-tight mb-6">GUIDE TECH</h2>
-<div class="text-xs text-slate-400 space-y-2">
-<p>株式会社GUIDE TECH</p>
-<p>〒150-0012</p>
-<p>東京都渋谷区広尾1丁目2番地1号</p>
-<p>ヒカリビル4階</p>
-</div>
-</div>
-<div class="flex flex-wrap gap-8 lg:gap-16">
-<div class="flex flex-col gap-4">
-<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="company.html">企業情報</a>
-<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="#service">事業内容</a>
-</div>
-<div class="flex flex-col gap-4">
-<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="#privacy">プライバシーポリシー</a>
-<a class="text-xs font-bold text-slate-400 hover:text-white transition-colors" href="contact.html">お問い合わせ</a>
-</div>
-</div>
-</div>
-<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-slate-500">
-<p>GUIDE TECH Inc.</p>
-<p>&copy; 2024 Guide Tech Inc. All rights reserved.</p>
-</div>
-</div>
-</footer>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ガイドテック | AI導入支援と訪日旅行サービス手配</title>
+  <meta name="description" content="ガイドテック。AI導入支援・AIコンサルティングと、海外DMC向けの訪日ガイド・旅行サービス手配を行っています。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sumi: #17130f;
+      --ink: #29231d;
+      --ai: #24465c;
+      --aizome: #183247;
+      --copper: #b68a57;
+      --moss: #687565;
+      --washi: #f5f1e8;
+      --paper: #fbfaf6;
+      --line: rgba(41, 35, 29, .16);
+      --white: #fff;
+      --muted: #746c62;
+    }
 
-</body></html>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Noto Sans JP", "Inter", sans-serif;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+
+    .serif { font-family: "Noto Serif JP", serif; }
+    .latin { font-family: "Inter", sans-serif; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .section { padding: 92px 0; }
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--copper);
+      font: 700 11px/1 "Inter", sans-serif;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, .82fr) minmax(260px, .5fr);
+      gap: 48px;
+      align-items: end;
+      margin-bottom: 48px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font: 600 clamp(24px, 2.8vw, 36px)/1.38 "Noto Serif JP", serif;
+      letter-spacing: 0;
+    }
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 14px;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 30;
+      color: var(--white);
+      transition: background .28s ease, box-shadow .28s ease, color .28s ease;
+    }
+    .site-header.scrolled {
+      background: rgba(251, 250, 246, .92);
+      color: var(--ink);
+      box-shadow: 0 1px 0 rgba(41,35,29,.08);
+      backdrop-filter: blur(18px);
+    }
+    .header-inner {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 0 32px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      padding: 6px 9px;
+      transition: background .28s ease;
+    }
+    .brand-logo {
+      width: 204px;
+      height: auto;
+      display: block;
+    }
+    .site-header:not(.scrolled) .brand {
+      background: rgba(251, 250, 246, .9);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-left: auto;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .nav a { opacity: .84; }
+    .nav a:hover { opacity: 1; }
+    .header-cta {
+      padding: 11px 16px;
+      color: var(--white);
+      background: var(--ai);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .site-header:not(.scrolled) .header-cta { background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.34); }
+
+    .hero {
+      position: relative;
+      min-height: 92svh;
+      color: var(--white);
+      overflow: hidden;
+      background: var(--sumi);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(23,19,15,.58), rgba(23,19,15,.34) 48%, rgba(23,19,15,.74)),
+        radial-gradient(circle at 50% 38%, rgba(255,255,255,.12), transparent 34%);
+    }
+    .hero-media { position: absolute; inset: 0; opacity: .74; }
+    .hero-media img { object-position: center; }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 128px 0 92px;
+      text-align: center;
+    }
+    .hero-grid {
+      max-width: 930px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      max-width: 900px;
+      margin: 0;
+      font: 500 clamp(30px, 4.8vw, 56px)/1.22 "Noto Serif JP", serif;
+      letter-spacing: 0;
+    }
+    .hero-lead {
+      max-width: 680px;
+      margin: 26px auto 32px;
+      color: rgba(255,255,255,.82);
+      line-height: 1.9;
+      font-size: clamp(14px, 1.25vw, 16px);
+    }
+    .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 20px;
+      border: 1px solid transparent;
+      background: var(--white);
+      color: var(--sumi);
+      font-size: 12px;
+      font-weight: 800;
+      transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button.ghost { color: var(--white); background: transparent; border-color: rgba(255,255,255,.42); }
+    .button.ghost:hover { border-color: rgba(255,255,255,.78); background: rgba(255,255,255,.08); }
+    .scroll-cue {
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      bottom: 34px;
+      transform: translateX(-50%);
+      display: grid;
+      justify-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,.5);
+      font: 700 11px/1 "Inter", sans-serif;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+    }
+    .scroll-cue::after {
+      content: "";
+      width: 1px;
+      height: 42px;
+      background: linear-gradient(to bottom, rgba(255,255,255,.5), transparent);
+    }
+
+    .philosophy {
+      background: var(--washi);
+      border-bottom: 1px solid var(--line);
+    }
+    .philosophy-inner {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .statement {
+      display: grid;
+      justify-items: center;
+      gap: 30px;
+      margin: 0 0 66px;
+    }
+    .statement::before {
+      content: "GUIDE TECH";
+      width: min(360px, 74vw);
+      padding-top: 22px;
+      border-top: 1px solid rgba(41,35,29,.2);
+      color: var(--copper);
+      font: 700 10px/1 "Inter", sans-serif;
+      letter-spacing: .22em;
+    }
+    .statement p {
+      margin: 0;
+      font: 400 clamp(18px, 2.1vw, 26px)/1.95 "Noto Serif JP", serif;
+    }
+    .statement.small p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: clamp(14px, 1.45vw, 18px);
+      line-height: 1.95;
+    }
+    .profile-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+    .tag {
+      border: 1px solid var(--line);
+      padding: 10px 13px;
+      background: rgba(255,255,255,.38);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .services { background: var(--paper); overflow: hidden; }
+    .service-heading {
+      max-width: 820px;
+      margin: 0 auto 56px;
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+      color: var(--ai);
+      font: 600 clamp(20px, 3vw, 40px)/1.05 "Noto Serif JP", serif;
+      letter-spacing: .06em;
+    }
+    .service {
+      display: grid;
+      grid-template-columns: minmax(0, .98fr) minmax(0, 1fr);
+      min-height: 330px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      border: 1px solid rgba(41,35,29,.1);
+      background: var(--white);
+      color: var(--ink);
+    }
+    .service img {
+      position: static;
+      min-height: 330px;
+      opacity: 1;
+      transition: transform .8s ease;
+    }
+    .service:hover img { transform: scale(1.045); }
+    .service-content {
+      min-height: 330px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 34px;
+    }
+    .service-number {
+      position: static;
+      color: var(--copper);
+      font: 700 11px/1 "Inter", sans-serif;
+      letter-spacing: .18em;
+    }
+    .service h3 {
+      margin: 0 0 18px;
+      font: 600 clamp(23px, 2.7vw, 34px)/1.32 "Noto Serif JP", serif;
+    }
+    .service p { margin: 0 0 22px; color: var(--muted); line-height: 1.85; font-size: 14px; }
+    .bullets { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+    .bullets li {
+      padding-left: 18px;
+      position: relative;
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+    .bullets li::before {
+      content: "";
+      position: absolute;
+      top: .72em;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background: var(--copper);
+    }
+    .service-cta {
+      align-self: flex-start;
+      margin-top: 12px;
+      background: var(--ai);
+      color: #fff;
+    }
+
+    .challenges {
+      padding: 28px;
+      margin-top: 46px;
+      background: var(--washi);
+      border: 1px solid var(--line);
+    }
+    .challenges h3 {
+      margin: 0 0 22px;
+      text-align: center;
+      font: 500 clamp(20px, 1.9vw, 26px)/1.5 "Noto Serif JP", serif;
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .tab {
+      border: 1px solid rgba(41,35,29,.22);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .tab.active {
+      background: var(--sumi);
+      color: var(--white);
+      border-color: var(--sumi);
+    }
+    .tab-panel {
+      display: grid;
+      grid-template-columns: .9fr 1fr;
+      gap: 26px;
+      align-items: center;
+    }
+    .tab-panel img {
+      min-height: 220px;
+      max-height: 270px;
+    }
+    .tab-panel h4 {
+      margin: 0 0 16px;
+      font: 600 clamp(22px, 2.4vw, 32px)/1.32 "Noto Serif JP", serif;
+    }
+    .tab-panel p { color: var(--muted); line-height: 1.75; font-size: 14px; }
+
+    .process {
+      background: var(--sumi);
+      color: var(--white);
+      overflow: hidden;
+    }
+    .process .section-head p { color: rgba(255,255,255,.62); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(255,255,255,.16);
+      border-left: 1px solid rgba(255,255,255,.16);
+    }
+    .step {
+      min-height: 230px;
+      padding: 26px;
+      border-right: 1px solid rgba(255,255,255,.16);
+      border-bottom: 1px solid rgba(255,255,255,.16);
+    }
+    .step span { color: var(--copper); font: 700 11px/1 "Inter", sans-serif; letter-spacing: .15em; }
+    .step h3 { margin: 42px 0 14px; font: 600 19px/1.5 "Noto Serif JP", serif; }
+    .step p { margin: 0; color: rgba(255,255,255,.66); font-size: 13px; line-height: 1.75; }
+    .marquee-band {
+      margin-top: 58px;
+      overflow: hidden;
+      border-top: 1px solid rgba(255,255,255,.14);
+      border-bottom: 1px solid rgba(255,255,255,.14);
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: guide-marquee 34s linear infinite;
+    }
+    .marquee-item {
+      width: 280px;
+      height: 190px;
+      margin: 24px 12px;
+      position: relative;
+      overflow: hidden;
+      background: rgba(255,255,255,.08);
+      flex: 0 0 auto;
+    }
+    .marquee-item img { opacity: .72; filter: saturate(.82); }
+    .marquee-item span {
+      position: absolute;
+      left: 18px;
+      bottom: 16px;
+      color: rgba(255,255,255,.84);
+      font: 700 11px/1 "Inter", sans-serif;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    @keyframes guide-marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .contact {
+      background: var(--paper);
+    }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: start;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .contact-copy {
+      position: static;
+    }
+    .contact-copy h2 {
+      margin: 0 0 22px;
+      font: 600 clamp(28px, 3.6vw, 44px)/1.32 "Noto Serif JP", serif;
+    }
+    .contact-copy p { margin: 0 0 22px; color: var(--muted); line-height: 1.9; font-size: 14px; }
+    .contact-meta {
+      display: grid;
+      gap: 12px;
+      margin-top: 34px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .form {
+      padding: 34px;
+      background: var(--washi);
+      border: 1px solid var(--line);
+    }
+    .form-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+    .field { display: grid; gap: 8px; margin-bottom: 18px; }
+    .field.full { grid-column: 1 / -1; }
+    label { font-size: 12px; font-weight: 700; }
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid rgba(41,35,29,.22);
+      background: rgba(255,255,255,.72);
+      color: var(--ink);
+      padding: 12px 13px;
+      border-radius: 0;
+      outline: none;
+    }
+    textarea { min-height: 210px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { border-color: var(--ai); box-shadow: 0 0 0 3px rgba(36,70,92,.12); }
+    .submit {
+      width: 100%;
+      border: 0;
+      background: var(--ai);
+      color: var(--white);
+      padding: 15px 20px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background .2s ease, transform .2s ease;
+    }
+    .submit:hover { background: var(--aizome); transform: translateY(-2px); }
+    .submit:disabled {
+      cursor: wait;
+      opacity: .72;
+      transform: none;
+    }
+    .form-status {
+      min-height: 1.6em;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .form-status.error {
+      color: #9b2f24;
+    }
+
+    .footer {
+      padding: 48px 0;
+      background: var(--sumi);
+      color: rgba(255,255,255,.72);
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: minmax(240px, 1.3fr) repeat(2, minmax(180px, .8fr));
+      gap: 28px;
+      align-items: start;
+      font-size: 12px;
+    }
+    .footer-brand-block {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .footer-logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      background: var(--paper);
+      padding: 10px 14px;
+    }
+    .footer-logo {
+      width: 218px;
+      height: auto;
+      display: block;
+    }
+    .footer-heading {
+      margin: 4px 0 14px;
+      color: var(--copper);
+      font: 800 11px/1 "Inter", sans-serif;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .footer-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: rgba(255,255,255,.68);
+      line-height: 1.8;
+    }
+    .footer-bottom {
+      margin-top: 34px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.42);
+      font-size: 11px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 920px) {
+      .nav { display: none; }
+      .header-inner { padding: 0 20px; }
+      .section { padding: 72px 0; }
+      .section-head, .service, .tab-panel, .contact-layout { grid-template-columns: 1fr; }
+      .hero-inner { min-height: 90svh; }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+      .contact-copy { position: static; }
+    }
+
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 28px, 1180px); }
+      .header-cta { display: none; }
+      .brand-logo { width: 172px; }
+      .hero { min-height: 88svh; }
+      .hero-inner { min-height: 88svh; padding-bottom: 46px; }
+      .hero h1 { font-size: clamp(34px, 10vw, 48px); }
+      .hero-lead { font-size: 13px; line-height: 1.85; }
+      .button { width: 100%; }
+      .service, .service-content { min-height: auto; }
+      .service img { min-height: 260px; }
+      .tab-panel img { min-height: 190px; }
+      .steps, .form-grid { grid-template-columns: 1fr; }
+      .step { min-height: auto; }
+      .step h3 { margin-top: 36px; }
+      .form { padding: 24px 18px; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="ガイドテック">
+        <img class="brand-logo" src="assets/logo-guidetech.svg" alt="ガイドテック">
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-cta" href="#contact">相談する</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-media">
+        <img src="assets/images/hero-guidetech-luxury-kyoto.png" alt="Luxury Kyoto street for inbound travel coordination">
+      </div>
+      <div class="wrap hero-inner">
+        <div class="hero-grid">
+          <p class="eyebrow reveal">Guide Tech</p>
+          <h1 class="reveal">技術と旅を、<br>現場で使える形へ。</h1>
+          <p class="hero-lead reveal">AI導入支援と訪日旅行サービス手配。計画づくりから実務の調整まで、現場で使える形に整えます。</p>
+          <div class="hero-actions reveal">
+            <a class="button" href="#services">サービスを見る</a>
+            <a class="button ghost" href="#contact">問い合わせる</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue">Scroll</div>
+    </section>
+
+    <section class="section philosophy" id="about">
+      <div class="wrap philosophy-inner">
+        <div class="statement reveal"><p>技術と旅のあいだに、確かな運用をつくる。</p></div>
+        <div class="statement small reveal"><p>AI導入支援では、業務整理からツール選定、試作、社内展開までを現実的なステップに分解します。技術側と現場側の両方を理解し、関係者が同じ理解で進められる状態をつくります。</p></div>
+        <div class="statement small reveal"><p>訪日旅行領域では、海外DMCや旅行会社が必要とするガイド、車両、体験、現地サービスの手配を、期待値のすり合わせから当日の運用まで丁寧に整えます。</p></div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">Services</p>
+            <h2 class="reveal">二つの専門性で、事業の前進を支える。</h2>
+          </div>
+        </div>
+        <div class="service-heading reveal">GUIDE & TECHNOLOGY</div>
+        <div>
+          <article class="service reveal">
+            <img src="assets/images/ai-consulting-generated.png" alt="AI consulting workspace">
+            <div class="service-content">
+              <div>
+                <span class="service-number">SERVICE 01</span>
+                <h3>AI導入支援・AIコンサル</h3>
+                <p>生成AIや業務自動化を、現場で継続して使える仕組みにします。初期相談から業務設計、ツール導入、社内説明まで伴走します。</p>
+                <ul class="bullets">
+                  <li>AI活用テーマの整理と優先順位づけ</li>
+                  <li>業務フロー改善・プロンプト設計・ツール選定</li>
+                  <li>非エンジニア向けの説明資料・研修支援</li>
+                </ul>
+              </div>
+              <a class="button service-cta" href="#contact">相談する</a>
+            </div>
+          </article>
+          <article class="service reveal">
+            <img src="assets/images/travel-arrangement-generated.png" alt="Japan travel arrangement">
+            <div class="service-content">
+              <div>
+                <span class="service-number">SERVICE 02</span>
+                <h3>訪日ガイド・旅行サービス手配</h3>
+                <p>海外DMCや旅行会社向けに、日本国内のガイド、体験、移動、現地調整を支援します。文化理解と実務調整の両面から旅を整えます。</p>
+                <ul class="bullets">
+                  <li>英語圏クライアント向けの現地サービス調整</li>
+                  <li>ガイド・体験・送迎などの手配相談</li>
+                  <li>旅程の実現性確認と当日運用サポート</li>
+                </ul>
+              </div>
+              <a class="button service-cta" href="#contact">相談する</a>
+            </div>
+          </article>
+        </div>
+        <div class="challenges reveal">
+          <h3>このような相談に対応しています</h3>
+          <div class="tabs" role="tablist">
+            <button class="tab active" type="button" data-title="AI導入の進め方を整理したい" data-image="assets/images/tab-ai-planning-japan.png" data-copy="業務内容を確認し、AIを使う場面、使わない場面、最初に検証する範囲を整理します。導入前の判断材料づくりから支援します。">AI導入の進め方</button>
+            <button class="tab" type="button" data-title="社内に分かりやすく説明したい" data-image="assets/images/tab-ai-training-japan.png" data-copy="現場の方が理解しやすい言葉で、AI活用の目的、使い方、注意点を整理します。説明資料や研修内容の設計にも対応します。">社内説明・研修</button>
+            <button class="tab" type="button" data-title="海外DMC向けに日本側手配を任せたい" data-image="assets/images/tab-dmc-ryokan-arrangement.png" data-copy="ガイド、体験、移動、食事、現地対応など、日本側で必要な手配条件を整理します。海外側との認識合わせも含めて進めます。">DMC向け手配</button>
+            <button class="tab" type="button" data-title="現地同行や運用面を相談したい" data-image="assets/images/tab-itinerary-luxury-japan.png" data-copy="当日の動線、集合、移動、現地判断、参加者対応を事前に確認します。安心して実施できる運用体制づくりを支援します。">同行相談</button>
+          </div>
+          <div class="tab-panel">
+            <img id="tabImage" src="assets/images/tab-ai-planning-japan.png" alt="AI導入の進め方">
+            <div>
+              <p class="eyebrow">Selected Topic</p>
+              <h4 id="tabTitle">AI導入の進め方を整理したい</h4>
+              <p id="tabCopy">業務内容を確認し、AIを使う場面、使わない場面、最初に検証する範囲を整理します。導入前の判断材料づくりから支援します。</p>
+              <a class="button" style="background:var(--sumi);color:#fff" href="#contact">問い合わせる</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">Process</p>
+            <h2 class="reveal">相談から実行まで、成果物を残しながら進める。</h2>
+          </div>
+          <p class="reveal">AI導入では業務フローや検証手順、旅行手配では条件表や運用メモなど、関係者がそのまま使える形に落とし込みます。</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><span>01 SCOPE</span><h3>要件を表にする</h3><p>目的、対象業務、旅行条件、期限、関係者を一枚に整理し、判断材料を揃えます。</p></div>
+          <div class="step reveal"><span>02 PLAN</span><h3>実行手順を決める</h3><p>AI導入は検証範囲と利用ルール、旅行手配は候補先と確認事項を具体化します。</p></div>
+          <div class="step reveal"><span>03 BUILD</span><h3>資料と手配を進める</h3><p>プロンプト、説明資料、業務メモ、手配依頼、確認リストなどを作成します。</p></div>
+          <div class="step reveal"><span>04 HANDOVER</span><h3>運用できる形で渡す</h3><p>使い方、注意点、次回改善点を残し、担当者が継続できる状態にします。</p></div>
+        </div>
+        <div class="marquee-band reveal" aria-label="Service scenes">
+          <div class="marquee-track">
+            <div class="marquee-item"><img src="assets/images/tab-ai-planning-japan.png" alt=""><span>AI Planning</span></div>
+            <div class="marquee-item"><img src="assets/images/tab-ai-training-japan.png" alt=""><span>Workshop</span></div>
+            <div class="marquee-item"><img src="assets/images/hero-guidetech-luxury-kyoto.png" alt=""><span>Japan Guide</span></div>
+            <div class="marquee-item"><img src="assets/images/tab-dmc-ryokan-arrangement.png" alt=""><span>DMC Support</span></div>
+            <div class="marquee-item"><img src="assets/images/tab-itinerary-luxury-japan.png" alt=""><span>Coordination</span></div>
+            <div class="marquee-item"><img src="assets/images/tab-ai-planning-japan.png" alt=""><span>AI Planning</span></div>
+            <div class="marquee-item"><img src="assets/images/tab-ai-training-japan.png" alt=""><span>Workshop</span></div>
+            <div class="marquee-item"><img src="assets/images/hero-guidetech-luxury-kyoto.png" alt=""><span>Japan Guide</span></div>
+            <div class="marquee-item"><img src="assets/images/tab-dmc-ryokan-arrangement.png" alt=""><span>DMC Support</span></div>
+            <div class="marquee-item"><img src="assets/images/tab-itinerary-luxury-japan.png" alt=""><span>Coordination</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="wrap contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow reveal">Contact</p>
+          <h2 class="reveal">まずは状況を聞かせてください。</h2>
+          <p class="reveal">AI導入の初期相談、社内活用の壁打ち、海外DMC向けの日本国内手配相談など、具体化前の段階でも構いません。</p>
+          <div class="contact-meta reveal">
+            <span>ガイドテック</span>
+            <span>対応領域: AI導入支援、AIコンサルティング、訪日旅行サービス手配</span>
+            <span>通常2〜3営業日以内に返信します。</span>
+          </div>
+        </div>
+        <form name="contact" method="POST" action="/thanks.html" data-netlify="true" data-netlify-honeypot="bot-field" class="form reveal" id="contactForm">
+          <p style="display:none"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+          <input type="hidden" name="form-name" value="contact">
+          <div class="form-grid">
+            <div class="field">
+              <label for="company">会社名 / Organization</label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="name">お名前 *</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">メールアドレス *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="topic">相談内容 *</label>
+              <select id="topic" name="topic" required>
+                <option value="">選択してください</option>
+                <option value="AI導入支援">AI導入支援・AIコンサル</option>
+                <option value="訪日旅行サービス手配">訪日旅行サービス手配</option>
+                <option value="協業相談">協業相談</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="message">お問い合わせ内容 *</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+          </div>
+          <button class="submit" type="submit">送信する</button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-brand-block">
+          <a class="footer-logo-wrap" href="#top" aria-label="ガイドテック">
+            <img class="footer-logo" src="assets/logo-guidetech.svg" alt="ガイドテック">
+          </a>
+          <div>AI Consulting & Inbound Travel Coordination</div>
+        </div>
+        <div>
+          <p class="footer-heading">Information</p>
+          <ul class="footer-list">
+            <li>ガイドテック</li>
+            <li>〒150-0012</li>
+            <li>東京都渋谷区広尾1丁目2番地1号<br>ヒカリビル4階</li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Services</p>
+          <ul class="footer-list">
+            <li>AI導入支援・AIコンサルティング</li>
+            <li>訪日ガイド・旅行サービス手配</li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Guide Tech. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById("siteHeader");
+    const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+
+    const tabs = document.querySelectorAll(".tab");
+    const tabTitle = document.getElementById("tabTitle");
+    const tabCopy = document.getElementById("tabCopy");
+    const tabImage = document.getElementById("tabImage");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((item) => item.classList.remove("active"));
+        tab.classList.add("active");
+        tabTitle.textContent = tab.dataset.title;
+        tabCopy.textContent = tab.dataset.copy;
+        tabImage.src = tab.dataset.image;
+        tabImage.alt = tab.dataset.title;
+      });
+    });
+
+    const contactForm = document.getElementById("contactForm");
+    const formStatus = document.getElementById("formStatus");
+    if (contactForm) {
+      contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          return;
+        }
+
+        const submitButton = contactForm.querySelector("button[type='submit']");
+        const originalLabel = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = "送信中...";
+        formStatus.textContent = "";
+        formStatus.classList.remove("error");
+
+        try {
+          const formData = new FormData(contactForm);
+          const body = new URLSearchParams(formData).toString();
+          const response = await fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body
+          });
+
+          if (!response.ok) {
+            throw new Error("Form submission failed");
+          }
+
+          window.location.href = contactForm.getAttribute("action") || "/thanks.html";
+        } catch (error) {
+          formStatus.textContent = "送信できませんでした。時間をおいて再度お試しください。";
+          formStatus.classList.add("error");
+          submitButton.disabled = false;
+          submitButton.textContent = originalLabel;
+        }
+      });
+    }
+  </script>
+</body>
+</html>
