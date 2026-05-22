@@ -496,17 +496,6 @@
       opacity: .72;
       transform: none;
     }
-    .form-status {
-      min-height: 1.6em;
-      margin: 14px 0 0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.6;
-    }
-    .form-status.error {
-      color: #9b2f24;
-    }
-
     .footer {
       padding: 48px 0;
       background: var(--sumi);
@@ -780,7 +769,6 @@
             </div>
           </div>
           <button class="submit" type="submit">送信する</button>
-          <p class="form-status" id="formStatus" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -844,45 +832,6 @@
       });
     });
 
-    const contactForm = document.getElementById("contactForm");
-    const formStatus = document.getElementById("formStatus");
-    if (contactForm) {
-      contactForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
-        if (!contactForm.checkValidity()) {
-          contactForm.reportValidity();
-          return;
-        }
-
-        const submitButton = contactForm.querySelector("button[type='submit']");
-        const originalLabel = submitButton.textContent;
-        submitButton.disabled = true;
-        submitButton.textContent = "送信中...";
-        formStatus.textContent = "";
-        formStatus.classList.remove("error");
-
-        try {
-          const formData = new FormData(contactForm);
-          const body = new URLSearchParams(formData).toString();
-          const response = await fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body
-          });
-
-          if (!response.ok) {
-            throw new Error("Form submission failed");
-          }
-
-          window.location.href = contactForm.getAttribute("action") || "/thanks.html";
-        } catch (error) {
-          formStatus.textContent = "送信できませんでした。時間をおいて再度お試しください。";
-          formStatus.classList.add("error");
-          submitButton.disabled = false;
-          submitButton.textContent = originalLabel;
-        }
-      });
-    }
   </script>
 </body>
 </html>
