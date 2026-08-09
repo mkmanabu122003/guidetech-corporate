@@ -1026,6 +1026,9 @@ function thumb(slug) {
 
 function articleSchemas(post, url) {
   return [
+    // The Organization entity is repeated on every page rather than only on the
+    // index, so the @id references below always resolve on the page itself.
+    organization(),
     {
       "@context": "https://schema.org",
       "@type": "Article",
