@@ -139,7 +139,7 @@ const posts = [
     cta: {
       heading: "Need someone in Japan doing this for you?",
       body: "GuideTech is a Tokyo-based operating partner. We research and shortlist Japanese suppliers, make first contact in Japanese, verify the company against public records, and coordinate the relationship on your behalf.",
-      href: "/japan-partner/en/supplier-sourcing.html",
+      href: "/japan-partner/en/supplier-sourcing",
       text: "See how supplier sourcing works"
     },
     faq: [
@@ -258,7 +258,7 @@ const posts = [
     cta: {
       heading: "Want a verified matcha shortlist instead of a search results page?",
       body: "GuideTech works from Tokyo. We identify candidate producers and wholesalers, make contact in Japanese, request specifications and certificates, check the company against Japanese public records, and hand you a shortlist with the trade-offs written down.",
-      href: "/japan-partner/en/contact.html",
+      href: "/japan-partner/en/contact",
       text: "Talk to us about matcha sourcing"
     },
     faq: [
@@ -357,7 +357,7 @@ const posts = [
     cta: {
       heading: "Want someone in Japan to check the counterparty first?",
       body: "GuideTech verifies Japanese companies against public registers, makes contact in Japanese, establishes what a supplier can actually allocate, and coordinates the relationship from Tokyo. That is usually cheaper than one bad first order.",
-      href: "/japan-partner/en/contact.html",
+      href: "/japan-partner/en/contact",
       text: "Ask us to verify a Japanese supplier"
     },
     faq: [
@@ -444,7 +444,7 @@ const posts = [
     cta: {
       heading: "Sourcing J-beauty, or building a brand in Japan?",
       body: "GuideTech works from Tokyo across both routes: approaching brands for authorised wholesale in Japanese, and identifying and qualifying OEM manufacturers against your regulatory requirements rather than only your price target.",
-      href: "/japan-partner/en/supplier-sourcing.html",
+      href: "/japan-partner/en/supplier-sourcing",
       text: "See how supplier sourcing works"
     },
     faq: [
@@ -525,7 +525,7 @@ const posts = [
     cta: {
       heading: "Need a Japan-side buyer for a mixed assortment?",
       body: "GuideTech sources from Tokyo: identifying makers and wholesalers, negotiating in Japanese, collecting full specification sheets for compliance review, and consolidating many small SKUs into one shipment.",
-      href: "/japan-partner/en/contact.html",
+      href: "/japan-partner/en/contact",
       text: "Talk to us about food and snack sourcing"
     },
     faq: [
@@ -634,7 +634,7 @@ const posts = [
     cta: {
       heading: "Want the checks run for you, in Japanese?",
       body: "GuideTech runs supplier verification from Tokyo: corporate number and register checks, commercial register extracts, credit reports where the order justifies one, and a physical or proxy visit to confirm that the address is what the documents claim.",
-      href: "/japan-partner/en/contact.html",
+      href: "/japan-partner/en/contact",
       text: "Ask us to verify a Japanese supplier"
     },
     faq: [
@@ -735,7 +735,7 @@ const posts = [
     cta: {
       heading: "Want introductions to makers rather than to resellers?",
       body: "GuideTech contacts Japanese blade makers and wholesalers in Japanese, establishes what they can actually produce and at what minimum, verifies the company against public records, and coordinates samples and the first order from Tokyo.",
-      href: "/japan-partner/en/supplier-sourcing.html",
+      href: "/japan-partner/en/supplier-sourcing",
       text: "See how supplier sourcing works"
     },
     faq: [
@@ -830,7 +830,7 @@ const posts = [
     cta: {
       heading: "Want someone walking the show floor for you?",
       body: "GuideTech attends Japanese trade shows on behalf of overseas buyers: target list preparation, booth conversations in Japanese, product photography, and same-week follow-up that turns a catalogue pile into a shortlist.",
-      href: "/japan-partner/en/contact.html",
+      href: "/japan-partner/en/contact",
       text: "Talk to us about trade show sourcing"
     },
     faq: [
@@ -930,12 +930,12 @@ function header(current) {
     <div class="lang-switch"><a class="current" href="/japan-partner/en/">EN</a><a class="" href="/japan-partner/es/">ES</a></div>
     <button class="mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>☰</button>
     <nav class="nav" data-nav>
-      <div class="nav-item"><a class="" href="/japan-partner/en/launch-partner.html">Services</a><div class="dropdown"><a href="/japan-partner/en/launch-partner.html">Launch Partner</a><a href="/japan-partner/en/supplier-sourcing.html">Supplier Sourcing</a><a href="/japan-partner/en/localization.html">Localization</a></div></div>
-      <a class="" href="/japan-partner/en/pricing.html">Pricing</a>
-      <a class="" href="/japan-partner/en/work.html">Work</a>
+      <div class="nav-item"><a class="" href="/japan-partner/en/launch-partner">Services</a><div class="dropdown"><a href="/japan-partner/en/launch-partner">Launch Partner</a><a href="/japan-partner/en/supplier-sourcing">Supplier Sourcing</a><a href="/japan-partner/en/localization">Localization</a></div></div>
+      <a class="" href="/japan-partner/en/pricing">Pricing</a>
+      <a class="" href="/japan-partner/en/work">Work</a>
       <a class="${current === "blog" ? "current" : ""}" href="/japan-partner/en/blog/">Guides</a>
-      <a class="" href="/japan-partner/en/about.html">About</a>
-      <a class="header-cta" href="/japan-partner/en/contact.html">Contact</a>
+      <a class="" href="/japan-partner/en/about">About</a>
+      <a class="header-cta" href="/japan-partner/en/contact">Contact</a>
     </nav>
   </div>
 </header>`;
@@ -945,8 +945,8 @@ const footer = `<footer class="footer">
   <div class="wrap">
     <div class="footer-grid">
       <div><h2>${serviceName}</h2><p>Your local partner in Japan for supplier sourcing, localization, and operations. Operated by <a href="https://guidetech.jp">GuideTech</a> in Tokyo, Shibuya.</p></div>
-      <div><h3>Services</h3><div class="footer-links"><a href="/japan-partner/en/launch-partner.html">Japan Launch Partner</a><a href="/japan-partner/en/supplier-sourcing.html">Supplier Sourcing</a><a href="/japan-partner/en/localization.html">Software Localization</a><a href="/japan-partner/en/pricing.html">Pricing</a></div></div>
-      <div><h3>Company</h3><div class="footer-links"><a href="/japan-partner/en/work.html">Work</a><a href="/japan-partner/en/about.html">About</a><a href="/japan-partner/en/contact.html">Contact</a></div></div>
+      <div><h3>Services</h3><div class="footer-links"><a href="/japan-partner/en/launch-partner">Japan Launch Partner</a><a href="/japan-partner/en/supplier-sourcing">Supplier Sourcing</a><a href="/japan-partner/en/localization">Software Localization</a><a href="/japan-partner/en/pricing">Pricing</a></div></div>
+      <div><h3>Company</h3><div class="footer-links"><a href="/japan-partner/en/work">Work</a><a href="/japan-partner/en/about">About</a><a href="/japan-partner/en/contact">Contact</a></div></div>
       <div><h3>Languages</h3><div class="footer-links"><a href="/japan-partner/en/">English</a><a href="/japan-partner/es/">Español</a></div></div>
     </div>
     <div class="footer-bottom">Operated by GuideTech. © 2026 GuideTech Inc.</div>
@@ -1005,7 +1005,7 @@ function organization() {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "sales",
-      url: `${site}/japan-partner/en/contact.html`,
+      url: `${site}/japan-partner/en/contact`,
       availableLanguage: ["English", "Japanese", "Spanish"]
     }
   };
@@ -1065,7 +1065,7 @@ function articleSchemas(post, url) {
 }
 
 function renderArticle(post) {
-  const url = `/${OUT_DIR}/${post.slug}.html`;
+  const url = `/${OUT_DIR}/${post.slug}`; // canonical is extensionless; the file itself stays .html
   const sections = post.sections
     .map((section, i) => `<h2 id="section-${i + 1}">${section.h}</h2>${section.blocks.map(renderBlock).join("")}`)
     .join("");
@@ -1080,7 +1080,7 @@ function renderArticle(post) {
     ? `<h2>Related guides</h2><ul class="check-list">${post.related
         .map((slug) => {
           const target = bySlug.get(slug);
-          return `<li><a href="/${OUT_DIR}/${slug}.html">${target.title}</a></li>`;
+          return `<li><a href="/${OUT_DIR}/${slug}">${target.title}</a></li>`;
         })
         .join("")}</ul>`
     : "";
@@ -1122,7 +1122,7 @@ function cardsFor(list) {
   return `<div class="grid two">${list
     .map(
       (post) =>
-        `<article class="card"><a class="card-thumb" href="/${OUT_DIR}/${post.slug}.html"><img src="${thumb(post.slug)}" alt="${esc(post.title)}" width="1200" height="675" loading="lazy"></a><p class="eyebrow">${post.kw}</p><h3><a href="/${OUT_DIR}/${post.slug}.html">${post.title}</a></h3><p>${post.description}</p></article>`
+        `<article class="card"><a class="card-thumb" href="/${OUT_DIR}/${post.slug}"><img src="${thumb(post.slug)}" alt="${esc(post.title)}" width="1200" height="675" loading="lazy"></a><p class="eyebrow">${post.kw}</p><h3><a href="/${OUT_DIR}/${post.slug}">${post.title}</a></h3><p>${post.description}</p></article>`
     )
     .join("")}</div>`;
 }
@@ -1169,22 +1169,22 @@ ${footer}`
 const staticUrls = [
   "/japan-partner/",
   "/japan-partner/en/",
-  "/japan-partner/en/localization.html",
-  "/japan-partner/en/supplier-sourcing.html",
-  "/japan-partner/en/launch-partner.html",
-  "/japan-partner/en/pricing.html",
-  "/japan-partner/en/work.html",
-  "/japan-partner/en/about.html",
-  "/japan-partner/en/contact.html",
+  "/japan-partner/en/localization",
+  "/japan-partner/en/supplier-sourcing",
+  "/japan-partner/en/launch-partner",
+  "/japan-partner/en/pricing",
+  "/japan-partner/en/work",
+  "/japan-partner/en/about",
+  "/japan-partner/en/contact",
   "/japan-partner/en/blog/",
   "/japan-partner/es/",
-  "/japan-partner/es/localization.html",
-  "/japan-partner/es/supplier-sourcing.html",
-  "/japan-partner/es/launch-partner.html",
-  "/japan-partner/es/pricing.html",
-  "/japan-partner/es/work.html",
-  "/japan-partner/es/about.html",
-  "/japan-partner/es/contact.html",
+  "/japan-partner/es/localization",
+  "/japan-partner/es/supplier-sourcing",
+  "/japan-partner/es/launch-partner",
+  "/japan-partner/es/pricing",
+  "/japan-partner/es/work",
+  "/japan-partner/es/about",
+  "/japan-partner/es/contact",
   "/japan-partner/es/blog/"
 ];
 
@@ -1197,9 +1197,9 @@ const esPostSlugs = [
 
 const sitemapUrls = [
   ...staticUrls,
-  ...posts.map((p) => `/${OUT_DIR}/${p.slug}.html`),
-  ...legacyPosts.map((p) => `/${OUT_DIR}/${p.slug}.html`),
-  ...esPostSlugs.map((slug) => `/japan-partner/es/blog/${slug}.html`)
+  ...posts.map((p) => `/${OUT_DIR}/${p.slug}`),
+  ...legacyPosts.map((p) => `/${OUT_DIR}/${p.slug}`),
+  ...esPostSlugs.map((slug) => `/japan-partner/es/blog/${slug}`)
 ];
 
 /* ------------------------------------------------------------------ *
@@ -1221,14 +1221,42 @@ ${feedItems
   .map(
     (post) => `    <item>
       <title>${esc(post.seoTitle || post.title)}</title>
-      <link>${site}/${OUT_DIR}/${post.slug}.html</link>
-      <guid isPermaLink="true">${site}/${OUT_DIR}/${post.slug}.html</guid>
+      <link>${site}/${OUT_DIR}/${post.slug}</link>
+      <guid isPermaLink="true">${site}/${OUT_DIR}/${post.slug}</guid>
       <description>${esc(post.seoDescription || post.description)}</description>
     </item>`
   )
   .join("\n")}
   </channel>
 </rss>
+`
+);
+
+/* ------------------------------------------------------------------ *
+ * .html -> extensionless redirects
+ *
+ * Netlify serves /foo from foo.html natively, so both forms return 200 unless
+ * we redirect. The trailing "!" forces the rule to shadow the real file.
+ * ------------------------------------------------------------------ */
+
+const htmlPages = [
+  ...sitemapUrls.filter((u) => !u.endsWith("/")),
+  "/japan-partner/en/thanks",
+  "/japan-partner/es/thanks"
+];
+const indexPages = [
+  "/japan-partner/",
+  "/japan-partner/en/",
+  "/japan-partner/es/",
+  "/japan-partner/en/blog/",
+  "/japan-partner/es/blog/"
+];
+write(
+  "_redirects",
+  `# Generated by scripts/generate-sourcing-articles.mjs - do not edit by hand.
+# Canonical URLs are extensionless. These 301s retire the .html form.
+${indexPages.map((u) => `${u}index.html${" ".repeat(Math.max(1, 58 - (u + "index.html").length))}${u}  301!`).join("\n")}
+${htmlPages.map((u) => `${u}.html${" ".repeat(Math.max(1, 58 - (u + ".html").length))}${u}  301!`).join("\n")}
 `
 );
 
