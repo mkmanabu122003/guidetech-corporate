@@ -1,3 +1,20 @@
+// ⚠️  DO NOT RUN. This script is superseded and out of date.
+//
+// The published pages have moved on: the English homepage was rebuilt by hand,
+// GA4 is applied by scripts/apply-analytics.mjs, the sourcing articles come
+// from scripts/generate-sourcing-articles.mjs, and the pricing / about / work
+// pages have had their TODO and {{PRICE_*}} placeholders replaced with
+// approved copy. Running this file would overwrite all of that and put the
+// placeholders back on the live site.
+//
+// It is kept only as a record of how the original page set was generated.
+// Remove this guard deliberately if you ever intend to regenerate from here.
+if (!process.env.ALLOW_LEGACY_GENERATOR) {
+  console.error("Refusing to run: this legacy generator would overwrite newer published pages.");
+  console.error("Set ALLOW_LEGACY_GENERATOR=1 only if you are certain.");
+  process.exit(1);
+}
+
 import fs from "node:fs";
 import path from "node:path";
 
