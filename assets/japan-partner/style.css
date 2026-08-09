@@ -124,6 +124,12 @@ p { line-height: 1.78; }
   font-size: 13px;
   font-weight: 900;
 }
+/* .header-cta lives inside .nav, and `.nav a` (0,1,1) outranks the
+   `.header-cta, .button` rule above (0,1,0). Without these the label renders
+   near-black on indigo (1.4:1) and turns fully invisible on hover (1.0:1). */
+.nav a.header-cta,
+.nav a.header-cta:hover,
+.nav a.header-cta.current { color: var(--white); }
 .button.secondary { background: var(--white); color: var(--indigo); border-color: rgba(34, 63, 90, .28); }
 .button.copper { background: var(--copper); color: var(--ink); }
 .button:hover { transform: translateY(-1px); }
