@@ -30,46 +30,55 @@
   from = "/scripts/*"
   to = "/japan-partner/en/404.html"
   status = 404
+  force = true
 
 [[redirects]]
   from = "/docs/*"
   to = "/japan-partner/en/404.html"
   status = 404
+  force = true
 
 [[redirects]]
   from = "/design-directions.html"
   to = "/japan-partner/en/404.html"
   status = 404
+  force = true
 
 [[redirects]]
   from = "/site-proposal.html"
   to = "/japan-partner/en/404.html"
   status = 404
+  force = true
 
 [[redirects]]
   from = "/studio-layout-proposal.html"
   to = "/japan-partner/en/404.html"
   status = 404
+  force = true
 
 [[redirects]]
   from = "/legacy-base-redesign.html"
   to = "/japan-partner/en/404.html"
   status = 404
+  force = true
 
 [[redirects]]
   from = "/legacy-inspired-proposal.html"
   to = "/japan-partner/en/404.html"
   status = 404
+  force = true
 
 [[redirects]]
   from = "/japan-partner-corporate-sample.html"
   to = "/japan-partner/en/404.html"
   status = 404
+  force = true
 
 [[redirects]]
   from = "/japan-partner-redesign-sample.html"
   to = "/japan-partner/en/404.html"
   status = 404
+  force = true
 
 [[redirects]]
   from = "/japan-localization/*"
