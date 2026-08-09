@@ -146,7 +146,7 @@ const posts = [
       ["Is there an Alibaba for Japan?", "Not in the same sense. Domestic B2B wholesale platforms exist and are large, but they are built for Japanese retailers: a Japanese business account and a domestic delivery address are typically required, and listings are in Japanese."],
       ["How long does Japanese supplier sourcing take?", "Plan on a quarter from starting research to a first shipment for a straightforward category, and longer where licensing, certification or custom manufacturing is involved."]
     ],
-    related: ["how-to-find-matcha-supplier-japan", "japanese-pokemon-card-wholesale-guide", "japanese-skincare-cosmetics-sourcing-guide"]
+    related: ["how-to-verify-a-japanese-company", "how-to-find-matcha-supplier-japan", "japanese-pokemon-card-wholesale-guide", "japanese-skincare-cosmetics-sourcing-guide", "japanese-snacks-confectionery-wholesale-guide", "japanese-kitchen-knives-wholesale-sourcing", "japanese-trade-shows-sourcing-guide"]
   },
 
   {
@@ -263,7 +263,7 @@ const posts = [
       ["Is ceremonial grade meaningless?", "As a regulated term, yes — no body defines or certifies it. As industry shorthand for first-flush, stone-milled, drinking-grade matcha it is usable, but only when the supplier can support it with harvest, cultivar and origin."],
       ["How do I confirm the matcha is really grown in Japan?", "Ask for origin documentation and crop year in writing, and use organic Transaction Certificates where they apply, because those are issued against specific lots and can be checked with the certifying body."]
     ],
-    related: ["how-to-find-japanese-suppliers", "japanese-snacks-confectionery-wholesale-guide", "japanese-skincare-cosmetics-sourcing-guide"]
+    related: ["how-to-find-japanese-suppliers", "how-to-verify-a-japanese-company", "japanese-snacks-confectionery-wholesale-guide", "japanese-trade-shows-sourcing-guide"]
   },
 
   {
@@ -360,7 +360,7 @@ const posts = [
       ["Why is everything sold out?", "Because popular sets are allocated rather than freely ordered. Supply is committed to established accounts long before it reaches anyone approaching the market cold."],
       ["Is buying at Japanese retail and exporting viable?", "At small scale it can be, for testing or for singles. It does not scale: there is no wholesale margin, consumption tax is usually unrecoverable, and retail purchase limits on popular product are common."]
     ],
-    related: ["how-to-find-japanese-suppliers", "how-to-find-matcha-supplier-japan", "japanese-snacks-confectionery-wholesale-guide"]
+    related: ["how-to-verify-a-japanese-company", "how-to-find-japanese-suppliers", "japanese-snacks-confectionery-wholesale-guide"]
   },
 
   {
@@ -445,7 +445,7 @@ const posts = [
       ["What minimum order quantity should I expect for OEM?", "Commonly 1,000–3,000 units per SKU, though this varies widely by format and by manufacturer. Packaging minimums are often the binding constraint rather than the formulation."],
       ["How long does a private-label project take?", "Roughly six to twelve months from brief to first shipment once stability testing and packaging are included. Compressing that usually means using a stock formula and stock packaging."]
     ],
-    related: ["how-to-find-japanese-suppliers", "how-to-find-matcha-supplier-japan", "japanese-snacks-confectionery-wholesale-guide"]
+    related: ["how-to-find-japanese-suppliers", "how-to-verify-a-japanese-company", "japanese-trade-shows-sourcing-guide"]
   },
 
   {
@@ -524,7 +524,306 @@ const posts = [
       ["Do I need to relabel Japanese snacks?", "In almost every market, yes. Allergen, ingredient, additive and nutrition declarations must comply with your destination rules in the destination language, which requires full specifications from the manufacturer."],
       ["Is it cheaper to buy from a Japanese exporter or to source direct?", "Direct is cheaper per unit and considerably more expensive in coordination, compliance and consolidation. For a mixed assortment of many SKUs, an exporter or a Japan-side buyer is often the lower total cost."]
     ],
-    related: ["how-to-find-japanese-suppliers", "how-to-find-matcha-supplier-japan", "japanese-pokemon-card-wholesale-guide"]
+    related: ["how-to-find-japanese-suppliers", "how-to-verify-a-japanese-company", "japanese-trade-shows-sourcing-guide"]
+  },
+
+  {
+    slug: "how-to-verify-a-japanese-company",
+    kw: "verify japanese supplier",
+    title: "How to Verify a Japanese Company Before You Pay",
+    description:
+      "Check a Japanese supplier using public records: the free corporate number register, the commercial register extract, credit reports, and the payment structure that protects you when verification runs out.",
+    lead:
+      "Almost every bad outcome in Japanese sourcing traces back to the same omission. The buyer verified the product and never verified the counterparty. Japan happens to be unusually good for this kind of due diligence: company identity is a matter of public record, the registers are cheap, and anyone may request an extract for any company. The obstacle is not access. It is that the records are in Japanese and most overseas buyers do not know they exist.",
+    sections: [
+      {
+        h: "What you can check for free in ten minutes",
+        blocks: [
+          ["p", "The National Tax Agency publishes a free, searchable register of every corporation in Japan — roughly 4.5 million of them. It gives the three basic facts: registered company name, registered head office address, and the 13-digit corporate number. It also records changes and closures, so a company that has moved, renamed itself or been dissolved shows that history."],
+          ["ul", [
+            "If the counterparty cannot give you a corporate number, they are not a registered Japanese corporation. That is not automatically disqualifying — sole proprietorships are legal and common — but it changes the risk profile and it should be a conscious decision rather than a surprise.",
+            "Check that the registered name matches the name on the quotation, exactly. Trading names and registered names differ more often than you would expect.",
+            "Check that the registered address matches the address on their documents and website.",
+            "Check the invoice registration number if they give you one. Registered invoice issuers are published by the same agency, and the number is the corporate number prefixed with a T."
+          ]],
+          ["note", "A name or address mismatch between the quotation, the website and the register is the single cheapest red flag to find and the most frequently ignored. It costs nothing to check and it catches both impersonation and the more common case of an intermediary presenting a maker's identity as their own."]
+        ]
+      },
+      {
+        h: "The commercial register extract",
+        blocks: [
+          ["p", "The free register gives identity. The commercial register extract gives substance. In Japan this is the certificate of registered matters, obtainable from the Legal Affairs Bureau over the counter or by post for a few hundred yen per copy, or viewed online through the registry information service for less. Anyone may request the extract for any company. You do not need the company's permission and they are not told."],
+          ["p", "What to actually read when you get one:"],
+          ["table", {
+            head: ["Field", "What it tells you", "What should make you pause"],
+            rows: [
+              ["Incorporation date", "How long the company has existed", "Incorporated recently, but quoting on a large order with confidence"],
+              ["Stated capital", "The capital formally committed", "Capital that is trivial relative to the order you are placing"],
+              ["Directors", "Who is legally responsible", "Frequent turnover, or a single director who is also the sole contact"],
+              ["Business purposes", "The activities the company is registered to conduct", "The thing they are selling you is not among them"],
+              ["Change history", "Renames, relocations, capital changes", "Repeated name or address changes over a short period"]
+            ]
+          }],
+          ["p", "None of these is proof of anything on its own. Read together they tell you whether you are dealing with an established operating business or a shell that was assembled recently, and that distinction is usually the one that matters."]
+        ]
+      },
+      {
+        h: "Credit reports, and when they are worth it",
+        blocks: [
+          ["p", "Teikoku Databank and Tokyo Shoko Research are the two standard Japanese commercial credit agencies. A report is paid and is written in Japanese, and it goes well beyond the registers: a credit score, estimated turnover, payment behaviour, principal banks, main customers and suppliers, and often a narrative assessment from an analyst who has spoken to the company."],
+          ["p", "The economics are simple. A report costs a fraction of one bad shipment. If the order value is meaningful, or if you are about to make the supplier a dependency rather than a transaction, buy the report. Below that threshold the free registers plus a sample order carry the risk adequately."]
+        ]
+      },
+      {
+        h: "Signals that cost nothing",
+        blocks: [
+          ["ul", [
+            "<strong>The address, on a map.</strong> Street view will tell you in seconds whether the registered head office is a factory, an office building, or a residential apartment. Virtual offices and rental mailboxes are legal and common, and they are also what you would expect to see if the company is a one-person intermediary rather than a maker.",
+            "<strong>The phone number.</strong> A landline in the prefecture where the company claims to operate is a mild positive signal. A mobile number as the only contact for a company claiming factory capacity is a mild negative one.",
+            "<strong>Domain age.</strong> A registration date from last quarter under a website claiming decades of history is worth a question.",
+            "<strong>The Official Gazette.</strong> Bankruptcy filings, civil rehabilitation and corporate reorganisation notices are published there, and they are searchable.",
+            "<strong>What they will put in writing.</strong> A supplier who answers specific questions about origin, capacity and certification by email, in writing, is behaving differently from one who keeps the answers verbal."
+          ]]
+        ]
+      },
+      {
+        h: "What verification cannot tell you",
+        blocks: [
+          ["p", "It is worth being precise about the limits, because buyers routinely over-read a clean register. The registers establish that a company exists, who runs it, and roughly how solid it is. They say nothing at all about whether it can actually produce what it quoted, whether it holds allocation of a scarce product, whether its quality is consistent between lots, or whether it will ship on time."],
+          ["p", "Those questions are answered by three things only: a paid sample, a small first order that you inspect against the sample, and someone physically present at the site. Verification tells you whether it is safe to start. It does not tell you whether it is worth continuing."]
+        ]
+      },
+      {
+        h: "Scale the effort to the order",
+        blocks: [
+          ["table", {
+            head: ["Order size", "Minimum verification", "Payment structure"],
+            rows: [
+              ["Sample / trial", "Corporate number register, address on a map", "Pay in full; the amount is the cost of the information"],
+              ["First commercial order", "Register plus commercial register extract", "Deposit and balance, balance against shipping documents"],
+              ["Recurring supply", "Add a credit report", "Negotiated terms, with the first few orders still split"],
+              ["Dependency or exclusivity", "Credit report plus a site visit or proxy visit", "Contract, defined remedies, and a second qualified source"]
+            ]
+          }]
+        ]
+      },
+      {
+        h: "Payment structure is the protection verification cannot give you",
+        blocks: [
+          ["ul", [
+            "<strong>Pay the registered corporate account, and check the account name against the register.</strong> A request to pay a personal account, an account in a different name, or an account in a third country is the point at which the conversation should stop. This single check prevents most supplier-impersonation fraud.",
+            "Avoid paying one hundred per cent in advance on a first commercial order. A deposit with the balance released against shipping documents is normal and is not an insult to ask for.",
+            "Treat a change of bank details mid-transaction as fraud until proven otherwise, and confirm it by phone on a number you already had, never on a number in the email requesting the change.",
+            "Above a threshold that suits your balance sheet, use a letter of credit or an escrow arrangement, and accept the cost as insurance rather than overhead."
+          ]]
+        ]
+      }
+    ],
+    cta: {
+      heading: "Want the checks run for you, in Japanese?",
+      body: "GuideTech runs supplier verification from Tokyo: corporate number and register checks, commercial register extracts, credit reports where the order justifies one, and a physical or proxy visit to confirm that the address is what the documents claim.",
+      href: "/japan-partner/en/contact.html",
+      text: "Ask us to verify a Japanese supplier"
+    },
+    faq: [
+      ["Can I search the Japanese corporate register in English?", "The National Tax Agency's corporate number site offers an English interface for basic searches. The commercial register extracts and credit reports are issued in Japanese only, so they usually need someone who reads Japanese to be useful."],
+      ["Can I obtain a commercial register extract from overseas?", "The counter, postal and online routes are all built for people in Japan, and the online service in particular expects a Japanese payment method. In practice an overseas buyer uses a Japan-side agent or a licensed administrative or judicial scrivener to obtain it."],
+      ["What if my supplier is a sole proprietor rather than a company?", "Sole proprietors are not in the corporate register, so the identity check shifts to the invoice registration number, any licences the category requires, references from other buyers, and a smaller first order. It is not a reason to walk away, but it is a reason to keep the exposure small for longer."],
+      ["How much should verification cost?", "Free for the identity check, a few hundred yen for a register extract, and a meaningful but not large amount for a credit report. Set the spend against the order value: the point at which verification feels expensive is usually the point at which you have not priced the downside correctly."]
+    ],
+    related: ["how-to-find-japanese-suppliers", "japanese-pokemon-card-wholesale-guide", "how-to-find-matcha-supplier-japan"]
+  },
+
+  {
+    slug: "japanese-kitchen-knives-wholesale-sourcing",
+    kw: "japanese kitchen knives wholesale",
+    title: "Japanese Kitchen Knives Wholesale: A Sourcing Guide",
+    description:
+      "Where Japanese kitchen knives are actually made, what forged versus stamped and each steel family mean commercially, realistic MOQs and lead times, OEM options, and the export rules that catch new importers.",
+    lead:
+      "Japanese knives are an unusually good category for a small importer. The product is high value for its shipping weight, the customer researches before buying, and the origin story is genuine rather than manufactured. The difficulty is that the word Japanese is doing an enormous amount of work in most listings, and the gap between a mass-produced stainless blade and a hand-forged single-bevel from a three-craftsman workshop is larger than any photograph will show you.",
+    sections: [
+      {
+        h: "Four regions, four different businesses",
+        blocks: [
+          ["table", {
+            head: ["Region", "Character", "Best for", "Commercial note"],
+            rows: [
+              ["Seki, Gifu", "Industrialised, vertically integrated, export-experienced", "Stainless production runs, OEM, consistent volume", "Commonly cited as the source of the large majority of Japan's blade output, and the region most likely to have handled export before"],
+              ["Sakai, Osaka", "Hand-forged, traditionally single-bevel, professional chef market", "Premium and specialist SKUs", "Work is split between a forger, a sharpener and a handle maker, so lead times are long and are not compressible"],
+              ["Tsubame-Sanjo, Niigata", "Traditional technique combined with automated precision", "Knives alongside tableware and tools", "Useful when you want a broader kitchenware range from one region"],
+              ["Echizen, Fukui", "Laminated construction, thin grinds, small workshops", "Enthusiast and specialist SKUs", "Small capacity; treat availability as the constraint"]
+            ]
+          }],
+          ["p", "Choosing the region is really choosing a business model. Seki is a manufacturing relationship. Sakai is closer to commissioning craft, with the scheduling consequences that implies."]
+        ]
+      },
+      {
+        h: "Forged versus stamped, and why the price gap is real",
+        blocks: [
+          ["p", "A stamped blade is cut from sheet steel and ground. A forged blade is shaped under force, which lets the maker vary thickness along the blade and through the spine. The difference shows up in balance, in how the blade behaves through dense food, and in how much material there is to sharpen away over a decade of use."],
+          ["p", "Commercially, the mistake runs in both directions. Importers sell stamped blades with forged-blade language and lose the customers who know the difference. Others buy hand-forged inventory for a market that wanted a dishwasher-safe knife under a modest price point and sit on it. Decide which customer you are serving before you choose the maker, not after."]
+        ]
+      },
+      {
+        h: "Steel: what your customer is actually buying",
+        blocks: [
+          ["table", {
+            head: ["Steel family", "Character", "Maintenance", "Fits"],
+            rows: [
+              ["Molybdenum stainless", "Forgiving, affordable, widely produced", "Low", "Home cooks, gifts, volume SKUs"],
+              ["VG-10", "Harder stainless, good edge retention, very common in exports", "Low to moderate", "The mainstream premium position"],
+              ["Damascus-clad", "A core steel with patterned cladding", "Follows the core steel", "Visual appeal; the pattern is cosmetic, not performance"],
+              ["Shirogami / Aogami carbon", "Takes and holds a very fine edge", "High — it will rust if left wet", "Enthusiasts and professionals"],
+              ["Aogami Super", "Among the hardest traditional options, roughly 65–67 HRC", "High, and chips if misused", "Specialist SKUs with an informed buyer"]
+            ]
+          }],
+          ["note", "The commercial trap in this category is carbon steel sold to a general audience. It performs beautifully and it rusts if it is left wet, and a home cook who was not told that will return it and describe it as defective. If your channel is mainstream retail, the maintenance requirement belongs in the listing, not in the small print."]
+        ]
+      },
+      {
+        h: "Single bevel, double bevel, and handedness",
+        blocks: [
+          ["p", "Traditional Japanese knives are frequently ground on one side only. That geometry is what a sushi chef wants and it is not what a Western home kitchen expects. It also has a consequence most importers meet after their first order: a single-bevel knife is handed. The standard product is ground for right-handed use, and left-handed versions are a separate item with a longer lead time and a higher price, because they are made to order rather than pulled from stock."],
+          ["p", "Double-bevel shapes — gyuto, santoku, petty, nakiri — are the practical core of a range aimed at a general market, with single-bevel yanagiba and deba as specialist additions rather than the foundation."]
+        ]
+      },
+      {
+        h: "MOQ and lead time",
+        blocks: [
+          ["ul", [
+            "Branded or OEM production runs commonly start in the range of a hundred to several hundred units per SKU, though the spread across suppliers is very wide and some will work in far smaller quantities at a higher unit price.",
+            "Stock items from an export-experienced Seki supplier can move quickly. Hand-forged Sakai work moves at the speed of three separate craftsmen and is quoted in months.",
+            "Handle materials and packaging frequently set the lead time rather than the blade.",
+            "Seasonal demand is real. Quoting in the autumn for December delivery is late in this category."
+          ]]
+        ]
+      },
+      {
+        h: "OEM, engraving and private label",
+        blocks: [
+          ["p", "Knives take branding well, and the cost curve is steep in places that are not obvious. Laser engraving a logo onto a stainless blade is inexpensive and fast. A custom blade profile, a custom handle shape, or a bolster change means new tooling and a different conversation entirely. Packaging sits in between and is where a range starts to look like a brand rather than a resale."],
+          ["p", "Settle the ownership questions in writing before tooling: who owns the profile, whether the maker may sell the same shape to others, and what happens if a steel or a handle material is discontinued mid-range."]
+        ]
+      },
+      {
+        h: "Export and destination-market rules",
+        blocks: [
+          ["ul", [
+            "Knives are a restricted category in a number of markets. Age-verified sale requirements, restrictions on particular blade shapes, and courier policies that refuse blades outright are all common, and they vary by country and sometimes by carrier rather than by law.",
+            "Confirm your own market's rules before you commit to inventory, not after it arrives. This is one of the few categories where a shipment can be legal to export and problematic to sell.",
+            "Describe the goods accurately on customs paperwork. Kitchen cutlery is a straightforward classification; vague descriptions on a blade shipment invite inspection.",
+            "Ask where the blade was forged, ground and finished, and get the answer in writing. Japanese steel is not the same claim as made in Japan, and the distinction is exactly what your customer is paying the premium for."
+          ]]
+        ]
+      }
+    ],
+    cta: {
+      heading: "Want introductions to makers rather than to resellers?",
+      body: "GuideTech contacts Japanese blade makers and wholesalers in Japanese, establishes what they can actually produce and at what minimum, verifies the company against public records, and coordinates samples and the first order from Tokyo.",
+      href: "/japan-partner/en/supplier-sourcing.html",
+      text: "See how supplier sourcing works"
+    },
+    faq: [
+      ["Can I buy Japanese knives wholesale without a Japanese company?", "Yes, more easily than in most categories, because Seki in particular has long-standing export experience. Smaller traditional workshops are a different matter and usually need an exporter or a Japan-side agent in between."],
+      ["What minimum order should I expect?", "Branded runs commonly start in the hundreds per SKU, but the range across suppliers is very wide and some will sell far smaller quantities at a higher unit price. Treat any single published figure as a starting point."],
+      ["Is VG-10 a Japanese steel?", "It is a Japanese-developed stainless steel and it is very widely used in knives made for export. Its presence tells you about the blade material, not about where the knife was forged and finished."],
+      ["Should I start with carbon or stainless?", "Stainless, unless your channel is specifically enthusiasts or professionals. Carbon steel performs better in skilled hands and generates returns and complaints in general retail."]
+    ],
+    related: ["how-to-find-japanese-suppliers", "how-to-verify-a-japanese-company", "japanese-trade-shows-sourcing-guide"]
+  },
+
+  {
+    slug: "japanese-trade-shows-sourcing-guide",
+    kw: "japan trade show",
+    title: "Sourcing at Japanese Trade Shows, With or Without Flying",
+    description:
+      "Which Japanese trade shows matter by category, how to prepare a target list, what actually happens at a booth, why follow-up is where most deals die, and how proxy attendance works when you cannot travel.",
+    lead:
+      "Trade shows are the highest-yield sourcing channel in Japan, and the reason is structural. Every other route requires you to solve the introduction problem: persuading a company that has never heard of you to reply to a stranger. At a trade show that problem is inverted. The exhibitor paid for a booth specifically to meet buyers they do not yet know, and for three days they want to talk to you.",
+    sections: [
+      {
+        h: "The shows that matter, by category",
+        blocks: [
+          ["table", {
+            head: ["Show", "Category", "When", "Note"],
+            rows: [
+              ["FOODEX JAPAN", "Food and beverage", "March, Tokyo Big Sight", "The largest food trade show in the region; the 2027 edition runs 9–12 March and the organisers report around ten thousand buyers from more than thirty countries"],
+              ["Beautyworld Japan", "Beauty, cosmetics, wellness", "May, Tokyo Big Sight", "The 2027 edition runs 17–19 May; the main meeting point for J-beauty manufacturers and OEM houses"],
+              ["LIFESTYLE Week", "Gift, homeware, tableware, beauty", "June, Tokyo", "The 2027 edition runs 9–11 June; organisers report that a large majority of attendees hold purchasing authority"],
+              ["Tokyo International Gift Show", "Gift and consumer goods", "February and September", "Runs twice a year and is the broadest net for consumer products"]
+            ]
+          }],
+          ["note", "Dates and venues move, and some shows have merged or rebranded in recent years. Confirm on the organiser's own site before booking anything, and register as a buyer well in advance — on-the-day registration is slower and some halls restrict it."]
+        ]
+      },
+      {
+        h: "Preparation is most of the result",
+        blocks: [
+          ["ul", [
+            "<strong>Download the exhibitor list weeks ahead</strong> and build a target list of twenty to thirty booths. Not two hundred. A show floor is large enough that an unplanned walk produces catalogues rather than conversations.",
+            "<strong>Pre-register as a buyer.</strong> It is free, it saves an hour at the door, and on some shows it is what gets you into the business-matching programme.",
+            "<strong>Prepare a one-page company profile in Japanese.</strong> Who you are, what you sell, through which channels, in which markets, and how long you have been trading. This is the document that converts a booth conversation into a follow-up.",
+            "<strong>Bring far more business cards than you think you need.</strong> Running out mid-show is a genuinely common and entirely avoidable failure.",
+            "<strong>Book an interpreter early</strong> if you need one. Show weeks clear the market, and the good ones are gone months ahead."
+          ]]
+        ]
+      },
+      {
+        h: "What actually happens at a booth",
+        blocks: [
+          ["p", "Expect five to ten minutes. The person in front of you may be the owner, a salesperson, or someone helping out for the day, and which one it is changes what the conversation can achieve. Your job in those minutes is not to negotiate. It is to establish whether there is a fit and to leave with a specific next step."],
+          ["sample", {
+            title: "What to leave each booth with",
+            rows: [
+              ["Materials", "Catalogue and price list if offered", "Collect"],
+              ["Contact", "Business card of the person you actually spoke to", "Essential"],
+              ["Facts", "Do they export, minimum order, lead time", "Ask"],
+              ["Next step", "Sample, quotation, or a call after the show", "Agree"]
+            ]
+          }],
+          ["p", "Ask whether they export and who handles it. That one question sorts your list into companies you can transact with and companies that will need a trading company or an agent in between, and it is much faster to ask in person than to discover over three weeks of email."]
+        ]
+      },
+      {
+        h: "The follow-up is where most deals die",
+        blocks: [
+          ["p", "This is the part worth being blunt about. The most common outcome of an overseas buyer attending a Japanese trade show is nothing at all, and the cause is almost never the quality of the conversations. It is that the follow-up went out three weeks later, in English, to a generic address, with no reference to the conversation."],
+          ["ul", [
+            "Follow up within about three business days, while the exhibitor still remembers the show and before their own backlog closes over.",
+            "Write in Japanese, to the person whose card you have, and name the booth and what you discussed.",
+            "Attach the one-page profile and ask for one specific thing — a quotation, a sample, or a call.",
+            "Expect to follow up twice. A single unanswered email is not a rejection in this market."
+          ]]
+        ]
+      },
+      {
+        h: "If you cannot fly",
+        blocks: [
+          ["p", "Proxy attendance is an established way to work these shows without the trip. A Japan-side representative walks the floor with your target list, asks your qualifying questions in Japanese, collects catalogues, price lists and cards, photographs products and displays, and reports back with a shortlist and a recommended next action for each booth."],
+          ["p", "The economics usually favour it for a first look at a category. Flights, a week of hotels in Tokyo during show season, and an interpreter add up quickly, and the return on a first exploratory visit is information rather than orders. Sending someone who already speaks the language and can start the follow-up the same week converts more of that information into actual conversations."],
+          ["ul", [
+            "Give the representative a written target list and the three or four questions that decide fit for you.",
+            "Ask for photographs of the product and of the booth, not only catalogue scans.",
+            "Have them start the Japanese follow-up while the show is still running.",
+            "Treat the output as a qualified shortlist, then decide whether the second visit is worth making in person."
+          ]]
+        ]
+      }
+    ],
+    cta: {
+      heading: "Want someone walking the show floor for you?",
+      body: "GuideTech attends Japanese trade shows on behalf of overseas buyers: target list preparation, booth conversations in Japanese, product photography, and same-week follow-up that turns a catalogue pile into a shortlist.",
+      href: "/japan-partner/en/contact.html",
+      text: "Talk to us about trade show sourcing"
+    },
+    faq: [
+      ["Do I need to be a registered company to attend as a buyer?", "Most shows are trade-only and ask for evidence that you are in the business — a company name, a website, sometimes a business card or a business registration. Pre-registration is where this is checked, which is another reason not to leave it to the day."],
+      ["Will exhibitors speak English?", "At the large international shows, some will, particularly those already exporting. Many will not, and the ones who do not are frequently the smaller makers who are most worth finding. Plan for Japanese."],
+      ["Is it worth attending if I am not ready to order?", "Yes, if you treat it as research rather than procurement. Understanding what a category actually looks like, what it costs and who makes it is worth the trip on its own — but say so honestly at the booth rather than implying an order that is not coming."],
+      ["How far ahead should I plan?", "Two to three months for registration, target list, interpreter and accommodation. Tokyo hotel pricing during major show weeks rewards booking early by a wide margin."]
+    ],
+    related: ["how-to-find-japanese-suppliers", "how-to-verify-a-japanese-company", "japanese-kitchen-knives-wholesale-sourcing"]
   }
 ];
 
