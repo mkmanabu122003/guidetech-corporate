@@ -36,41 +36,52 @@ Upwork / Freelancer.com は Cloudflare のボット対策で案件一覧を機�
 
 ---
 
-## 公開済み（第1バッチ・5本）
+## 公開済み（8本・2026-08-09 デプロイ済み）
 
 すべて `/japan-partner/en/blog/` 配下。`scripts/generate-sourcing-articles.mjs` で生成。
 
+### 第1バッチ
+
 | # | slug | 主要KW | 役割 | 語数 |
 |---|---|---|---|---|
-| 1 | `how-to-find-japanese-suppliers` | how to find japanese suppliers | **ハブ記事**。他4本へ内部リンク | 1,573 |
+| 1 | `how-to-find-japanese-suppliers` | how to find japanese suppliers | **ハブ記事**。他7本へ内部リンク | 1,573 |
 | 2 | `how-to-find-matcha-supplier-japan` | matcha supplier japan | 最大需要 | 1,484 |
-| 3 | `japanese-pokemon-card-wholesale-guide` | japanese pokemon card wholesale distributors | 競合が薄く差別化しやすい | 1,132 |
+| 3 | `japanese-pokemon-card-wholesale-guide` | japanese pokemon card wholesale distributors | 競合が薄い | 1,132 |
 | 4 | `japanese-skincare-cosmetics-sourcing-guide` | japanese skincare wholesale suppliers | 単価が高い | 1,070 |
-| 5 | `japanese-snacks-confectionery-wholesale-guide` | japanese candy wholesale suppliers | 反復購入が見込める | 942 |
+| 5 | `japanese-snacks-confectionery-wholesale-guide` | japanese candy wholesale suppliers | 反復購入 | 942 |
+
+### 第2バッチ
+
+| # | slug | 主要KW | 役割 | 語数 |
+|---|---|---|---|---|
+| 6 | `how-to-verify-a-japanese-company` | verify japanese supplier | **検証ハブ**。全カテゴリ記事から被リンク | 1,482 |
+| 7 | `japanese-kitchen-knives-wholesale-sourcing` | japanese kitchen knives wholesale | 高単価・高粗利 | 1,229 |
+| 8 | `japanese-trade-shows-sourcing-guide` | japan trade show | 代理出展という明確なサービス需要 | 1,143 |
 
 各記事の構成: 導入 → 5〜7セクション（比較表 / チェックリスト付き）→ CTA ボックス
 → FAQ（FAQPage 構造化データ付き）→ 関連記事。目次は sticky サイドバー。
 
-導線: 記事 → `/supplier-sourcing.html` または `/contact.html`。
-問い合わせフォームの種別に `Supplier sourcing / product sourcing` と
-`Supplier verification` を追加済み。
+**内部リンク設計**: ハブ記事(#1)が全7本へ発リンク。検証記事(#6)は全カテゴリ記事から
+被リンクを受ける第2のハブ。カテゴリ記事どうしは横に2〜3本ずつ接続。
+
+導線: 記事 → `/supplier-sourcing.html`（ガイド8枚のカード掲載）または `/contact.html`。
+問い合わせ種別に `Supplier sourcing / product sourcing` と `Supplier verification` を追加済み。
 
 ---
 
-## 第2バッチ候補（優先度順）
+## 第3バッチ候補（優先度順）
 
-| 優先 | タイトル案 | 主要KW | 狙い |
-|---|---|---|---|
-| 1 | How to Verify a Japanese Company Before You Pay | verify japanese supplier / japanese company registry | ハブ記事の「検証」章を単独記事化。全カテゴリから内部リンクが集まる |
-| 2 | Japanese Kitchen Knives and Kitchenware Wholesale | japanese kitchen knives wholesale | 競合が弱く、単価と粗利が高い |
-| 3 | Attending a Japanese Trade Show Without Flying to Japan | japan trade show 2026 / FOODEX | 代理出展・代理商談という明確なサービス需要 |
-| 4 | Japanese Apparel and Bag OEM: Private Label Sourcing | japanese clothing manufacturers / private label japan bag | OEM 単価が高い |
-| 5 | Importing Sake and Japanese Whisky: Licences and Reality | japanese whiskey wholesale / sake import | 難度が高い＝相談に繋がりやすい |
-| 6 | Japan Market Entry for SaaS: What the First 90 Days Cost | japan market entry consulting | 既存 SaaS 路線の補強 |
-| 7 | Japanese Ceramics and Homeware Wholesale | japanese ceramics wholesale | 工芸クラスタ |
+| 優先 | タイトル案 | 主要KW |
+|---|---|---|
+| 1 | Japanese Apparel and Bag OEM: Private Label Sourcing | japanese clothing manufacturers / private label japan bag |
+| 2 | Importing Sake and Japanese Whisky: Licences and Reality | japanese whiskey wholesale / sake import |
+| 3 | Japan Market Entry for SaaS: What the First 90 Days Cost | japan market entry consulting |
+| 4 | Japanese Ceramics and Homeware Wholesale | japanese ceramics wholesale |
+| 5 | Shipping from Japan: Incoterms, Consolidation and Customs | shipping from japan to usa / import from japan |
 
-**目安ペース**: 月2本。1本ずつ順位を確認してから次を出すほうが、
-まとめて10本出すより内部リンク設計を調整しやすい。
+**目安ペース**: 月2本。1本ずつ順位を確認してから次を出すほうが内部リンク設計を調整しやすい。
+第1・第2バッチの掲載順位が Search Console に出るまで 4〜8週間かかるので、
+それを見てから第3バッチのテーマを最終決定するのが合理的。
 
 ---
 
@@ -101,3 +112,7 @@ Upwork / Freelancer.com は Cloudflare のボット対策で案件一覧を機�
 
 5. **価格ページが placeholder のまま**
    `{{PRICE_TRANSLATION}}` 等が本番に出ている。記事流入が増える前に埋めるべき。
+
+6. **EU 向け Cookie 同意バナーが未実装**
+   GA4（`G-3S3JEC00N4`）を全ページに導入済み。ES ページと英語ページで EU 訪問者を
+   想定している以上、GDPR / ePrivacy 上は事前同意が必要。実装は未着手。
