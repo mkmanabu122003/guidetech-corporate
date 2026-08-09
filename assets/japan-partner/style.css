@@ -476,6 +476,34 @@ details p { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
 .article p, .article li { color: var(--muted); font-size: 16px; line-height: 1.86; }
 .article a { color: var(--indigo); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
 .article-meta { margin: 20px 0 0; color: var(--muted); font-size: 13px; }
+
+/* In-article CTA. `.article a` (0,1,1) outranks `.button` (0,1,0), so the
+   button text and underline must be restated at higher specificity or the
+   label renders indigo-on-indigo and disappears. */
+.article-cta {
+  margin: 46px 0;
+  padding: 28px 30px;
+  background: var(--washi);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--copper);
+  border-radius: 8px;
+}
+.article-cta h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.article-cta p { margin: 0 0 20px; }
+.article-cta p:last-child { margin: 0; }
+.article a.button,
+.article a.button:hover {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.2;
+}
+.article a.button.secondary,
+.article a.button.secondary:hover { color: var(--indigo); }
 .toc {
   position: sticky;
   top: 96px;

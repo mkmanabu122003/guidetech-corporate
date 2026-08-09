@@ -1019,7 +1019,7 @@ function renderArticle(post) {
     .map((section, i) => `<h2 id="section-${i + 1}">${section.h}</h2>${section.blocks.map(renderBlock).join("")}`)
     .join("");
 
-  const cta = `<div class="diagram"><h3>${post.cta.heading}</h3><p>${post.cta.body}</p><p><a class="button" href="${post.cta.href}">${post.cta.text}</a></p></div>`;
+  const cta = `<div class="article-cta"><h3>${post.cta.heading}</h3><p>${post.cta.body}</p><p><a class="button" href="${post.cta.href}">${post.cta.text}</a></p></div>`;
 
   const faq = `<h2 id="faq">Frequently asked questions</h2><div class="faq">${post.faq
     .map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`)
