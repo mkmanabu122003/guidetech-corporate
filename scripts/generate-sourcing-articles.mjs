@@ -881,7 +881,7 @@ function write(file, html) {
   console.log(`wrote ${file}`);
 }
 
-function head({ title, description, canonical, schemas, ogType = "website" }) {
+function head({ title, description, canonical, schemas, ogType = "website", ogImage = "/assets/japan-partner/images/og-default.webp" }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -894,7 +894,7 @@ function head({ title, description, canonical, schemas, ogType = "website" }) {
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:url" content="${site}${canonical}">
-  <meta property="og:image" content="${site}/assets/japan-partner/images/og-default.webp">
+  <meta property="og:image" content="${site}${ogImage}">
   <meta name="twitter:card" content="summary_large_image">
 ${analyticsBlock()}
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -965,6 +965,19 @@ function renderBlock(block) {
   }
 }
 
+/** Thumbnail path for a post. Legacy posts keep their original cover art. */
+function thumb(slug) {
+  const legacy = {
+    "japanese-translation-services-pricing-guide": "blog-pricing.webp",
+    "software-localization-japan-guide": "blog-localization.webp",
+    "japanese-translation-agency-vs-localization-partner": "blog-agency-vs-partner.webp",
+    "doing-business-in-japan-for-software-companies": "blog-doing-business.webp"
+  };
+  return legacy[slug]
+    ? `/assets/japan-partner/images/${legacy[slug]}`
+    : `/assets/japan-partner/images/blog/${slug}.webp`;
+}
+
 function articleSchemas(post, url) {
   return [
     {
@@ -972,6 +985,7 @@ function articleSchemas(post, url) {
       "@type": "Article",
       headline: post.title,
       description: post.description,
+      image: `${site}${thumb(post.slug)}`,
       author: { "@type": "Organization", name: serviceName },
       publisher: { "@type": "Organization", name: "GuideTech", url: site },
       datePublished: today,
@@ -1024,13 +1038,16 @@ function renderArticle(post) {
     .map((section, i) => `<a href="#section-${i + 1}">${section.h}</a>`)
     .join("")}<a href="#faq">Frequently asked questions</a><a href="${post.cta.href}">${post.cta.text}</a></aside>`;
 
-  const body = `<section class="section alt"><div class="wrap article-layout"><article class="article"><p class="eyebrow">${post.kw}</p><h1>${post.title}</h1><p class="article-meta">By ${serviceName} · Updated ${today}</p><p>${post.lead}</p>${sections}${cta}${faq}${related}</article>${toc}</div></section>`;
+  const cover = `<figure class="article-cover"><img src="${thumb(post.slug)}" alt="${esc(post.title)}" width="1200" height="675" fetchpriority="high"></figure>`;
+
+  const body = `<section class="section alt"><div class="wrap article-layout"><article class="article"><p class="eyebrow">${post.kw}</p><h1>${post.title}</h1><p class="article-meta">By ${serviceName} · Updated ${today}</p>${cover}<p>${post.lead}</p>${sections}${cta}${faq}${related}</article>${toc}</div></section>`;
 
   return `${head({
     title: `${post.title} | GuideTech`,
     description: post.description,
     canonical: url,
     ogType: "article",
+    ogImage: thumb(post.slug),
     schemas: articleSchemas(post, url)
   })}
 ${header("blog")}
@@ -1054,7 +1071,7 @@ function cardsFor(list) {
   return `<div class="grid two">${list
     .map(
       (post) =>
-        `<article class="card"><p class="eyebrow">${post.kw}</p><h3><a href="/${OUT_DIR}/${post.slug}.html">${post.title}</a></h3><p>${post.description}</p></article>`
+        `<article class="card"><a class="card-thumb" href="/${OUT_DIR}/${post.slug}.html"><img src="${thumb(post.slug)}" alt="${esc(post.title)}" width="1200" height="675" loading="lazy"></a><p class="eyebrow">${post.kw}</p><h3><a href="/${OUT_DIR}/${post.slug}.html">${post.title}</a></h3><p>${post.description}</p></article>`
     )
     .join("")}</div>`;
 }
@@ -1069,6 +1086,7 @@ write(
     title: `${indexTitle} | GuideTech Japan Partner`,
     description: indexDescription,
     canonical: `/${OUT_DIR}/`,
+    ogImage: thumb("how-to-find-japanese-suppliers"),
     schemas: [
       {
         "@context": "https://schema.org",

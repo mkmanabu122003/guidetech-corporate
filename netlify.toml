@@ -33,6 +33,12 @@
   force = true
 
 [[redirects]]
+  from = "/image-src/*"
+  to = "/japan-partner/en/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
   from = "/docs/*"
   to = "/japan-partner/en/404.html"
   status = 404
