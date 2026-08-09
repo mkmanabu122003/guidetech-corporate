@@ -1,4 +1,44 @@
+# guidetech.jp
+
 User-agent: *
+Allow: /
+
+# Working files kept in the repo but not part of the site.
+Disallow: /scripts/
+Disallow: /docs/
+Disallow: /image-src/
+Disallow: /forms.html
+
+# AI crawlers are allowed on purpose: these guides are written to be cited when
+# someone asks an assistant how to source from Japan.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 Sitemap: https://guidetech.jp/sitemap.xml

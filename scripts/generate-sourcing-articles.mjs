@@ -25,6 +25,8 @@ const OUT_DIR = "japan-partner/en/blog";
 const posts = [
   {
     slug: "how-to-find-japanese-suppliers",
+    seoTitle: "How to Find Japanese Suppliers",
+    seoDescription: "The five sourcing channels that work in Japan, why most wholesale routes are closed to foreign buyers, and how to verify a company before you pay.",
     kw: "how to find japanese suppliers",
     title: "How to Find Japanese Suppliers: A Practical Guide for Overseas Buyers",
     description:
@@ -151,6 +153,8 @@ const posts = [
 
   {
     slug: "how-to-find-matcha-supplier-japan",
+    seoTitle: "How to Find a Matcha Supplier in Japan",
+    seoDescription: "Growing regions, the four supplier types, what ceremonial grade really means, the tencha shortage, and the certificates to demand before ordering.",
     kw: "matcha supplier japan",
     title: "How to Find a Matcha Supplier in Japan",
     description:
@@ -268,6 +272,8 @@ const posts = [
 
   {
     slug: "japanese-pokemon-card-wholesale-guide",
+    seoTitle: "Japanese Trading Card Wholesale Explained",
+    seoDescription: "Why overseas buyers cannot open a Japanese TCG wholesale account, what distributors require, how allocation works, and the lawful routes in.",
     kw: "japanese pokemon card wholesale distributors",
     title: "Japanese Trading Card Wholesale: How Japanese Distribution Actually Works",
     description:
@@ -365,6 +371,8 @@ const posts = [
 
   {
     slug: "japanese-skincare-cosmetics-sourcing-guide",
+    seoTitle: "Japanese Skincare Sourcing: Wholesale vs OEM",
+    seoDescription: "Authorised wholesale, the risks of parallel import, and OEM private label in Japan: licences, minimums, lead times and destination compliance.",
     kw: "japanese skincare wholesale suppliers",
     title: "Japanese Skincare and Cosmetics Sourcing: Wholesale vs OEM",
     description:
@@ -450,6 +458,8 @@ const posts = [
 
   {
     slug: "japanese-snacks-confectionery-wholesale-guide",
+    seoTitle: "Japanese Snack and Confectionery Wholesale",
+    seoDescription: "Japan's distribution layers, the shelf-life mathematics that catches new importers, and the allergen and additive rules your market will apply.",
     kw: "japanese candy wholesale suppliers",
     title: "Japanese Snacks and Confectionery Wholesale: A Sourcing Guide",
     description:
@@ -529,6 +539,8 @@ const posts = [
 
   {
     slug: "how-to-verify-a-japanese-company",
+    seoTitle: "How to Verify a Japanese Company",
+    seoDescription: "Check a Japanese supplier with public records: the free corporate register, the commercial register extract, credit reports and safe payment terms.",
     kw: "verify japanese supplier",
     title: "How to Verify a Japanese Company Before You Pay",
     description:
@@ -636,6 +648,8 @@ const posts = [
 
   {
     slug: "japanese-kitchen-knives-wholesale-sourcing",
+    seoTitle: "Japanese Kitchen Knives Wholesale Guide",
+    seoDescription: "The four production regions, forged versus stamped, the steel families, realistic minimums, and the export rules that catch new importers.",
     kw: "japanese kitchen knives wholesale",
     title: "Japanese Kitchen Knives Wholesale: A Sourcing Guide",
     description:
@@ -735,6 +749,8 @@ const posts = [
 
   {
     slug: "japanese-trade-shows-sourcing-guide",
+    seoTitle: "Sourcing at Japanese Trade Shows",
+    seoDescription: "Which Japanese trade shows matter by category, how to build a target list, why follow-up decides the outcome, and how proxy attendance works.",
     kw: "japan trade show",
     title: "Sourcing at Japanese Trade Shows, With or Without Flying",
     description:
@@ -901,6 +917,7 @@ ${analyticsBlock()}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/japan-partner/style.css">
+  <link rel="alternate" type="application/rss+xml" title="GuideTech Japan sourcing guides" href="/japan-partner/en/blog/feed.xml">
 ${schemas.map((s) => `<script type="application/ld+json">${json(s)}</script>`).join("\n")}
 </head>`;
 }
@@ -965,6 +982,35 @@ function renderBlock(block) {
   }
 }
 
+/** Organization entity, repeated on every page so AI and search engines can
+ *  resolve "GuideTech Japan Partner" to a single, consistent operator. */
+function organization() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${site}/#organization`,
+    name: "GuideTech",
+    alternateName: serviceName,
+    url: site,
+    description:
+      "Tokyo-based local operating partner for overseas companies working with Japan: supplier sourcing and verification, localization, Japanese-language communication and reporting to headquarters.",
+    areaServed: { "@type": "Country", name: "Japan" },
+    knowsLanguage: ["ja", "en", "es"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Shibuya-ku",
+      addressRegion: "Tokyo",
+      addressCountry: "JP"
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      url: `${site}/japan-partner/en/contact.html`,
+      availableLanguage: ["English", "Japanese", "Spanish"]
+    }
+  };
+}
+
 /** Thumbnail path for a post. Legacy posts keep their original cover art. */
 function thumb(slug) {
   const legacy = {
@@ -986,8 +1032,10 @@ function articleSchemas(post, url) {
       headline: post.title,
       description: post.description,
       image: `${site}${thumb(post.slug)}`,
-      author: { "@type": "Organization", name: serviceName },
-      publisher: { "@type": "Organization", name: "GuideTech", url: site },
+      author: { "@id": `${site}/#organization` },
+      publisher: { "@id": `${site}/#organization` },
+      isAccessibleForFree: true,
+      inLanguage: "en",
       datePublished: today,
       dateModified: today,
       mainEntityOfPage: `${site}${url}`
@@ -1043,8 +1091,8 @@ function renderArticle(post) {
   const body = `<section class="section alt"><div class="wrap article-layout"><article class="article"><p class="eyebrow">${post.kw}</p><h1>${post.title}</h1><p class="article-meta">By ${serviceName} · Updated ${today}</p>${cover}<p>${post.lead}</p>${sections}${cta}${faq}${related}</article>${toc}</div></section>`;
 
   return `${head({
-    title: `${post.title} | GuideTech`,
-    description: post.description,
+    title: `${post.seoTitle || post.title} | GuideTech`,
+    description: post.seoDescription || post.description,
     canonical: url,
     ogType: "article",
     ogImage: thumb(post.slug),
@@ -1077,29 +1125,19 @@ function cardsFor(list) {
 }
 
 const indexTitle = "Japan Sourcing and Market Entry Guides";
+const indexSeoTitle = "Japan Sourcing Guides";
 const indexDescription =
-  "Practical guides for overseas buyers and companies working with Japan: finding and verifying Japanese suppliers, sourcing matcha, trading cards, skincare and confectionery, plus localization and market entry.";
+  "Practical guides from Tokyo on finding and verifying Japanese suppliers, and on sourcing matcha, trading cards, skincare and confectionery from Japan.";
 
 write(
   `${OUT_DIR}/index.html`,
   `${head({
-    title: `${indexTitle} | GuideTech Japan Partner`,
+    title: `${indexSeoTitle} | GuideTech Japan Partner`,
     description: indexDescription,
     canonical: `/${OUT_DIR}/`,
     ogImage: thumb("how-to-find-japanese-suppliers"),
     schemas: [
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        name: "GuideTech",
-        url: site,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Shibuya-ku",
-          addressRegion: "Tokyo",
-          addressCountry: "JP"
-        }
-      },
+      organization(),
       {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -1160,6 +1198,36 @@ const sitemapUrls = [
   ...legacyPosts.map((p) => `/${OUT_DIR}/${p.slug}.html`),
   ...esPostSlugs.map((slug) => `/japan-partner/es/blog/${slug}.html`)
 ];
+
+/* ------------------------------------------------------------------ *
+ * RSS feed
+ * ------------------------------------------------------------------ */
+
+const feedItems = [...posts, ...legacyPosts];
+write(
+  `${OUT_DIR}/feed.xml`,
+  `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>${indexTitle} | ${serviceName}</title>
+    <link>${site}/${OUT_DIR}/</link>
+    <description>${indexDescription}</description>
+    <language>en</language>
+    <atom:link href="${site}/${OUT_DIR}/feed.xml" rel="self" type="application/rss+xml" />
+${feedItems
+  .map(
+    (post) => `    <item>
+      <title>${esc(post.seoTitle || post.title)}</title>
+      <link>${site}/${OUT_DIR}/${post.slug}.html</link>
+      <guid isPermaLink="true">${site}/${OUT_DIR}/${post.slug}.html</guid>
+      <description>${esc(post.seoDescription || post.description)}</description>
+    </item>`
+  )
+  .join("\n")}
+  </channel>
+</rss>
+`
+);
 
 write(
   "sitemap.xml",

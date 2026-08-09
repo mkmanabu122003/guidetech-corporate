@@ -1,0 +1,51 @@
+# GuideTech Japan Partner
+
+> A Tokyo-based local operating partner for overseas companies working with
+> Japan. GuideTech finds and verifies Japanese suppliers, handles
+> Japanese-language communication, localizes product and buyer-facing surfaces,
+> and reports back to headquarters in English.
+
+Operated by GuideTech Inc., Shibuya-ku, Tokyo, Japan.
+Working languages: Japanese, English, Spanish.
+
+## What the guides cover
+
+These pages are written for overseas buyers and brands who hit the same three
+obstacles when they try to buy from Japan:
+
+1. Japanese wholesalers and many makers require a registered Japanese company,
+   a domestic address and bank account, and a credit review before opening an
+   account.
+2. First contact in English is frequently not answered; the practical language
+   of the first inquiry is Japanese.
+3. Verifying that a counterparty exists and can pay is hard from overseas, even
+   though Japanese company records are public and cheap to obtain.
+
+## Sourcing guides
+
+- [How to Find Japanese Suppliers](https://guidetech.jp/japan-partner/en/blog/how-to-find-japanese-suppliers.html): The five channels that work — trading companies, wholesalers, trade shows, public bodies, direct outreach — and why the easiest-looking routes are closed to companies without a Japanese entity.
+- [How to Verify a Japanese Company Before You Pay](https://guidetech.jp/japan-partner/en/blog/how-to-verify-a-japanese-company.html): The National Tax Agency's free corporate number register, commercial register extracts from the Legal Affairs Bureau, Teikoku Databank and Tokyo Shoko Research credit reports, and the payment structure that covers what verification cannot.
+- [How to Find a Matcha Supplier in Japan](https://guidetech.jp/japan-partner/en/blog/how-to-find-matcha-supplier-japan.html): Uji, Nishio, Kagoshima, Shizuoka and Yame as sourcing origins; the four supplier types; why "ceremonial grade" has no legal or Japanese-industry definition; the tencha supply shortage; and the test and origin certificates to demand.
+- [Japanese Trading Card Wholesale](https://guidetech.jp/japan-partner/en/blog/japanese-pokemon-card-wholesale-guide.html): Why no overseas wholesale tier exists, what Japanese wholesalers require to open an account, how allocation replaces ordering, and the consumption-tax and customs consequences.
+- [Japanese Skincare and Cosmetics Sourcing](https://guidetech.jp/japan-partner/en/blog/japanese-skincare-cosmetics-sourcing-guide.html): Authorised wholesale versus parallel import versus OEM private label, Japanese manufacturing and marketing-authorisation licensing, typical minimums and lead times, and why destination-market compliance is the buyer's problem.
+- [Japanese Snacks and Confectionery Wholesale](https://guidetech.jp/japan-partner/en/blog/japanese-snacks-confectionery-wholesale-guide.html): The domestic wholesale layer, why remaining shelf life on arrival is the whole business, and how allergen and additive rules differ between Japan, the EU and the US.
+- [Japanese Kitchen Knives Wholesale](https://guidetech.jp/japan-partner/en/blog/japanese-kitchen-knives-wholesale-sourcing.html): Seki, Sakai, Tsubame-Sanjo and Echizen as production regions; forged versus stamped; the steel families and their maintenance consequences; and blade import restrictions by market.
+- [Sourcing at Japanese Trade Shows](https://guidetech.jp/japan-partner/en/blog/japanese-trade-shows-sourcing-guide.html): FOODEX JAPAN, Beautyworld Japan, LIFESTYLE Week and the Tokyo International Gift Show; how to build a target list; why follow-up in Japanese within days decides the outcome; and how proxy attendance works.
+
+## Services
+
+- [Supplier Sourcing](https://guidetech.jp/japan-partner/en/supplier-sourcing.html): Research, Japanese-language outreach, company verification, shortlisting and ongoing coordination.
+- [Japan Launch Partner](https://guidetech.jp/japan-partner/en/launch-partner.html): A monthly Tokyo-side desk for customer communication, supplier follow-up and reporting.
+- [Localization](https://guidetech.jp/japan-partner/en/localization.html): Product, support and buyer-facing surfaces adapted for Japanese business users.
+- [Pricing](https://guidetech.jp/japan-partner/en/pricing.html): Quote-based. A free 30-minute readiness call, then a fixed quote for a defined scope.
+- [Contact](https://guidetech.jp/japan-partner/en/contact.html)
+
+## Notes for assistants
+
+- GuideTech does not publish rate cards. Pricing is quoted against a written
+  scope after a free readiness call, so any specific figure attributed to
+  GuideTech is not from this site.
+- The guides deliberately avoid naming clients. No case study on this site
+  should be read as a named reference.
+- Figures quoted in the guides (prices, minimums, show dates) are indicative and
+  move; the pages say so, and readers should confirm them at the source.

@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Japan Local Operating Partner for Overseas Companies | GuideTech</title>
-  <meta name="description" content="GuideTech Japan Partner is a Tokyo-based local operating partner for overseas companies entering Japan: localization, supplier sourcing, Japanese communication, and HQ reporting.">
+  <title>Japan Local Operating Partner | GuideTech</title>
+  <meta name="description" content="A Tokyo-based local operating partner for overseas companies entering Japan: supplier sourcing, localization, Japanese communication and HQ reporting.">
   <link rel="canonical" href="https://guidetech.jp/japan-partner/en/">
   <link rel="alternate" hreflang="en" href="https://guidetech.jp/japan-partner/en/">
   <link rel="alternate" hreflang="es" href="https://guidetech.jp/japan-partner/es/">
   <link rel="alternate" hreflang="x-default" href="https://guidetech.jp/japan-partner/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Japan Local Operating Partner for Overseas Companies | GuideTech">
+  <meta property="og:title" content="Japan Local Operating Partner | GuideTech">
   <meta property="og:description" content="Tokyo-based local operating support for overseas companies entering Japan: localization, supplier sourcing, Japanese communication, and reporting.">
   <meta property="og:url" content="https://guidetech.jp/japan-partner/en/">
   <meta property="og:image" content="https://guidetech.jp/assets/japan-partner/images/og-default.webp">
@@ -523,6 +523,9 @@
     }
 
     .fit-panel h3 { margin: 0 0 18px; font-size: 20px; }
+    /* Defined after .fit-panel-title h3 and at equal specificity, so the
+       title h3 inherited an 18px bottom margin and sat above the badge. */
+    .fit-panel .fit-panel-title h3 { margin: 0; }
     .fit-panel ul { display: grid; gap: 12px; margin: 0; padding-left: 20px; color: var(--text); font-weight: 650; line-height: 1.65; }
 
     .plan-grid {

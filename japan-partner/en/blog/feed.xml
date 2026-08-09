@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Japan Sourcing and Market Entry Guides | GuideTech Japan Partner</title>
+    <link>https://guidetech.jp/japan-partner/en/blog/</link>
+    <description>Practical guides from Tokyo on finding and verifying Japanese suppliers, and on sourcing matcha, trading cards, skincare and confectionery from Japan.</description>
+    <language>en</language>
+    <atom:link href="https://guidetech.jp/japan-partner/en/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Find Japanese Suppliers</title>
+      <link>https://guidetech.jp/japan-partner/en/blog/how-to-find-japanese-suppliers.html</link>
+      <guid isPermaLink="true">https://guidetech.jp/japan-partner/en/blog/how-to-find-japanese-suppliers.html</guid>
+      <description>The five sourcing channels that work in Japan, why most wholesale routes are closed to foreign buyers, and how to verify a company before you pay.</description>
+    </item>
+    <item>
+      <title>How to Find a Matcha Supplier in Japan</title>
+      <link>https://guidetech.jp/japan-partner/en/blog/how-to-find-matcha-supplier-japan.html</link>
+      <guid isPermaLink="true">https://guidetech.jp/japan-partner/en/blog/how-to-find-matcha-supplier-japan.html</guid>
+      <description>Growing regions, the four supplier types, what ceremonial grade really means, the tencha shortage, and the certificates to demand before ordering.</description>
+    </item>
+    <item>
+      <title>Japanese Trading Card Wholesale Explained</title>
+      <link>https://guidetech.jp/japan-partner/en/blog/japanese-pokemon-card-wholesale-guide.html</link>
+      <guid isPermaLink="true">https://guidetech.jp/japan-partner/en/blog/japanese-pokemon-card-wholesale-guide.html</guid>
+      <description>Why overseas buyers cannot open a Japanese TCG wholesale account, what distributors require, how allocation works, and the lawful routes in.</description>
+    </item>
+    <item>
+      <title>Japanese Skincare Sourcing: Wholesale vs OEM</title>
+      <link>https://guidetech.jp/japan-partner/en/blog/japanese-skincare-cosmetics-sourcing-guide.html</link>
+      <guid isPermaLink="true">https://guidetech.jp/japan-partner/en/blog/japanese-skincare-cosmetics-sourcing-guide.html</guid>
+      <description>Authorised wholesale, the risks of parallel import, and OEM private label in Japan: licences, minimums, lead times and destination compliance.</description>
+    </item>
+    <item>
+      <title>Japanese Snack and Confectionery Wholesale</title>
+      <link>https://guidetech.jp/japan-partner/en/blog/japanese-snacks-confectionery-wholesale-guide.html</link>
+      <guid isPermaLink="true">https://guidetech.jp/japan-partner/en/blog/japanese-snacks-confectionery-wholesale-guide.html</guid>
+      <description>Japan's distribution layers, the shelf-life mathematics that catches new importers, and the allergen and additive rules your market will apply.</description>
+    </item>
+    <item>
+      <title>How to Verify a Japanese Company</title>
+      <link>https://guidetech.jp/japan-partner/en/blog/how-to-verify-a-japanese-company.html</link>
+      <guid isPermaLink="true">https://guidetech.jp/japan-partner/en/blog/how-to-verify-a-japanese-company.html</guid>
+      <description>Check a Japanese supplier with public records: the free corporate register, the commercial register extract, credit reports and safe payment terms.</description>
+    </item>
+    <item>
+      <title>Japanese Kitchen Knives Wholesale Guide</title>
+      <link>https://guidetech.jp/japan-partner/en/blog/japanese-kitchen-knives-wholesale-sourcing.html</link>
+      <guid isPermaLink="true">https://guidetech.jp/japan-partner/en/blog/japanese-kitchen-knives-wholesale-sourcing.html</guid>
+      <description>The four production regions, forged versus stamped, the steel families, realistic minimums, and the export rules that catch new importers.</description>
+    </item>
+    <item>
+      <title>Sourcing at Japanese Trade Shows</title>
+      <link>https://guidetech.jp/japan-partner/en/blog/japanese-trade-shows-sourcing-guide.html</link>
+      <guid isPermaLink="true">https://guidetech.jp/japan-partner/en/blog/japanese-trade-shows-sourcing-guide.html</guid>
+      <description>Which Japanese trade shows matter by category, how to build a target list, why follow-up decides the outcome, and how proxy attendance works.</description>
+    </item>
+    <item>
+      <title>Japanese Translation Services Price Guide for Software Teams</title>
+      <link>https://guidetech.jp/japan-partner/en/blog/japanese-translation-services-pricing-guide.html</link>
+      <guid isPermaLink="true">https://guidetech.jp/japan-partner/en/blog/japanese-translation-services-pricing-guide.html</guid>
+      <description>A practical guide to Japanese translation services price ranges, localization costs, and when software teams should budget beyond word rates.</description>
+    </item>
+    <item>
+      <title>Software Localization Japan Guide for AI and SaaS Companies</title>
+      <link>https://guidetech.jp/japan-partner/en/blog/software-localization-japan-guide.html</link>
+      <guid isPermaLink="true">https://guidetech.jp/japan-partner/en/blog/software-localization-japan-guide.html</guid>
+      <description>A practical software localization Japan guide covering UI, honorific tone, local formats, LINE, payments, invoices, support, and launch readiness.</description>
+    </item>
+    <item>
+      <title>Japanese Translation Agency vs Localization Partner</title>
+      <link>https://guidetech.jp/japan-partner/en/blog/japanese-translation-agency-vs-localization-partner.html</link>
+      <guid isPermaLink="true">https://guidetech.jp/japan-partner/en/blog/japanese-translation-agency-vs-localization-partner.html</guid>
+      <description>How a Japanese translation agency differs from a localization partner for AI and SaaS companies launching in Japan.</description>
+    </item>
+    <item>
+      <title>Doing Business in Japan for Software Companies</title>
+      <link>https://guidetech.jp/japan-partner/en/blog/doing-business-in-japan-for-software-companies.html</link>
+      <guid isPermaLink="true">https://guidetech.jp/japan-partner/en/blog/doing-business-in-japan-for-software-companies.html</guid>
+      <description>A first-90-days guide to doing business in Japan for overseas AI and SaaS companies without a local office.</description>
+    </item>
+  </channel>
+</rss>
