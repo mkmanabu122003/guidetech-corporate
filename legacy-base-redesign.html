@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUIDE TECH Corporate Redesign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #030509;
+      --ink: #0a1020;
+      --white: #ffffff;
+      --soft: #f4f5f1;
+      --line: rgba(255, 255, 255, 0.16);
+      --line-light: #d9ddd5;
+      --muted: #707987;
+      --blue: #255cff;
+      --blue-2: #1a47d8;
+      --green: #2e6a55;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--black);
+      font-family: "Inter", "Noto Sans JP", sans-serif;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      color: var(--white);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(3, 5, 9, 0.78);
+      backdrop-filter: blur(22px);
+    }
+
+    .header-inner {
+      width: min(1280px, calc(100% - 40px));
+      height: 84px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .nav a:hover {
+      color: var(--white);
+    }
+
+    .lang {
+      display: flex;
+      gap: 6px;
+      color: rgba(255, 255, 255, 0.46);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .contact-button {
+      padding: 13px 18px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--blue);
+      border-radius: 3px;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      color: var(--white);
+      background: var(--black);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "GUIDE TECH";
+      position: absolute;
+      right: -0.08em;
+      bottom: 0.08em;
+      z-index: 1;
+      color: rgba(255, 255, 255, 0.035);
+      font-size: clamp(92px, 20vw, 300px);
+      line-height: 0.8;
+      font-weight: 900;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      opacity: 0.5;
+    }
+
+    .hero-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 68% 24%, rgba(37, 92, 255, 0.34), transparent 28%),
+        linear-gradient(90deg, rgba(3, 5, 9, 0.98), rgba(3, 5, 9, 0.76) 46%, rgba(3, 5, 9, 0.28)),
+        linear-gradient(0deg, rgba(3, 5, 9, 0.98), transparent 58%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(1280px, calc(100% - 40px));
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 150px 0 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .kicker {
+      margin: 0 0 18px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 980px;
+      margin: 0;
+      font-size: clamp(72px, 12vw, 176px);
+      line-height: 0.82;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .hero h1 span {
+      color: rgba(255, 255, 255, 0.42);
+    }
+
+    .hero-lead {
+      max-width: 720px;
+      margin: 32px 0 36px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: clamp(15px, 1.6vw, 19px);
+      line-height: 1.9;
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 14px 18px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .button.primary {
+      color: var(--white);
+      background: var(--blue);
+    }
+
+    .button.secondary {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .scroll {
+      margin-top: 76px;
+      color: rgba(255, 255, 255, 0.38);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-domains {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      width: min(860px, 100%);
+      margin-top: 46px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .hero-domain {
+      padding: 22px;
+      background: rgba(3, 5, 9, 0.42);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-domain b {
+      display: block;
+      margin-bottom: 7px;
+      color: white;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .hero-domain p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .section {
+      padding: 118px 0;
+      background: var(--white);
+    }
+
+    .section.dark {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .section.soft {
+      background: var(--soft);
+    }
+
+    .wrap {
+      width: min(1280px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.58fr);
+      gap: 64px;
+      align-items: end;
+      margin-bottom: 58px;
+    }
+
+    .label {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: clamp(48px, 7vw, 104px);
+      line-height: 0.9;
+      font-weight: 900;
+    }
+
+    .section-desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 2.05;
+      font-weight: 600;
+    }
+
+    .dark .section-desc {
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    .philosophy {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .philosophy-copy {
+      margin: 0;
+      font-size: clamp(40px, 6.2vw, 92px);
+      line-height: 1.02;
+      font-weight: 900;
+    }
+
+    .philosophy-copy span {
+      color: var(--blue);
+    }
+
+    .philosophy-text {
+      margin: 8px 0 0;
+      color: rgba(255, 255, 255, 0.64);
+      line-height: 2.1;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .service-lead {
+      margin-bottom: 34px;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .service-row {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      border-top: 1px solid var(--line);
+      min-height: 430px;
+    }
+
+    .service-row:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-row.reverse {
+      grid-template-columns: 1.28fr 0.72fr;
+    }
+
+    .service-row.reverse .service-media {
+      order: 2;
+    }
+
+    .service-media {
+      min-height: 430px;
+      overflow: hidden;
+    }
+
+    .service-media img {
+      filter: saturate(0.92) contrast(1.04);
+      transform: scale(1.01);
+    }
+
+    .service-content {
+      padding: 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .service-no {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .service-content h3 {
+      margin: 14px 0 18px;
+      font-size: clamp(52px, 7.2vw, 112px);
+      line-height: 0.84;
+      font-weight: 900;
+    }
+
+    .service-content p {
+      max-width: 640px;
+      margin: 0 0 30px;
+      color: rgba(255, 255, 255, 0.66);
+      line-height: 1.95;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .service-tags span {
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: rgba(255, 255, 255, 0.84);
+      background: rgba(255, 255, 255, 0.035);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .challenges {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .challenge {
+      padding: 34px;
+      border: 1px solid var(--line-light);
+      background: var(--white);
+      box-shadow: 0 20px 60px rgba(10, 16, 32, 0.05);
+    }
+
+    .challenge h3 {
+      margin: 0 0 24px;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.02;
+      font-weight: 900;
+    }
+
+    .challenge ul {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .challenge li {
+      color: var(--muted);
+      line-height: 1.72;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .challenge li::before {
+      content: "— ";
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      border-top: 1px solid var(--line-light);
+      border-left: 1px solid var(--line-light);
+    }
+
+    .flow-step {
+      min-height: 210px;
+      padding: 26px;
+      border-right: 1px solid var(--line-light);
+      border-bottom: 1px solid var(--line-light);
+      background: var(--white);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .flow-step:hover {
+      background: #f8f9fb;
+      transform: translateY(-2px);
+    }
+
+    .flow-step span {
+      display: block;
+      margin-bottom: 34px;
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .flow-step h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.1;
+      font-weight: 900;
+    }
+
+    .flow-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.78;
+      font-weight: 600;
+    }
+
+    .company {
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+      gap: 74px;
+    }
+
+    .company-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-top: 1px solid var(--line-light);
+    }
+
+    .company-table th,
+    .company-table td {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line-light);
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.8;
+    }
+
+    .company-table th {
+      width: 170px;
+      font-weight: 900;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .company-table td {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .cta {
+      padding: 104px 0;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2), transparent 26%),
+        var(--blue);
+    }
+
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .cta h2 {
+      margin: 0 0 16px;
+      font-size: clamp(56px, 8vw, 116px);
+      line-height: 0.84;
+      font-weight: 900;
+    }
+
+    .cta p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.85;
+      font-weight: 600;
+    }
+
+    .cta .button {
+      color: var(--ink);
+      background: var(--white);
+    }
+
+    footer {
+      padding: 38px 0;
+      color: rgba(255, 255, 255, 0.46);
+      background: var(--black);
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .nav,
+      .lang {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: clamp(56px, 18vw, 92px);
+      }
+
+      .section {
+        padding: 82px 0;
+      }
+
+      .section-head,
+      .philosophy,
+      .service-row,
+      .service-row.reverse,
+      .challenges,
+      .flow,
+      .company,
+      .cta-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-domains {
+        grid-template-columns: 1fr;
+      }
+
+      .service-row.reverse .service-media {
+        order: 0;
+      }
+
+      .service-content {
+        padding: 34px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="#">GUIDE TECH</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#philosophy">Philosophy</a>
+        <a href="#services">Services</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#company">Company</a>
+      </nav>
+      <div class="lang">JA | EN</div>
+      <a class="contact-button" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/images/corporate-tokyo-downtown.jpg" alt="">
+      </div>
+      <div class="hero-inner">
+        <p class="kicker">Business Support / Travel Arrangement</p>
+        <h1>Guide<br><span>Forward.</span></h1>
+        <p class="hero-lead">
+          事業を支え、旅を整える。株式会社GUIDE TECHは、AIコンサルティング事業と旅行サービス手配業を展開しています。
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#services">Our Services</a>
+          <a class="button secondary" href="#philosophy">About GUIDE TECH</a>
+        </div>
+        <div class="hero-domains" aria-label="Business domains">
+          <section class="hero-domain">
+            <b>AI Consulting</b>
+            <p>AI導入、業務効率化、社内活用の設計と定着支援。</p>
+          </section>
+          <section class="hero-domain">
+            <b>Travel Arrangement</b>
+            <p>訪日旅行に必要な旅程、移動、予約、ガイド手配。</p>
+          </section>
+        </div>
+        <p class="scroll">Scroll</p>
+      </div>
+    </section>
+
+    <section class="section dark" id="philosophy">
+      <div class="wrap philosophy">
+        <div>
+          <p class="label">Philosophy</p>
+          <p class="philosophy-copy">
+            相談を整理し、<span>実行できる形</span>にする。
+          </p>
+        </div>
+        <p class="philosophy-text">
+          GUIDE TECHは、企業のAI活用と訪日旅行の手配という異なる領域で、必要な支援を具体化する会社です。抽象的な提案で終わらせず、相談内容を整理し、実務や手配に落とし込むことを大切にしています。
+        </p>
+      </div>
+    </section>
+
+    <section class="section dark" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="label">Services</p>
+            <h2>Two Business Domains</h2>
+          </div>
+          <p class="section-desc">
+            AIコンサルティング事業と旅行サービス手配業を、それぞれ独立した事業として展開しています。
+          </p>
+        </div>
+
+        <article class="service-row">
+          <div class="service-media">
+            <img src="assets/images/ai-consulting-generated.png" alt="Japanese business team discussing AI consulting">
+          </div>
+          <div class="service-content">
+            <span class="service-no">Business 01</span>
+            <h3>AI Consulting</h3>
+            <p>生成AIや自動化ツールを、実際の業務に合わせて導入・活用するための支援を行います。</p>
+            <div class="service-tags">
+              <span>AI導入方針</span>
+              <span>業務効率化</span>
+              <span>社内定着</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-row reverse">
+          <div class="service-media">
+            <img src="assets/images/travel-arrangement-generated.png" alt="Travel coordinator arranging Japan itinerary">
+          </div>
+          <div class="service-content">
+            <span class="service-no">Business 02</span>
+            <h3>Travel Arrangement</h3>
+            <p>訪日外国人に向けて、旅程、移動、予約、ガイド手配など、日本滞在に必要な旅行サービスの手配を行います。</p>
+            <div class="service-tags">
+              <span>旅程相談</span>
+              <span>移動・送迎</span>
+              <span>予約代行</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section soft" id="challenges">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="label">Challenges</p>
+            <h2>このようなご相談に対応しています</h2>
+          </div>
+          <p class="section-desc">
+            初回相談で内容を整理し、必要な支援範囲や手配内容を明確にします。
+          </p>
+        </div>
+        <div class="challenges">
+          <section class="challenge">
+            <h3>AIコンサルティング</h3>
+            <ul>
+              <li>生成AIを業務に取り入れたい</li>
+              <li>資料作成や調査業務を効率化したい</li>
+              <li>社内のAI利用ルールを整えたい</li>
+              <li>現場で使える活用例を作りたい</li>
+            </ul>
+          </section>
+          <section class="challenge">
+            <h3>旅行サービス手配</h3>
+            <ul>
+              <li>訪日旅行の旅程を相談したい</li>
+              <li>空港送迎や移動を手配したい</li>
+              <li>飲食店や体験予約を依頼したい</li>
+              <li>ガイドや滞在中の相談先を探している</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="label">Process</p>
+            <h2>ご相談の流れ</h2>
+          </div>
+          <p class="section-desc">
+            お問い合わせ内容に応じて、支援範囲や手配内容を確認し、必要なご提案・お見積りを行います。
+          </p>
+        </div>
+        <div class="flow">
+          <section class="flow-step">
+            <span>01</span>
+            <h3>お問い合わせ</h3>
+            <p>内容を選んでご連絡ください。</p>
+          </section>
+          <section class="flow-step">
+            <span>02</span>
+            <h3>内容確認</h3>
+            <p>目的、課題、希望内容を確認します。</p>
+          </section>
+          <section class="flow-step">
+            <span>03</span>
+            <h3>範囲の整理</h3>
+            <p>必要な支援範囲を整理します。</p>
+          </section>
+          <section class="flow-step">
+            <span>04</span>
+            <h3>ご提案</h3>
+            <p>実施内容、期間、費用を提示します。</p>
+          </section>
+          <section class="flow-step">
+            <span>05</span>
+            <h3>実行支援</h3>
+            <p>支援または手配を進めます。</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="company">
+      <div class="wrap company">
+        <div>
+          <p class="label">Company</p>
+          <h2>会社概要</h2>
+          <p class="section-desc">
+            株式会社GUIDE TECHの基本情報です。
+          </p>
+        </div>
+        <table class="company-table">
+          <tbody>
+            <tr>
+              <th>会社名</th>
+              <td>株式会社GUIDE TECH</td>
+            </tr>
+            <tr>
+              <th>代表者</th>
+              <td>河原 学</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>〒150-0012<br>東京都渋谷区広尾1丁目2番地1号 ヒカリビル4階</td>
+            </tr>
+            <tr>
+              <th>事業内容</th>
+              <td>AIコンサルティング事業<br>旅行サービス手配業</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <div>
+          <h2>Contact</h2>
+          <p>AI活用、旅行サービス手配、提携相談など、内容に応じてお問い合わせください。</p>
+        </div>
+        <a class="button" href="contact.html">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© GUIDE TECH Inc. All Rights Reserved.</div>
+  </footer>
+</body>
+</html>

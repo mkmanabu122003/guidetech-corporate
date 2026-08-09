@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUIDE TECH Design Directions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #111827;
+      --muted: #667085;
+      --line: #d8dee8;
+      --paper: #ffffff;
+      --soft: #f7f7f3;
+      --navy: #132238;
+      --indigo: #1f3a5f;
+      --green: #2f6f5e;
+      --red: #a44533;
+      --gold: #b48a3c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #f2f3f0;
+      font-family: "Noto Sans JP", "Inter", sans-serif;
+      letter-spacing: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-header {
+      padding: 56px 0 34px;
+      background: #101820;
+      color: white;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .page-header p {
+      max-width: 760px;
+      margin: 14px 0 0;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.8;
+    }
+
+    .page-header h1 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: 1.12;
+    }
+
+    .direction {
+      margin: 32px auto;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 70px rgba(16, 24, 40, 0.08);
+      overflow: hidden;
+    }
+
+    .direction-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 26px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfbf8;
+    }
+
+    .direction-label b {
+      font-family: "Inter", sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .direction-label span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 800;
+      border: 1px solid transparent;
+    }
+
+    .section-label {
+      margin: 0 0 12px;
+      color: var(--gold);
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .mini-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      padding: 0 36px;
+      border-bottom: 1px solid rgba(216, 222, 232, 0.7);
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    .brand {
+      font-family: "Inter", sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .mini-nav nav {
+      display: flex;
+      gap: 24px;
+      color: #475467;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-a {
+      position: relative;
+      min-height: 620px;
+      display: grid;
+      align-items: end;
+      color: white;
+      background: #101820;
+    }
+
+    .hero-a .media {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-a .media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(11, 17, 29, 0.9), rgba(11, 17, 29, 0.42) 56%, rgba(11, 17, 29, 0.12));
+    }
+
+    .hero-a .content {
+      position: relative;
+      z-index: 1;
+      width: min(1060px, calc(100% - 72px));
+      padding: 86px 0 52px;
+      margin: 0 auto;
+    }
+
+    .hero-a h2 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(44px, 7vw, 84px);
+      line-height: 1.05;
+    }
+
+    .hero-a p {
+      max-width: 650px;
+      margin: 22px 0 32px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .hero-a .button {
+      background: white;
+      color: var(--navy);
+    }
+
+    .business-a {
+      padding: 72px 36px;
+      background: white;
+    }
+
+    .business-grid-a {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .business-card-a {
+      display: grid;
+      grid-template-columns: 0.85fr 1fr;
+      min-height: 360px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .business-card-a .body {
+      padding: 28px;
+    }
+
+    .business-card-a h3 {
+      margin: 0 0 14px;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+
+    .business-card-a p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .hero-b {
+      padding: 88px 36px 54px;
+      background: #f7f7f3;
+    }
+
+    .hero-b-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 44px;
+      align-items: center;
+    }
+
+    .hero-b h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(40px, 5vw, 72px);
+      line-height: 1.08;
+    }
+
+    .hero-b p {
+      margin: 22px 0 30px;
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 17px;
+    }
+
+    .hero-b .visual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .hero-b .photo {
+      aspect-ratio: 4 / 5;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .hero-b .photo:nth-child(2) {
+      margin-top: 42px;
+    }
+
+    .hero-b .button {
+      color: white;
+      background: var(--navy);
+    }
+
+    .domains-b {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: white;
+    }
+
+    .domain-b {
+      padding: 40px 36px;
+    }
+
+    .domain-b + .domain-b {
+      border-left: 1px solid var(--line);
+    }
+
+    .domain-b h3 {
+      margin: 0 0 12px;
+      font-size: 28px;
+    }
+
+    .domain-b p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .domain-b.ai {
+      border-top: 5px solid var(--indigo);
+    }
+
+    .domain-b.travel {
+      border-top: 5px solid var(--green);
+    }
+
+    .hero-c {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 650px;
+      background: #fbfaf5;
+    }
+
+    .hero-c .copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 72px 54px;
+    }
+
+    .hero-c h2 {
+      margin: 0;
+      color: #1f2933;
+      font-size: clamp(38px, 5vw, 68px);
+      line-height: 1.12;
+    }
+
+    .hero-c p {
+      margin: 24px 0 32px;
+      color: #586474;
+      font-size: 17px;
+      line-height: 1.95;
+    }
+
+    .hero-c .button {
+      align-self: flex-start;
+      color: white;
+      background: #1f2933;
+    }
+
+    .hero-c .photo {
+      position: relative;
+      min-height: 520px;
+    }
+
+    .hero-c .photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(31, 41, 51, 0.22), transparent 54%);
+    }
+
+    .values-c {
+      padding: 72px 54px;
+      background: #ffffff;
+    }
+
+    .values-c h3 {
+      margin: 0 0 30px;
+      font-size: 38px;
+      line-height: 1.25;
+    }
+
+    .value-list-c {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .value-c {
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .value-c b {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--red);
+      font-family: "Inter", sans-serif;
+      font-size: 13px;
+    }
+
+    .value-c p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    @media (max-width: 860px) {
+      .mini-nav nav {
+        display: none;
+      }
+
+      .hero-a .content,
+      .hero-b,
+      .business-a,
+      .hero-c .copy,
+      .values-c {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .business-grid-a,
+      .business-card-a,
+      .hero-b-inner,
+      .domains-b,
+      .hero-c,
+      .value-list-c {
+        grid-template-columns: 1fr;
+      }
+
+      .domain-b + .domain-b {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="wrap">
+      <h1>GUIDE TECH デザイン改善案</h1>
+      <p>競合コーポレートサイトを参考に、GUIDE TECHに合う3つの方向性をHTMLモックとして整理しました。最終的にはA案をベースに、B案の事業導線を組み合わせるのが現実的です。</p>
+    </div>
+  </header>
+
+  <section class="direction wrap">
+    <div class="direction-label">
+      <b>Direction A / Recommended</b>
+      <span>信頼重視のコーポレート型。Future、SIGMAXYZ、JTB Group系の落ち着いた見せ方。</span>
+    </div>
+    <div class="mini-nav">
+      <a class="brand" href="#">GUIDE TECH</a>
+      <nav>
+        <a href="#">About</a>
+        <a href="#">Business</a>
+        <a href="#">Company</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <section class="hero-a">
+      <div class="media">
+        <img src="assets/images/corporate-tokyo-downtown.jpg" alt="">
+      </div>
+      <div class="content">
+        <p class="section-label">GUIDE TECH Inc.</p>
+        <h2>事業を支え、旅を整える。</h2>
+        <p>株式会社GUIDE TECHは、法人向けのAI導入・業務改善支援と、訪日外国人向けの旅行サービス手配を行っています。</p>
+        <a class="button" href="#">事業内容を見る</a>
+      </div>
+    </section>
+    <section class="business-a">
+      <p class="section-label">Business</p>
+      <div class="business-grid-a">
+        <article class="business-card-a">
+          <div class="media">
+            <img src="assets/images/ai-consulting-generated.png" alt="">
+          </div>
+          <div class="body">
+            <h3>AIコンサルティング事業</h3>
+            <p>生成AIや自動化ツールを、実際の業務に合わせて導入・活用するための支援を行います。</p>
+          </div>
+        </article>
+        <article class="business-card-a">
+          <div class="media">
+            <img src="assets/images/travel-arrangement-generated.png" alt="">
+          </div>
+          <div class="body">
+            <h3>旅行サービス手配業</h3>
+            <p>訪日外国人に向けて、旅程、移動、予約、ガイド手配など日本滞在に必要な準備をサポートします。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </section>
+
+  <section class="direction wrap">
+    <div class="direction-label">
+      <b>Direction B</b>
+      <span>2ドメイン型。KNT-CT、JTB法人サービスのように事業入口を明確化。</span>
+    </div>
+    <div class="mini-nav">
+      <a class="brand" href="#">GUIDE TECH</a>
+      <nav>
+        <a href="#">AI Consulting</a>
+        <a href="#">Travel Arrangement</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <section class="hero-b">
+      <div class="hero-b-inner">
+        <div>
+          <p class="section-label">Two Business Domains</p>
+          <h2>AIと旅の相談を、実行できる形に。</h2>
+          <p>AI活用支援と旅行サービス手配。異なる2つの事業を、相談内容に応じてわかりやすく案内します。</p>
+          <a class="button" href="#">相談内容を選ぶ</a>
+        </div>
+        <div class="visual">
+          <div class="photo">
+            <img src="assets/images/ai-consulting-generated.png" alt="">
+          </div>
+          <div class="photo">
+            <img src="assets/images/travel-arrangement-generated.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="domains-b">
+      <article class="domain-b ai">
+        <p class="section-label">AI Consulting</p>
+        <h3>業務に合わせてAIを導入する。</h3>
+        <p>業務整理、活用方針、ワークフロー作成、社内定着までを支援します。</p>
+      </article>
+      <article class="domain-b travel">
+        <p class="section-label">Travel Arrangement</p>
+        <h3>日本滞在に必要な手配を行う。</h3>
+        <p>旅程、移動、予約、体験、ガイド手配などを来日前からサポートします。</p>
+      </article>
+    </section>
+  </section>
+
+  <section class="direction wrap">
+    <div class="direction-label">
+      <b>Direction C</b>
+      <span>日本らしい上質編集型。余白、写真、短いコピーで落ち着いた印象を作る。</span>
+    </div>
+    <div class="mini-nav">
+      <a class="brand" href="#">GUIDE TECH</a>
+      <nav>
+        <a href="#">Philosophy</a>
+        <a href="#">Business</a>
+        <a href="#">Company</a>
+      </nav>
+    </div>
+    <section class="hero-c">
+      <div class="copy">
+        <p class="section-label">Corporate Philosophy</p>
+        <h2>人の移動と、事業の前進を支える。</h2>
+        <p>企業のAI活用と、訪日旅行の手配。GUIDE TECHは、相談を整理し、必要な準備を進める会社です。</p>
+        <a class="button" href="#">GUIDE TECHについて</a>
+      </div>
+      <div class="photo">
+        <img src="assets/images/travel-japan-kyoto.jpg" alt="">
+      </div>
+    </section>
+    <section class="values-c">
+      <p class="section-label">What We Value</p>
+      <h3>複雑な相談を、進められる形に整える。</h3>
+      <div class="value-list-c">
+        <section class="value-c">
+          <b>01 Listening</b>
+          <p>課題や要望を丁寧に聞き取り、必要な支援内容を整理します。</p>
+        </section>
+        <section class="value-c">
+          <b>02 Planning</b>
+          <p>AI活用も旅行手配も、実行しやすい計画へ落とし込みます。</p>
+        </section>
+        <section class="value-c">
+          <b>03 Support</b>
+          <p>相談から実行まで、内容に応じて必要な対応を進めます。</p>
+        </section>
+      </div>
+    </section>
+  </section>
+</body>
+</html>

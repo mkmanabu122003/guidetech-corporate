@@ -2,8 +2,17 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
   <title>Forms</title>
 </head>
+<!--
+  Netlify form definitions. Netlify parses the real forms in the published
+  pages at deploy time, so this file is a safety net rather than the source of
+  truth. Keep the field names in sync with the live forms:
+    guidetech-contact       -> contact.html, index.html
+    japan-partner-contact   -> japan-partner/en/contact.html, japan-partner/es/contact.html
+    japan-partner-readiness -> japan-partner/en/index.html
+-->
 <body>
   <form name="guidetech-contact" method="POST" action="/thanks.html" netlify netlify-honeypot="bot-field" hidden>
     <input name="bot-field">
@@ -17,6 +26,32 @@
       <option value="協業相談">協業相談</option>
       <option value="その他">その他</option>
     </select>
+    <textarea name="message"></textarea>
+  </form>
+  <form name="japan-partner-contact" method="POST" action="/japan-partner/en/thanks.html" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field">
+    <input type="hidden" name="form-name" value="japan-partner-contact">
+    <input name="organization" type="text">
+    <input name="name" type="text">
+    <input name="email" type="email">
+    <select name="inquiry_type">
+      <option value="Supplier sourcing / product sourcing">Supplier sourcing / product sourcing</option>
+      <option value="Supplier verification">Supplier verification</option>
+      <option value="Translation">Translation</option>
+      <option value="Localization">Localization</option>
+      <option value="Launch Partner">Launch Partner</option>
+      <option value="Other">Other</option>
+    </select>
+    <textarea name="message"></textarea>
+  </form>
+  <form name="japan-partner-readiness" method="POST" action="/japan-partner/en/thanks.html" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field">
+    <input type="hidden" name="form-name" value="japan-partner-readiness">
+    <input name="organization" type="text">
+    <input name="name" type="text">
+    <input name="email" type="email">
+    <input name="website" type="text">
+    <input name="support_needed" type="text">
     <textarea name="message"></textarea>
   </form>
 </body>

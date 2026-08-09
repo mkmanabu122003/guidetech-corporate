@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GuideTech Japan Partner | English Corporate Sample</title>
+  <meta name="description" content="English corporate landing page sample for GuideTech Japan Partner, a Tokyo-based local operating partner for overseas companies entering Japan.">
+  <style>
+    :root {
+      --blue: #0758d8;
+      --blue-2: #0b3f9e;
+      --navy: #061d44;
+      --ink: #07142f;
+      --text: #28364d;
+      --muted: #667085;
+      --line: #d9e6f7;
+      --soft: #f3f8ff;
+      --white: #fff;
+      --shadow: 0 22px 60px rgba(8, 47, 103, .12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+    h1, h2, h3, p, a, li, td, th, span { overflow-wrap: anywhere; }
+    p { line-height: 1.75; }
+    .wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, .94);
+      border-bottom: 1px solid #eef3fb;
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+    }
+
+    .brand {
+      display: inline-flex;
+      flex-direction: column;
+      color: var(--blue-2);
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      margin-left: 55px;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-left: auto;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 23px;
+      border: 1px solid var(--blue);
+      border-radius: 999px;
+      background: var(--blue);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+      box-shadow: 0 10px 24px rgba(7, 88, 216, .2);
+      white-space: nowrap;
+    }
+
+    .button.secondary {
+      border-color: transparent;
+      background: transparent;
+      color: var(--blue-2);
+      box-shadow: none;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 720px;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.94) 38%, rgba(255,255,255,.36) 67%, rgba(255,255,255,0) 100%),
+        url("/assets/japan-partner/images/tokyo-corporate-hero.webp") center right / cover no-repeat;
+      z-index: 0;
+    }
+
+    .hero .wrap { position: relative; z-index: 1; }
+    .hero-copy { width: min(680px, 100%); padding: 72px 0; }
+
+    .hero-panel {
+      position: absolute;
+      right: 8vw;
+      bottom: 64px;
+      width: min(360px, 30vw);
+      padding: 18px;
+      border: 1px solid rgba(217, 230, 247, .9);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .9);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-panel::before {
+      content: "";
+      display: block;
+      height: 6px;
+      margin: -18px -18px 16px;
+      border-radius: 8px 8px 0 0;
+      background: linear-gradient(90deg, var(--blue), #64a6ff);
+    }
+
+    .mini-report {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .mini-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .status {
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: #e9f3ff;
+      color: var(--blue-2);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 4.5vw, 62px);
+      line-height: 1.13;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 24px 0 0;
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .checks {
+      display: grid;
+      gap: 13px;
+      margin: 30px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .checks li {
+      position: relative;
+      min-width: 0;
+      padding-left: 34px;
+      line-height: 1.65;
+    }
+
+    .checks li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .35em;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--ink);
+    }
+
+    .checks li::after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: calc(.35em + 5px);
+      width: 7px;
+      height: 4px;
+      border-left: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(-45deg);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .section { padding: 74px 0; background: #fff; }
+    .section.soft { background: linear-gradient(180deg, #f7fbff, #edf6ff); }
+
+    .signal-strip {
+      position: relative;
+      z-index: 2;
+      margin-top: -42px;
+      padding-bottom: 28px;
+    }
+
+    .signal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .signal-item {
+      min-height: 116px;
+      padding: 22px;
+      border-left: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .signal-item:first-child { border-left: 0; }
+    .signal-item span { display: block; color: var(--blue); font-size: 12px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .signal-item strong { display: block; margin-top: 12px; font-size: 17px; line-height: 1.35; }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      text-align: center;
+      font-size: clamp(30px, 3.2vw, 42px);
+      line-height: 1.25;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .section-intro {
+      max-width: 780px;
+      margin: 16px auto 0;
+      color: var(--text);
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .grid.four { grid-template-columns: repeat(4, 1fr); }
+    .grid.three { grid-template-columns: repeat(3, 1fr); }
+    .grid.two { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      min-height: 300px;
+      padding: 34px 28px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 12px 34px rgba(7, 88, 216, .05);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: #a9c7ef;
+      box-shadow: 0 22px 52px rgba(7, 88, 216, .1);
+    }
+
+    .card-icon {
+      width: 88px;
+      height: 88px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 26px;
+      border-radius: 50%;
+      background: #e9f3ff;
+      color: var(--blue);
+    }
+
+    .card-icon svg {
+      width: 42px;
+      height: 42px;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .card h3 { margin: 0; font-size: 18px; font-weight: 900; }
+    .card p { margin: 16px 0 0; color: var(--text); font-size: 14px; font-weight: 600; }
+
+    .card.compact {
+      min-height: 210px;
+      text-align: left;
+    }
+
+    .card.compact .card-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 0 22px;
+    }
+
+    .card.compact .card-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .fit-panel-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .fit-panel-title h3 { margin: 0; }
+
+    .fit-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #e9f3ff;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .fit-mark.muted {
+      background: #f3f6fb;
+      color: var(--muted);
+    }
+
+    .small-note { max-width: 760px; margin: 14px auto 0; color: var(--muted); text-align: center; font-size: 13px; font-weight: 700; }
+
+    .deliverable-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .deliverable-card {
+      display: grid;
+      grid-template-columns: 58px 1fr auto;
+      gap: 16px;
+      align-items: start;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(7, 88, 216, .05);
+    }
+
+    .deliverable-no {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #e9f3ff;
+      color: var(--blue-2);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .deliverable-card h3 { margin: 0; font-size: 17px; }
+    .deliverable-card p { margin: 8px 0 0; color: var(--text); font-size: 14px; font-weight: 600; line-height: 1.6; }
+    .deliverable-time { color: var(--blue-2); font-size: 12px; font-weight: 900; white-space: nowrap; }
+
+    .output-feature {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(520px, 1fr);
+      gap: 26px;
+      align-items: start;
+      margin-top: 34px;
+    }
+
+    .output-photo {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .output-photo img {
+      width: 100%;
+      min-height: 420px;
+      object-fit: cover;
+    }
+
+    .fit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .fit-panel {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(7, 88, 216, .05);
+    }
+
+    .fit-panel h3 { margin: 0 0 18px; font-size: 20px; }
+    .fit-panel ul { display: grid; gap: 12px; margin: 0; padding-left: 20px; color: var(--text); font-weight: 650; line-height: 1.65; }
+
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .plan {
+      position: relative;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(7, 88, 216, .05);
+    }
+
+    .plan-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 32px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #e9f3ff;
+      color: var(--blue-2);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .plan strong {
+      display: block;
+      margin: 12px 0 18px;
+      color: var(--blue-2);
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .plan ul { display: grid; gap: 10px; margin: 0; padding-left: 18px; color: var(--text); font-size: 14px; font-weight: 650; line-height: 1.6; }
+
+    .problem-list { margin-top: 34px; border-top: 1px solid var(--line); }
+    .problem {
+      display: grid;
+      grid-template-columns: 90px 1fr 330px;
+      gap: 28px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: start;
+    }
+    .problem span { color: var(--blue); font-size: 13px; font-weight: 900; letter-spacing: .1em; }
+    .problem strong { font-size: 20px; line-height: 1.45; }
+    .problem p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 34px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .step { padding: 32px 26px; border-left: 1px solid var(--line); }
+    .step:first-child { border-left: 0; }
+    .step span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+    }
+    .step h3 { margin: 0; font-size: 18px; }
+    .step p { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+
+    .step svg {
+      width: 34px;
+      height: 34px;
+      margin: 0 0 16px;
+      color: var(--blue);
+      stroke: currentColor;
+      stroke-width: 2.2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .diagram {
+      margin-top: 34px;
+      padding: 24px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .image-feature {
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(320px, .7fr);
+      gap: 28px;
+      align-items: stretch;
+      margin-top: 34px;
+    }
+
+    .photo-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+    }
+
+    .supplier-map {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .map-center,
+    .map-node {
+      min-height: 96px;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 900;
+    }
+
+    .map-center {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 16px 36px rgba(7, 88, 216, .18);
+    }
+
+    .map-node { background: #f8fbff; color: var(--text); }
+
+    .localization-demo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 34px;
+    }
+    .ui-mock {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(7, 88, 216, .05);
+    }
+    .ui-mock .label { color: var(--blue); font-size: 12px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .ui-window { margin-top: 16px; padding: 18px; border: 1px solid var(--line); border-radius: 8px; background: #f8fbff; }
+    .bar { height: 12px; margin: 12px 0; border-radius: 999px; background: #cfe0f4; }
+    .mock-button { display: inline-flex; margin-top: 10px; padding: 9px 14px; border-radius: 999px; background: var(--blue); color: #fff; font-size: 13px; font-weight: 900; }
+    .rhythm {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+    .rhythm-card {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .rhythm-card h3 { margin: 0 0 16px; }
+    .rhythm-card ul { display: grid; gap: 10px; margin: 0; padding-left: 18px; color: var(--text); line-height: 1.6; font-weight: 600; }
+
+    .rhythm-compact {
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 0;
+    }
+
+    .operator {
+      display: grid;
+      grid-template-columns: minmax(280px, .55fr) 1fr;
+      gap: 30px;
+      align-items: stretch;
+      margin-top: 34px;
+    }
+
+    .photo-placeholder {
+      min-height: 310px;
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      border: 1px dashed #a9c7ef;
+      border-radius: 8px;
+      background: #f8fbff;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 900;
+    }
+    .operator-copy {
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .operator-copy h3 { margin: 0; font-size: 24px; }
+    .operator-copy p { color: var(--text); font-weight: 600; }
+
+    .tokyo-card {
+      min-height: 310px;
+      display: grid;
+      align-content: end;
+      gap: 18px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.92)),
+        url("/assets/japan-partner/images/tokyo-corporate-hero.webp") center / cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .tokyo-card strong {
+      display: block;
+      max-width: 260px;
+      color: var(--ink);
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .tokyo-card span {
+      display: inline-flex;
+      width: fit-content;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--blue-2);
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 8px 24px rgba(8, 47, 103, .12);
+    }
+
+    .work-note {
+      max-width: 940px;
+      margin: 42px auto 0;
+      padding: 28px;
+      border: 1px dashed #a9c7ef;
+      border-radius: 8px;
+      background: #f8fbff;
+      color: var(--text);
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .thumb {
+      height: 82px;
+      margin: 0 0 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f8fbff;
+      padding: 12px;
+    }
+
+    .thumb-flow,
+    .thumb-list,
+    .thumb-table,
+    .thumb-queue {
+      height: 100%;
+      display: grid;
+      gap: 6px;
+    }
+
+    .thumb-flow { grid-template-columns: repeat(4, 1fr); align-items: center; }
+    .thumb-flow span,
+    .thumb-list span,
+    .thumb-table span,
+    .thumb-queue span {
+      display: block;
+      border-radius: 999px;
+      background: #cfe0f4;
+    }
+    .thumb-flow span { height: 12px; }
+    .thumb-list span { height: 10px; }
+    .thumb-table { grid-template-columns: 1fr 1fr; }
+    .thumb-table span { height: 16px; border-radius: 4px; }
+    .thumb-queue { grid-template-columns: 1fr; }
+    .thumb-queue span { height: 12px; }
+
+    .cta {
+      position: relative;
+      overflow: hidden;
+      padding: 80px 0;
+      color: #fff;
+      background: var(--blue);
+    }
+    .cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(7,88,216,.98), rgba(7,88,216,.86) 45%, rgba(7,88,216,.5)),
+        url("/assets/japan-partner/images/tokyo-corporate-hero.webp") center / cover no-repeat;
+      filter: saturate(.9);
+    }
+    .cta .wrap {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 34px;
+      align-items: center;
+    }
+    .cta h2 { max-width: 560px; color: #fff; text-align: left; }
+    .cta p { max-width: 720px; margin: 18px 0 32px; color: rgba(255,255,255,.9); font-weight: 700; }
+    .cta .button { background: #fff; color: var(--blue); border-color: #fff; box-shadow: none; }
+
+    .agenda {
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 8px;
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .agenda::before {
+      content: "";
+      display: block;
+      height: 5px;
+      margin: -22px -22px 16px;
+      border-radius: 8px 8px 0 0;
+      background: rgba(255,255,255,.65);
+    }
+
+    .agenda h3 { margin: 0 0 14px; }
+    .agenda ul { display: grid; gap: 10px; margin: 0; padding-left: 18px; color: rgba(255,255,255,.9); font-weight: 700; line-height: 1.55; }
+
+    .agenda-visual {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .agenda-bar {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.14);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .agenda-bar span:first-child {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,.92);
+      color: var(--blue);
+      font-size: 12px;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      min-height: 46px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,.42);
+      border-radius: 8px;
+      background: rgba(255,255,255,.95);
+      color: var(--ink);
+      font: inherit;
+      font-size: 14px;
+    }
+
+    .contact-form textarea { min-height: 104px; resize: vertical; }
+    .contact-form button { cursor: pointer; }
+
+    .footer { padding: 38px 0; background: var(--navy); color: #fff; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; font-size: 13px; font-weight: 700; }
+    .footer-links { display: flex; gap: 22px; color: rgba(255,255,255,.86); }
+    .footer .brand { color: #fff; font-size: 22px; }
+    .footer .brand span { color: rgba(255,255,255,.86); }
+
+    @media (max-width: 960px) {
+      .links { display: none; }
+      .hero-panel { display: none; }
+      .grid.four, .grid.three, .grid.two, .process, .rhythm, .localization-demo, .operator, .cta .wrap, .image-feature, .fit-grid, .plan-grid, .signal-grid, .output-feature { grid-template-columns: 1fr 1fr; }
+      .signal-item:nth-child(odd) { border-left: 0; }
+      .signal-item:nth-child(n+3) { border-top: 1px solid var(--line); }
+      .rhythm-compact { grid-template-columns: 1fr; }
+      .problem { grid-template-columns: 60px 1fr; }
+      .problem p { grid-column: 2; }
+      .step { border-left: 0; border-top: 1px solid var(--line); }
+      .step:first-child { border-top: 0; }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        width: min(100% - 48px, 342px);
+        margin-left: 24px;
+        margin-right: auto;
+      }
+      .nav { min-height: 68px; }
+      .nav > .button { display: none; }
+      .brand { font-size: 22px; }
+      .brand span { margin-left: 42px; }
+      .hero { min-height: auto; align-items: start; padding-top: 34px; }
+      .hero::before {
+        position: relative;
+        display: block;
+        height: 230px;
+        margin: 0 0 28px;
+        background: url("/assets/japan-partner/images/tokyo-corporate-hero.webp") center / cover no-repeat;
+        z-index: 0;
+      }
+      .hero-copy { width: 100%; padding: 28px 0 54px; }
+      .signal-strip { margin-top: 0; padding: 0 0 18px; }
+      h1 { font-size: 29px; line-height: 1.18; }
+      h2 { font-size: 24px; line-height: 1.3; }
+      .lead { font-size: 15px; }
+      .actions { display: grid; gap: 12px; }
+      .button { width: 100%; white-space: normal; text-align: center; }
+      .section { padding: 64px 0; }
+      .grid.four, .grid.three, .grid.two, .process, .rhythm, .localization-demo, .operator, .supplier-map, .cta .wrap, .image-feature, .fit-grid, .plan-grid, .signal-grid, .output-feature { grid-template-columns: 1fr; }
+      .output-photo img { min-height: 240px; }
+      .signal-item { border-left: 0; border-top: 1px solid var(--line); }
+      .signal-item:first-child { border-top: 0; }
+      .photo-card img { min-height: 230px; }
+      .card { min-height: auto; padding: 28px 22px; }
+      .problem { grid-template-columns: 1fr; gap: 10px; }
+      .problem p { grid-column: auto; }
+      .diagram { padding: 18px; }
+      .deliverable-card { grid-template-columns: 42px 1fr; }
+      .deliverable-time { grid-column: 2; }
+      .footer-inner, .footer-links { display: grid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap nav">
+      <a class="brand" href="#">GuideTech<span>Japan Partner</span></a>
+      <nav class="links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#outputs">Outputs</a>
+        <a href="#plans">Plans</a>
+        <a href="#cadence">Cadence</a>
+        <a href="#company">Company</a>
+      </nav>
+      <a class="button" href="#contact">Free review</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <h1>For overseas companies entering Japan, GuideTech is your local operating partner.</h1>
+          <p class="lead">GuideTech Japan Partner handles the local operating work that usually sits between localization, supplier research, Japanese customer communication, and HQ reporting.</p>
+          <ul class="checks">
+            <li>Free 30-minute Japan readiness review</li>
+            <li>First shortlist or action memo within 10 business days</li>
+            <li>Japanese communication handled from Tokyo</li>
+            <li>Weekly English reporting for headquarters</li>
+          </ul>
+          <div class="actions">
+            <a class="button" href="#contact">Get a free readiness review</a>
+            <a class="button secondary" href="#services">See services</a>
+          </div>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="Japan launch desk preview">
+        <strong>Japan launch desk</strong>
+        <div class="mini-report">
+          <div class="mini-row"><span>Japan readiness audit</span><span class="status">Review</span></div>
+          <div class="mini-row"><span>Supplier shortlist</span><span class="status">Intro</span></div>
+          <div class="mini-row"><span>Weekly HQ report</span><span class="status">Friday</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="signal-strip" aria-label="Service signals">
+      <div class="wrap">
+        <div class="signal-grid">
+          <div class="signal-item"><span>Entry</span><strong>Free readiness review</strong></div>
+          <div class="signal-item"><span>Output</span><strong>Action memo or shortlist</strong></div>
+          <div class="signal-item"><span>Local desk</span><strong>Japanese communication</strong></div>
+          <div class="signal-item"><span>HQ view</span><strong>Weekly English reporting</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="wrap">
+        <p class="eyebrow">What we handle</p>
+        <h2>Local operating support before you hire in Japan.</h2>
+        <p class="section-intro">The offer is intentionally practical: we help overseas teams test Japan, communicate locally, and decide what to build next before committing to a full local hire.</p>
+        <div class="grid three">
+          <article class="card compact"><div class="card-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="10" width="32" height="26" rx="4"/><path d="M14 18h20M14 25h14M17 40h14"/></svg></div><h3>Localize the buyer path</h3><p>Website, landing pages, product or service pages, inquiry forms, onboarding emails, help copy, and invoice wording.</p></article>
+          <article class="card compact"><div class="card-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="12" cy="24" r="5"/><circle cx="36" cy="14" r="5"/><circle cx="36" cy="34" r="5"/><path d="M17 22l14-6M17 26l14 6"/></svg></div><h3>Find practical partners</h3><p>Supplier categories, candidate research, Japanese outreach, screening notes, and introduction setup.</p></article>
+          <article class="card compact"><div class="card-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 27v-5a12 12 0 0 1 24 0v5"/><path d="M12 27h6v9h-6zM30 27h6v9h-6zM30 39h-7"/><path d="M18 15h12"/></svg></div><h3>Operate the first desk</h3><p>Japanese inquiry handling, customer notes, internal escalation, and weekly English reports to HQ.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="wrap">
+        <p class="eyebrow">Best fit</p>
+        <h2>Built for companies testing Japan before building a full local team.</h2>
+        <div class="fit-grid">
+          <div class="fit-panel">
+            <div class="fit-panel-title"><span class="fit-mark">OK</span><h3>Good fit</h3></div>
+            <ul>
+              <li>You sell software, services, products, travel experiences, education, or B2B offerings from outside Japan.</li>
+              <li>You have Japanese inquiries, partners, suppliers, or website traffic but no local operating desk.</li>
+              <li>You need a practical first step: localization, supplier screening, customer communication, or local coordination.</li>
+            </ul>
+          </div>
+          <div class="fit-panel">
+            <div class="fit-panel-title"><span class="fit-mark muted">NO</span><h3>Not the right fit</h3></div>
+            <ul>
+              <li>You need regulated legal, tax, visa, or incorporation advice as the main project.</li>
+              <li>You want a large call center, full BPO operation, or guaranteed sales result from day one.</li>
+              <li>You need public client logos or inflated case claims before factual approval is available.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="outputs" class="section">
+      <div class="wrap">
+        <p class="eyebrow">Sample outputs</p>
+        <h2>Concrete deliverables, not a vague consulting retainer.</h2>
+        <p class="section-intro">Each deliverable is designed to help headquarters decide the next move without waiting for a full local hire.</p>
+        <div class="output-feature">
+          <figure class="output-photo">
+            <img src="/assets/japan-partner/images/japan-readiness-deliverables.webp" alt="Japan readiness deliverables including reports, supplier shortlist, and dashboard notes on an office desk" width="1672" height="941" loading="lazy">
+          </figure>
+          <div class="deliverable-list">
+            <article class="deliverable-card"><span class="deliverable-no">01</span><div><h3>Japan readiness memo</h3><p>Target customer, current Japan signals, localized assets, supplier needs, support gaps, and first 30-day action list.</p></div><span class="deliverable-time">After discovery</span></article>
+            <article class="deliverable-card"><span class="deliverable-no">02</span><div><h3>Localization review sheet</h3><p>Japanese tone, CTA wording, form fields, billing terms, FAQ gaps, and support response examples.</p></div><span class="deliverable-time">Per asset</span></article>
+            <article class="deliverable-card"><span class="deliverable-no">03</span><div><h3>Supplier shortlist</h3><p>Candidate category, fit reason, Japanese contact status, risk note, expected next step, and owner.</p></div><span class="deliverable-time">10 business days*</span></article>
+            <article class="deliverable-card"><span class="deliverable-no">04</span><div><h3>Weekly HQ report</h3><p>Inbound inquiries, partner progress, customer signals, blockers, requested HQ decisions, and next-week priorities.</p></div><span class="deliverable-time">Every Friday</span></article>
+          </div>
+        </div>
+        <p class="small-note">*Timeline depends on supplier category, response speed, and required screening depth.</p>
+      </div>
+    </section>
+
+    <section id="plans" class="section soft">
+      <div class="wrap">
+        <p class="eyebrow">Starting plans</p>
+        <h2>Start small, then expand only when Japan shows signal.</h2>
+        <p class="section-intro">The structure below gives buyers a concrete path without requiring a full local hire from day one.</p>
+        <div class="plan-grid">
+          <article class="plan"><span class="plan-badge">Start</span><h3>Readiness Review</h3><strong>Free</strong><ul><li>30-minute call</li><li>Japan opportunity and risk notes</li><li>Suggested first scope</li></ul></article>
+          <article class="plan"><span class="plan-badge">Project</span><h3>First Japan Scope</h3><strong>Quote after review</strong><ul><li>Localization review or supplier shortlist</li><li>Action memo</li><li>One follow-up call</li></ul></article>
+          <article class="plan"><span class="plan-badge">Monthly</span><h3>Japan Desk</h3><strong>Monthly quote</strong><ul><li>Japanese communication desk</li><li>Supplier and partner follow-up</li><li>Weekly HQ reporting</li></ul></article>
+        </div>
+        <!-- TODO: Replace quote-based labels with approved price ranges when finalized. -->
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Where we start</p>
+        <h2>Start with a readiness call, then a narrow first scope.</h2>
+        <p class="section-intro">The first step is a small diagnostic scope, followed by a clear action memo and one practical execution track.</p>
+        <div class="process">
+          <div class="step"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="22" cy="22" r="12"/><path d="M31 31l9 9"/></svg><span>01</span><h3>Readiness call</h3><p>Offering, Japan target segment, current signals, support gap, and supplier needs.</p></div>
+          <div class="step"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 12h18l10 10v14H10z"/><path d="M28 12v10h10M16 28h16M16 34h12"/></svg><span>02</span><h3>Action memo</h3><p>First risks, useful local assets, decision points, and recommended starting scope.</p></div>
+          <div class="step"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 28v-5a12 12 0 0 1 24 0v5"/><path d="M12 28h6v8h-6zM30 28h6v8h-6zM24 38h8"/></svg><span>03</span><h3>Local execution</h3><p>Localization edits, supplier outreach, customer replies, or meeting coordination.</p></div>
+          <div class="step"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 38h28M15 34V22M24 34V14M33 34V26"/></svg><span>04</span><h3>HQ report</h3><p>Signals, blockers, open decisions, and next action in English.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cadence" class="section soft">
+      <div class="wrap">
+        <p class="eyebrow">Monthly partner</p>
+        <h2>A Japan-side desk for the first operating phase.</h2>
+        <p class="section-intro">For teams not ready to hire locally, GuideTech can operate a small Japan desk covering communication, coordination, and reporting.</p>
+        <div class="image-feature">
+          <div class="photo-card">
+            <img src="/assets/japan-partner/images/japan-operations-team.webp" alt="Bilingual Japan operations team reviewing market entry notes in a bright Tokyo office" width="1672" height="941" loading="lazy">
+          </div>
+          <div class="rhythm rhythm-compact">
+            <div class="rhythm-card"><h3>Weekly desk</h3><ul><li>Japanese inquiry triage</li><li>Supplier follow-up</li><li>Friday HQ summary</li></ul></div>
+            <div class="rhythm-card"><h3>Monthly review</h3><ul><li>Buyer signal review</li><li>Localization backlog</li><li>Next 30-day plan</li></ul></div>
+            <div class="rhythm-card"><h3>Project add-ons</h3><ul><li>Landing page localization</li><li>Training material support</li><li>Partner meeting support</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="company" class="section">
+      <div class="wrap">
+        <p class="eyebrow">Company</p>
+        <h2>Operated by GuideTech in Tokyo.</h2>
+        <div class="operator">
+          <div class="tokyo-card"><span>Shibuya, Tokyo</span><strong>Japan-side execution from a real local base.</strong></div>
+          <div class="operator-copy">
+            <h3>GuideTech, Shibuya, Tokyo</h3>
+            <p>GuideTech supports implementation work for Japanese companies and Japan-side operations for overseas partners. The Japan Partner offer connects that practical background to overseas teams entering Japan.</p>
+            <!-- TODO: Replace placeholder with an approved representative or office photo. Do not use AI-generated portraits. -->
+            <p><a href="https://guidetech.jp">Visit GuideTech corporate site</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="wrap">
+        <div>
+          <h2>Get a free Japan readiness review.</h2>
+          <p>Tell us what you are selling, what Japan signals you already see, and what local support you need first.</p>
+          <form class="contact-form" name="japan-partner-readiness" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="japan-partner-readiness">
+            <input type="hidden" name="bot-field">
+            <input name="organization" placeholder="Organization">
+            <input name="name" placeholder="Name*" required>
+            <input name="email" type="email" placeholder="Email*" required>
+            <input name="website" type="url" placeholder="Company or product URL">
+            <select name="support_needed">
+              <option value="">Support needed</option>
+              <option>Localization</option>
+              <option>Supplier or partner sourcing</option>
+              <option>Japanese customer communication</option>
+              <option>Monthly Japan desk</option>
+              <option>Other</option>
+            </select>
+            <textarea name="message" placeholder="What are you trying to do in Japan?*" required></textarea>
+            <button class="button" type="submit">Request review</button>
+          </form>
+        </div>
+        <aside class="agenda">
+          <div class="agenda-visual" aria-hidden="true">
+            <div class="agenda-bar"><span>1</span><strong>Signals</strong></div>
+            <div class="agenda-bar"><span>2</span><strong>Gaps</strong></div>
+            <div class="agenda-bar"><span>3</span><strong>Scope</strong></div>
+          </div>
+          <h3>Readiness call agenda</h3>
+          <ul>
+            <li>Japan signals so far</li>
+            <li>Localized assets needed</li>
+            <li>Supplier or partner needs</li>
+            <li>First 30-day scope</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#">GuideTech<span>Japan Partner</span></a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#outputs">Outputs</a>
+        <a href="#plans">Plans</a>
+        <a href="#cadence">Cadence</a>
+        <a href="https://guidetech.jp">Company</a>
+      </nav>
+      <span>Operated by GuideTech.</span>
+    </div>
+  </footer>
+</body>
+</html>

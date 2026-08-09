@@ -22,3 +22,126 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Netlify publishes the repo root, so working files would otherwise be
+# publicly fetchable. Keep build scripts, planning docs, and internal design
+# drafts in the repo but out of the public site.
+[[redirects]]
+  from = "/scripts/*"
+  to = "/japan-partner/en/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/docs/*"
+  to = "/japan-partner/en/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/design-directions.html"
+  to = "/japan-partner/en/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/site-proposal.html"
+  to = "/japan-partner/en/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/studio-layout-proposal.html"
+  to = "/japan-partner/en/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/legacy-base-redesign.html"
+  to = "/japan-partner/en/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/legacy-inspired-proposal.html"
+  to = "/japan-partner/en/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/japan-partner-corporate-sample.html"
+  to = "/japan-partner/en/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/japan-partner-redesign-sample.html"
+  to = "/japan-partner/en/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/japan-localization/*"
+  to = "/japan-partner/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/en/localization"
+  to = "/japan-partner/en/localization.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/en/supplier-sourcing"
+  to = "/japan-partner/en/supplier-sourcing.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/en/launch-partner"
+  to = "/japan-partner/en/launch-partner.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/en/pricing"
+  to = "/japan-partner/en/pricing.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/en/work"
+  to = "/japan-partner/en/work.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/en/about"
+  to = "/japan-partner/en/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/en/contact"
+  to = "/japan-partner/en/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/es/localization"
+  to = "/japan-partner/es/localization.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/es/supplier-sourcing"
+  to = "/japan-partner/es/supplier-sourcing.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/es/launch-partner"
+  to = "/japan-partner/es/launch-partner.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/es/pricing"
+  to = "/japan-partner/es/pricing.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/es/work"
+  to = "/japan-partner/es/work.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/es/about"
+  to = "/japan-partner/es/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/japan-partner/es/contact"
+  to = "/japan-partner/es/contact.html"
+  status = 301
