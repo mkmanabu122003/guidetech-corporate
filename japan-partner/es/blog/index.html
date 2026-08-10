@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/japan-partner/tokens.css">
   <link rel="stylesheet" href="/assets/japan-partner/style.css">
   <link rel="alternate" type="application/rss+xml" title="GuideTech Japan sourcing guides" href="/japan-partner/en/blog/feed.xml">
 <script type="application/ld+json">{
@@ -73,13 +74,27 @@
   ]
 }</script>
   <!-- analytics:start -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S3JEC00N4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    (function(){
+      var stored = null;
+      try { stored = localStorage.getItem('gt-consent'); } catch (e) {}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: stored === 'granted' ? 'granted' : 'denied',
+        wait_for_update: 500
+      });
+    })();
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S3JEC00N4"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-3S3JEC00N4');
   </script>
+  <script defer src="/assets/japan-partner/consent.js"></script>
   <!-- analytics:end -->
 </head>
 <body>
@@ -99,7 +114,7 @@
   </div>
 </header>
 <section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><p class="eyebrow">GuideTech Japan Partner</p><h1>Guías para entrar en Japón</h1><p>Escritas desde Tokio para equipos de software que quieren vender, dar soporte y facturar en Japón antes de contratar localmente.</p></div><aside class="hero-panel"><strong>Para quién</strong><ul><li>Empresas SaaS y de IA que exploran Japón</li><li>Equipos sin oficina ni personal local</li><li>Responsables de producto y de expansión</li></ul></aside></div></section>
-<section class="section"><div class="wrap"><div class="section-head"><h2>Vender y operar en Japón</h2><p>Precios, localización de producto, elección de proveedor y secuencia de los primeros noventa días.</p></div><div class="grid two"><article class="card"><a class="card-thumb" href="/japan-partner/es/blog/traduccion-japones-servicios-precios"><img src="/assets/japan-partner/images/blog-pricing.webp" alt="Traducción al Japonés: Qué Cubre Realmente el Precio" width="1200" height="675" loading="lazy"></a><p class="eyebrow">precio traducción japonés</p><h3><a href="/japan-partner/es/blog/traduccion-japones-servicios-precios">Traducción al Japonés: Qué Cubre Realmente el Precio</a></h3><p>Guía práctica de precios de traducción al japonés para equipos de software: qué incluye una tarifa por palabra, por qué el producto se cotiza distinto y cómo comparar.</p></article><article class="card"><a class="card-thumb" href="/japan-partner/es/blog/localizacion-software-japon"><img src="/assets/japan-partner/images/blog-localization.webp" alt="Localización de Software en Japón: Guía de Trabajo" width="1200" height="675" loading="lazy"></a><p class="eyebrow">localización de software en Japón</p><h3><a href="/japan-partner/es/blog/localizacion-software-japon">Localización de Software en Japón: Guía de Trabajo</a></h3><p>Cómo localizar un producto para usuarios de empresa japoneses: contexto de producto, tono como decisión de producto, formatos locales, expectativas de facturación y QA real.</p></article><article class="card"><a class="card-thumb" href="/japan-partner/es/blog/agencia-traduccion-japones-vs-partner-localizacion"><img src="/assets/japan-partner/images/blog-agency-vs-partner.webp" alt="Agencia de Traducción vs Partner de Localización" width="1200" height="675" loading="lazy"></a><p class="eyebrow">agencia de traducción japonés</p><h3><a href="/japan-partner/es/blog/agencia-traduccion-japones-vs-partner-localizacion">Agencia de Traducción vs Partner de Localización</a></h3><p>Qué hace bien una agencia, qué decisiones no puede tomar en su nombre, qué aporta un partner de localización y cómo elegir entre ambos.</p></article><article class="card"><a class="card-thumb" href="/japan-partner/es/blog/hacer-negocios-en-japon-empresas-software"><img src="/assets/japan-partner/images/blog-doing-business.webp" alt="Hacer Negocios en Japón sin Oficina Local" width="1200" height="675" loading="lazy"></a><p class="eyebrow">hacer negocios en Japón</p><h3><a href="/japan-partner/es/blog/hacer-negocios-en-japon-empresas-software">Hacer Negocios en Japón sin Oficina Local</a></h3><p>Cómo entran en Japón las empresas de software antes de contratar localmente: cómo se evalúa la confianza, cómo localizar el proceso de compra y qué posponer.</p></article></div></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><h2>Vender y operar en Japón</h2><p>Precios, localización de producto, elección de proveedor y secuencia de los primeros noventa días.</p></div><div class="grid two"><article class="card"><a class="card-thumb" href="/japan-partner/es/blog/traduccion-japones-servicios-precios"><img src="/assets/japan-partner/images/tokyo-operations-desk.webp" alt="Traducción al Japonés: Qué Cubre Realmente el Precio" width="1200" height="675" loading="lazy"></a><p class="eyebrow">precio traducción japonés</p><h3><a href="/japan-partner/es/blog/traduccion-japones-servicios-precios">Traducción al Japonés: Qué Cubre Realmente el Precio</a></h3><p>Guía práctica de precios de traducción al japonés para equipos de software: qué incluye una tarifa por palabra, por qué el producto se cotiza distinto y cómo comparar.</p></article><article class="card"><a class="card-thumb" href="/japan-partner/es/blog/localizacion-software-japon"><img src="/assets/japan-partner/images/japan-readiness-deliverables.webp" alt="Localización de Software en Japón: Guía de Trabajo" width="1200" height="675" loading="lazy"></a><p class="eyebrow">localización de software en Japón</p><h3><a href="/japan-partner/es/blog/localizacion-software-japon">Localización de Software en Japón: Guía de Trabajo</a></h3><p>Cómo localizar un producto para usuarios de empresa japoneses: contexto de producto, tono como decisión de producto, formatos locales, expectativas de facturación y QA real.</p></article><article class="card"><a class="card-thumb" href="/japan-partner/es/blog/agencia-traduccion-japones-vs-partner-localizacion"><img src="/assets/japan-partner/images/japan-operations-team.webp" alt="Agencia de Traducción vs Partner de Localización" width="1200" height="675" loading="lazy"></a><p class="eyebrow">agencia de traducción japonés</p><h3><a href="/japan-partner/es/blog/agencia-traduccion-japones-vs-partner-localizacion">Agencia de Traducción vs Partner de Localización</a></h3><p>Qué hace bien una agencia, qué decisiones no puede tomar en su nombre, qué aporta un partner de localización y cómo elegir entre ambos.</p></article><article class="card"><a class="card-thumb" href="/japan-partner/es/blog/hacer-negocios-en-japon-empresas-software"><img src="/assets/japan-partner/images/tokyo-corporate-hero.webp" alt="Hacer Negocios en Japón sin Oficina Local" width="1200" height="675" loading="lazy"></a><p class="eyebrow">hacer negocios en Japón</p><h3><a href="/japan-partner/es/blog/hacer-negocios-en-japon-empresas-software">Hacer Negocios en Japón sin Oficina Local</a></h3><p>Cómo entran en Japón las empresas de software antes de contratar localmente: cómo se evalúa la confianza, cómo localizar el proceso de compra y qué posponer.</p></article></div></div></section>
 <footer class="footer">
   <div class="wrap">
     <div class="footer-grid">

@@ -1,0 +1,32 @@
+/* Single source of truth for the Japan Partner design tokens.
+   Both the marketing homepage (which carries its own component CSS inline) and
+   style.css (which dresses the service and guide pages) read from here, so a
+   palette change lands on the whole section instead of half of it. */
+:root {
+  /* brand */
+  --blue:      #0758d8;
+  --blue-2:    #0b3f9e;
+  --navy:      #061d44;
+
+  /* surfaces */
+  --paper:     #fff;
+  --white:     #fff;
+  --washi:     #f3f8ff;
+  --soft:      #f3f8ff;
+
+  /* text */
+  --ink:       #07142f;
+  --text:      #28364d;
+  --muted:     #667085;
+
+  /* lines and depth */
+  --line:      #d9e6f7;
+  --shadow:    0 22px 60px rgba(8, 47, 103, .12);
+
+  /* legacy aliases kept so existing component rules keep resolving */
+  --indigo:    var(--blue);
+  --indigo-2:  var(--blue-2);
+  --copper:    var(--blue);
+  --moss:      var(--blue-2);
+  --rose:      #a85f57;
+}

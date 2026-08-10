@@ -39,18 +39,39 @@ export function analyticsBlock({ indent = "  " } = {}) {
     lines.push(`<meta name="google-site-verification" content="${gscToken}">`);
   }
 
+  // Consent Mode v2. Analytics storage starts denied so no cookie is written
+  // before the visitor chooses; the banner script grants it on accept. Google
+  // still receives cookieless pings, which keeps modelled data available.
+  const consentDefaults = [
+    "<script>",
+    "  window.dataLayer = window.dataLayer || [];",
+    "  function gtag(){dataLayer.push(arguments);}",
+    "  (function(){",
+    "    var stored = null;",
+    "    try { stored = localStorage.getItem('gt-consent'); } catch (e) {}",
+    "    gtag('consent', 'default', {",
+    "      ad_storage: 'denied',",
+    "      ad_user_data: 'denied',",
+    "      ad_personalization: 'denied',",
+    "      analytics_storage: stored === 'granted' ? 'granted' : 'denied',",
+    "      wait_for_update: 500",
+    "    });",
+    "  })();",
+    "</script>"
+  ];
+
   if (gtmId) {
     lines.push(
       `<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${gtmId}');</script>`
     );
   } else if (ga4Id) {
+    lines.push(...consentDefaults);
     lines.push(`<script async src="https://www.googletagmanager.com/gtag/js?id=${ga4Id}"></script>`);
     lines.push("<script>");
-    lines.push("  window.dataLayer = window.dataLayer || [];");
-    lines.push("  function gtag(){dataLayer.push(arguments);}");
     lines.push("  gtag('js', new Date());");
     lines.push(`  gtag('config', '${ga4Id}');`);
     lines.push("</script>");
+    lines.push('<script defer src="/assets/japan-partner/consent.js"></script>');
   }
 
   if (lines.length === 1) {

@@ -1671,6 +1671,7 @@ ${analyticsBlock()}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/japan-partner/tokens.css">
   <link rel="stylesheet" href="/assets/japan-partner/style.css">
   <link rel="alternate" type="application/rss+xml" title="GuideTech Japan sourcing guides" href="/japan-partner/en/blog/feed.xml">
 ${schemas.map((s) => `<script type="application/ld+json">${json(s)}</script>`).join("\n")}
@@ -1780,15 +1781,18 @@ function organization() {
 
 /** Thumbnail path for a post. Legacy posts keep their original cover art. */
 function thumb(slug) {
-  const legacy = {
-    "japanese-translation-services-pricing-guide": "blog-pricing.webp",
-    "software-localization-japan-guide": "blog-localization.webp",
-    "japanese-translation-agency-vs-localization-partner": "blog-agency-vs-partner.webp",
-    "doing-business-in-japan-for-software-companies": "blog-doing-business.webp"
+  // The four software guides carried figure art drawn in the retired warm
+  // palette. They now share Tokyo operations photography until dedicated
+  // artwork exists, which at least keeps the set visually consistent.
+  const software = {
+    "japanese-translation-services-pricing-guide": "tokyo-operations-desk.webp",
+    "software-localization-japan-guide": "japan-readiness-deliverables.webp",
+    "japanese-translation-agency-vs-localization-partner": "japan-operations-team.webp",
+    "doing-business-in-japan-for-software-companies": "tokyo-corporate-hero.webp"
   };
-  if (legacy[slug]) return `/assets/japan-partner/images/${legacy[slug]}`;
+  if (software[slug]) return `/assets/japan-partner/images/${software[slug]}`;
   const es = esPosts.find((p) => p.slug === slug);
-  if (es) return `/assets/japan-partner/images/${legacy[es.en] || "og-default.webp"}`;
+  if (es) return `/assets/japan-partner/images/${software[es.en] || "og-default.webp"}`;
   return `/assets/japan-partner/images/blog/${slug}.webp`;
 }
 

@@ -1,27 +1,4 @@
-/* Design tokens mirror japan-partner/en/index.html so the marketing homepage
-   and the service / blog pages read as one site. The variable names are the
-   original warm-palette ones and are kept deliberately: every component rule
-   below already references them, so re-pointing the tokens re-skins the whole
-   stylesheet without touching any markup. */
-:root {
-  --blue: #0758d8;
-  --blue-2: #0b3f9e;
-  --navy: #061d44;
-
-  --paper: #fff;
-  --washi: #f3f8ff;
-  --white: #fff;
-  --ink: #07142f;
-  --text: #28364d;
-  --muted: #667085;
-  --line: #d9e6f7;
-  --indigo: var(--blue);
-  --indigo-2: var(--blue-2);
-  --copper: var(--blue);
-  --moss: var(--blue-2);
-  --rose: #a85f57;
-  --shadow: 0 22px 60px rgba(8, 47, 103, .12);
-}
+/* Design tokens now live in tokens.css, loaded before this file. */
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -662,4 +639,43 @@ textarea { min-height: 150px; resize: vertical; }
   .sample-row { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .header-cta { display: none; }
+}
+
+/* Cookie consent banner. Injected by assets/japan-partner/consent.js only when
+   the visitor has not chosen yet. */
+#consent-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  z-index: 90;
+  transform: translateX(-50%);
+  width: min(660px, calc(100% - 28px));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  padding: 16px 20px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 18px 48px rgba(8, 47, 103, .18);
+}
+#consent-banner p { flex: 1 1 300px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.consent-actions { display: flex; gap: 8px; margin-left: auto; }
+#consent-banner button {
+  min-height: 40px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+#consent-banner .consent-accept { border-color: var(--blue); background: var(--blue); color: #fff; }
+#consent-banner button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+@media (max-width: 520px) {
+  .consent-actions { margin-left: 0; width: 100%; }
+  #consent-banner button { flex: 1; }
 }
