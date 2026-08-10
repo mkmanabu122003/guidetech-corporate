@@ -843,31 +843,779 @@ const posts = [
   }
 ];
 
-/* Existing articles, kept in the index. These files are not regenerated here. */
-const legacyPosts = [
+/* Software / market-entry guides. These four replace the original generated
+   versions, which repeated the same six paragraphs under every heading. */
+const softwarePosts = [
   {
     slug: "japanese-translation-services-pricing-guide",
+    seoTitle: "Japanese Translation Price Guide",
+    seoDescription:
+      "What a per-word Japanese quote covers, where software work leaves the word rate behind, what actually drives the number, and how to compare quotes.",
     kw: "japanese translation services price",
-    title: "Japanese Translation Services Price Guide for Software Teams",
-    description: "A practical guide to Japanese translation services price ranges, localization costs, and when software teams should budget beyond word rates."
+    title: "Japanese Translation Services: What the Price Actually Covers",
+    description:
+      "A practical guide to Japanese translation pricing for software teams: what a word rate includes, why product work is priced differently, and how to compare quotes.",
+    lead:
+      "Most Japanese translation quotes arrive as a single number per word, which makes them look comparable. They usually are not. Two vendors can quote the same rate and deliver work that differs by an order of magnitude in how much of your team's time it consumes afterwards. The rate is the cheapest part of the decision.",
+    sections: [
+      {
+        h: "What a per-word quote actually covers",
+        blocks: [
+          ["p", "A standard word rate covers translating supplied text, one editing pass, and light coordination. That is a real service and for the right material it is the correct thing to buy. What it does not cover is everything that happens because the text belongs to a product rather than a document."],
+          ["ul", [
+            "<strong>Included, normally:</strong> translation of what you send, an editing pass, basic terminology consistency within the file, and delivery in the format you supplied.",
+            "<strong>Not included, normally:</strong> asking what a string means, looking at where it appears, deciding tone per screen, checking that the Japanese fits the button, maintaining a glossary across releases, or advising on what should stay in English.",
+            "<strong>Frequently unclear:</strong> who owns the translation memory, whether repeated strings are discounted, and what happens when you change the source after delivery."
+          ]],
+          ["note", "The single most useful question to ask a vendor is not the rate. It is: “If a string is ambiguous, what do you do?” The answer separates a supplier who will ask you from one who will guess, and guessing is what generates rework."]
+        ]
+      },
+      {
+        h: "Where software work leaves the word rate behind",
+        blocks: [
+          ["p", "A document is linear and self-explanatory. A product string is neither. The same three words can be a button, a page title, an error state and a push notification, and Japanese does not resolve to the same phrasing in all four. Pricing that ignores this is not cheaper; it moves the cost onto your engineers and support team."],
+          ["table", {
+            head: ["Material", "Sensible pricing model", "Why"],
+            rows: [
+              ["Policies, manuals, long-form marketing", "Per source word", "Linear, self-contained, low ambiguity"],
+              ["Website and landing pages", "Per word or per page", "Some context needed, but the surface is visible"],
+              ["Product interface strings", "Per project or per sprint", "Context, length limits and tone decisions dominate the effort"],
+              ["Support macros and help centre", "Per project, then monthly", "Changes continuously with the product and with real tickets"],
+              ["Ongoing releases", "Monthly retainer", "The work is maintenance, not delivery"]
+            ]
+          }],
+          ["p", "If a vendor quotes per word for interface strings without asking to see the interface, that is useful information about how the work will go."]
+        ]
+      },
+      {
+        h: "What actually drives the number",
+        blocks: [
+          ["ul", [
+            "<strong>Ambiguity.</strong> How often the translator has to stop and ask. This is the largest hidden variable and it is entirely under your control: screenshots and a one-line note per string reduce it more than any other input.",
+            "<strong>Tone decisions.</strong> Japanese requires choosing a register. Deciding it once, in a written glossary, is cheap. Re-deciding it per screen, per translator, per release is expensive and produces an inconsistent product.",
+            "<strong>Length constraints.</strong> A label that must fit 8 characters is a different job from a paragraph. Constraints have to be communicated or discovered.",
+            "<strong>Review depth.</strong> Translation, translation plus edit, or translation plus edit plus in-context QA. These are three different prices and three different outcomes.",
+            "<strong>Turnaround.</strong> Compressed schedules cost more everywhere, and in Japanese they also reduce the time available for the consistency pass that keeps terminology stable."
+          ]]
+        ]
+      },
+      {
+        h: "How to compare quotes that are not comparable",
+        blocks: [
+          ["p", "Put the vendors on the same axes before you compare numbers. The following five questions produce answers that are easy to line up and hard to fudge."],
+          ["sample", {
+            title: "Five questions that make quotes comparable",
+            rows: [
+              ["Context", "Will you review screenshots or the running product?", "Yes / No"],
+              ["Files", "Can you work directly with string files?", "Yes / No"],
+              ["Glossary", "Do you maintain terminology across releases?", "Who owns it"],
+              ["Continuity", "Same translator on the next release?", "Yes / Best effort"],
+              ["Aftercare", "What happens when we change the source text?", "Rate / Free"]
+            ]
+          }],
+          ["p", "A low rate paired with “no” to context and files is not a bargain. It is a rate for a different service than the one you need, and the difference reappears as internal review hours."]
+        ]
+      },
+      {
+        h: "Budgeting a first Japanese release",
+        blocks: [
+          ["p", "Budget by surface rather than by word count, because surfaces are what a buyer encounters and what your team has to maintain. A realistic first pass covers the sales path, the first-run experience, the parts of the product a pilot customer will actually touch, and the commercial documents that go to procurement."],
+          ["ul", [
+            "The pages that carry the pitch, and the inquiry form at the end of them.",
+            "Onboarding and the first session in the product, where confusion is most expensive.",
+            "Billing and plan language, which finance and procurement read closely.",
+            "Support macros for the ten questions you already know you will be asked.",
+            "Whatever a Japanese buyer's legal or security review will ask for."
+          ]],
+          ["p", "Then hold budget back. The second round is better spent than the first, because by then real questions from real prospects will have shown you which wording is failing. Teams that spend everything on the initial translation and nothing on the follow-up end up with a Japanese product that was accurate on launch day and drifting three months later."]
+        ]
+      }
+    ],
+    cta: {
+      heading: "Want a quote built from your actual surfaces?",
+      body: "GuideTech scopes Japanese language work from what a buyer will see rather than from a word count, and says plainly when a straightforward agency word rate is the better purchase.",
+      href: "/japan-partner/en/contact",
+      text: "Talk to us about scope"
+    },
+    faq: [
+      ["What is a normal per-word rate for Japanese?", "Rates vary widely by subject matter, review depth and turnaround, and any single published figure will be wrong for some of those combinations. Compare on the five questions above first; the rate only becomes meaningful once the scope is the same."],
+      ["Is per-word pricing ever right for software?", "Yes, for documentation, policies and long-form marketing attached to the product. It fits poorly for interface strings, where context and length constraints dominate the work."],
+      ["Should we translate everything before validating demand?", "No. Translate the surfaces required to sell, onboard, support and invoice a pilot customer. Expand once real conversations tell you where the wording is failing."],
+      ["Who should own the glossary?", "You should, with the vendor maintaining it. If the glossary lives only inside a vendor's tool, changing vendors means re-deciding every terminology question you already settled."]
+    ],
+    related: ["software-localization-japan-guide", "japanese-translation-agency-vs-localization-partner", "doing-business-in-japan-for-software-companies"]
   },
+
   {
     slug: "software-localization-japan-guide",
+    seoTitle: "Software Localization Japan Guide",
+    seoDescription:
+      "Localizing software for Japan: working from product context, choosing a register, local formats, LINE and invoice expectations, and in-interface QA.",
     kw: "software localization japan",
-    title: "Software Localization Japan Guide for AI and SaaS Companies",
-    description: "A practical software localization Japan guide covering UI, honorific tone, local formats, LINE, payments, invoices, support, and launch readiness."
+    title: "Software Localization for Japan: A Working Guide",
+    description:
+      "How to localize a product for Japanese business users: product context over string lists, tone as a product decision, local formats, billing expectations and in-interface QA.",
+    lead:
+      "A product can be entirely in Japanese and still feel foreign. Labels overflow their buttons, error messages sound blunt, dates arrive in an unfamiliar order, and the billing screen uses words no Japanese finance team would use. None of that is a translation error. It is what happens when Japanese is treated as a content layer applied at the end rather than as a set of product decisions.",
+    sections: [
+      {
+        h: "Start from product context, not from the string list",
+        blocks: [
+          ["p", "The translator needs three things that a spreadsheet of strings cannot carry: who is looking at this screen, what state they are in, and what happens next. Without them, even accurate Japanese produces a worse experience, because the register will be wrong and the length will be unconstrained."],
+          ["ul", [
+            "Export strings with a screenshot or a screen name attached, even an imperfect one.",
+            "Mark the strings that have hard length limits, and say what the limit is.",
+            "Flag anything that is a proper noun, a feature name, or deliberately kept in English.",
+            "Say who the user is on that screen. An administrator and a first-time trial user get different Japanese."
+          ]],
+          ["note", "If supplying context feels like too much work, that is a signal about the size of the review you will otherwise do later. The context is not overhead; it is the specification."]
+        ]
+      },
+      {
+        h: "Tone is a product decision, not a translator's preference",
+        blocks: [
+          ["p", "Japanese forces a choice of register on every sentence. Too casual reads as careless to a corporate buyer; too formal makes a modern product feel bureaucratic and slow. The right answer differs by surface, and it should be decided once and written down rather than re-litigated per string."],
+          ["table", {
+            head: ["Surface", "What the user is doing", "Register that usually works"],
+            rows: [
+              ["Marketing pages", "Deciding whether to care", "Confident, plain, not stiff"],
+              ["Onboarding", "Trying not to get lost", "Warm and instructional"],
+              ["Errors and validation", "Blocked and irritated", "Apologetic, concrete about the fix"],
+              ["Billing and plans", "Being scrutinised by finance", "Formal and precise; match accounting vocabulary"],
+              ["Support replies", "Waiting on you", "Polite, unambiguous about what happens next"]
+            ]
+          }],
+          ["p", "Put these decisions in the glossary alongside terminology. A glossary that defines only nouns will not stop two translators from producing two different products."]
+        ]
+      },
+      {
+        h: "Local formats are trust signals",
+        blocks: [
+          ["p", "Dates, name fields, postal codes, addresses, currency and tax labels are not cosmetic. They are where a Japanese user decides whether the product was built for them or merely translated for them, and the judgement happens in seconds."],
+          ["ul", [
+            "Name fields: family name first, and a separate field for the phonetic reading is expected in many business contexts.",
+            "Addresses: the Japanese order runs largest to smallest, and postal code lookup that auto-fills the address is a normal expectation rather than a nicety.",
+            "Dates: era-based years still appear on official and financial documents even where the interface uses the Western calendar.",
+            "Currency: yen has no minor unit, so a price rendered with two decimal places reads as an import.",
+            "Tax: display conventions for tax-inclusive and tax-exclusive pricing are regulated in consumer contexts and closely watched in B2B."
+          ]]
+        ]
+      },
+      {
+        h: "Channels and billing carry their own expectations",
+        blocks: [
+          ["p", "Two areas surprise overseas teams more than the language itself. The first is communication: LINE is a normal business channel for some segments and entirely absent from others, and the decision should follow your customer rather than your roadmap. The second is money."],
+          ["ul", [
+            "Bank transfer remains common in Japanese B2B, and invoicing after delivery is the default rather than the exception.",
+            "The qualified invoice system means your invoice wording and registration status matter to your customer's own tax position. Get the terminology right on the billing screen and the document, not just in the help centre.",
+            "Payment terms are often longer than overseas SaaS teams expect, and asking for card-on-file from a corporate buyer can stall a deal that was otherwise closing."
+          ]],
+          ["note", "None of this needs to be solved before a pilot. It does need to be answered before the first invoice, and the answer belongs in the product's Japanese, not only in an internal document."]
+        ]
+      },
+      {
+        h: "QA has to happen inside the interface",
+        blocks: [
+          ["p", "Reviewing strings in a spreadsheet catches vocabulary errors and misses everything else. The failures that damage trust are layout, state and tone, and they are only visible in the running product."],
+          ["ul", [
+            "Walk the real flows: sign-up, empty states, validation errors, navigation, emails and the help centre path.",
+            "Check the narrowest viewport you support. Japanese does not wrap the way English does, and a label that fits on desktop can break a mobile control.",
+            "Read the error messages aloud. Bluntness that is invisible on screen becomes obvious when spoken.",
+            "Capture issues as screenshots with a suggested fix. A list of strings without screens produces another round of guessing."
+          ]],
+          ["p", "Budget this pass explicitly. It is routinely cut when a release slips, and it is the pass that determines whether the Japanese version feels finished."]
+        ]
+      }
+    ],
+    cta: {
+      heading: "Need the in-interface pass done from Tokyo?",
+      body: "GuideTech reviews the running product rather than the string list: register per surface, length and layout, format and billing language, with screenshots and suggested fixes your engineers can act on.",
+      href: "/japan-partner/en/localization",
+      text: "See the localization service"
+    },
+    faq: [
+      ["Is machine translation good enough for Japanese product strings?", "For a first draft of low-risk text it can be, provided a competent reviewer sees the strings in context afterwards. For billing, errors and anything a buyer's legal team reads, the review is the work and skipping it is where the cost reappears."],
+      ["Do we need LINE?", "Only if your customers use it for business. It is normal in some segments and absent in others, so make it a deliberate decision rather than an assumption in either direction."],
+      ["Can we launch with the website localized and the product in English?", "Yes, for demand testing. For paid pilots the onboarding, billing and support surfaces usually need Japanese too, because that is where a buyer's internal objections form."],
+      ["How much does the interface change after the first pass?", "More than teams expect. Real support tickets and sales objections consistently reveal wording that tested fine internally, which is why the follow-up round matters."]
+    ],
+    related: ["japanese-translation-services-pricing-guide", "japanese-translation-agency-vs-localization-partner", "doing-business-in-japan-for-software-companies"]
   },
+
   {
     slug: "japanese-translation-agency-vs-localization-partner",
+    seoTitle: "Translation Agency vs Localization Partner",
+    seoDescription:
+      "What a Japanese translation agency is built to do well, the decisions it cannot make for you, and when a localization partner is the right purchase instead.",
     kw: "japanese translation agency",
     title: "Japanese Translation Agency vs Localization Partner",
-    description: "How a Japanese translation agency differs from a localization partner for AI and SaaS companies launching in Japan."
+    description:
+      "What an agency does well, the product decisions it cannot make on your behalf, what a localization partner adds, and how to choose between them.",
+    lead:
+      "These are different purchases, and choosing wrongly is expensive in both directions. Buying a partner for work an agency does better means paying for judgement you did not need. Buying an agency for work that requires judgement means receiving accurate Japanese that still fails in the product.",
+    sections: [
+      {
+        h: "What an agency is built to do well",
+        blocks: [
+          ["p", "Agencies are optimised for throughput and consistency on defined material. That is a genuine strength and it is what you should buy when the material is genuinely defined."],
+          ["ul", [
+            "Volume with a deadline, coordinated across several translators without the quality diverging.",
+            "Subject-matter specialists on demand, including legal, medical and technical registers you would struggle to source alone.",
+            "Established terminology management and quality processes, with a paper trail.",
+            "Certified translations where a counterparty requires one."
+          ]],
+          ["p", "For policies, manuals, contracts, long-form marketing and anything with a fixed scope, this is the right purchase and usually the cheaper one."]
+        ]
+      },
+      {
+        h: "The decisions an agency cannot make for you",
+        blocks: [
+          ["p", "Software localization keeps producing questions that are not linguistic. An agency is generally not authorised to answer them, and should not be, because answering requires knowing your product strategy."],
+          ["ul", [
+            "Should this error message apologise, and how strongly?",
+            "Should this feature name stay in English, or does it need a Japanese equivalent that customers will actually say out loud?",
+            "Does the billing label follow accounting vocabulary or product vocabulary when the two disagree?",
+            "Should onboarding reference a workflow that only exists in Japanese companies?",
+            "Which of these forty screens actually matters for a pilot, and which can wait?"
+          ]],
+          ["note", "Notice that none of these are questions about Japanese. They are product, sales and operations questions that happen to surface in Japanese, which is why they arrive unanswered from a pure language vendor."]
+        ]
+      },
+      {
+        h: "What a localization partner adds",
+        blocks: [
+          ["table", {
+            head: ["", "Translation agency", "Localization partner"],
+            rows: [
+              ["Input needed", "A finished source file", "Access to the product and the people"],
+              ["Works from", "Text", "Context, flows and constraints"],
+              ["Decides", "Wording", "Wording, register, priority and scope"],
+              ["Output", "Translated text", "Text, glossary, QA notes and recommendations"],
+              ["After delivery", "Next purchase order", "Continues through releases and tickets"],
+              ["Best for", "Defined material at volume", "Market entry where the scope is still forming"]
+            ]
+          }],
+          ["p", "The practical difference shows up in who does the thinking. With an agency, your team converts product reality into a brief. With a partner, that conversion is the service."]
+        ]
+      },
+      {
+        h: "Why the work does not end at launch",
+        blocks: [
+          ["p", "The first release is when the useful information starts arriving. Customers ask questions your glossary never anticipated. Sales meets objections that need new wording. Support tickets expose a phrase that reads as rude. Meanwhile the product ships new strings every sprint."],
+          ["p", "If the language work stops at delivery, the Japanese experience begins drifting immediately: new features arrive in English, support replies get written ad hoc, and the register that was carefully chosen erodes one message at a time. Six months later the product reads as half-localized, which is worse than obviously English because it looks unfinished rather than foreign."]
+        ]
+      },
+      {
+        h: "Choosing, and when to use both",
+        blocks: [
+          ["ul", [
+            "<strong>Buy an agency</strong> when the scope is defined, the material is linear, and you already know what you want it to say.",
+            "<strong>Buy a partner</strong> when Japan is a market entry rather than a content task, when the scope is still being discovered, or when the work has to continue past launch.",
+            "<strong>Use both</strong> once you are running: the partner owns the glossary, the product surfaces and the decisions; the agency handles bulk documents against that glossary. This is the normal steady state and it is cheaper than either alone."
+          ]],
+          ["p", "The failure mode to avoid is buying an agency for market entry and concluding from the result that localization does not work. What did not work was asking a text supplier to make product decisions."]
+        ]
+      }
+    ],
+    cta: {
+      heading: "Not sure which one you need?",
+      body: "Tell us what you are trying to ship and by when. If an agency word rate is the better purchase for your material, we will say so — that answer costs you a 30-minute call and saves a mis-scoped project.",
+      href: "/japan-partner/en/contact",
+      text: "Ask which model fits"
+    },
+    faq: [
+      ["Is GuideTech a translation agency?", "No. We work as a product-aware localization and Japan operating partner. For high-volume document translation an agency is usually the better and cheaper choice, and we will tell you when that is the case."],
+      ["Can an agency handle software localization?", "Some can, particularly larger ones with localization engineering teams. Verify specifically that they review context, work with string files and stay available after launch, rather than assuming it from the word “localization” in a proposal."],
+      ["What should we localize first?", "The sales path, the first session in the product, billing and plan language, and support macros for the questions you already know are coming."],
+      ["Can we switch later?", "Yes, and it is much easier if you own the glossary and the translation memory from the start. Make that explicit in the first contract with whoever you choose."]
+    ],
+    related: ["software-localization-japan-guide", "japanese-translation-services-pricing-guide", "doing-business-in-japan-for-software-companies"]
   },
+
   {
     slug: "doing-business-in-japan-for-software-companies",
+    seoTitle: "Doing Business in Japan: First 90 Days",
+    seoDescription:
+      "A first-90-days guide for overseas software companies entering Japan without a local office: trust, the buying process, realistic sequencing and what not to build yet.",
     kw: "doing business in japan",
-    title: "Doing Business in Japan for Software Companies",
-    description: "A first-90-days guide to doing business in Japan for overseas AI and SaaS companies without a local office."
+    title: "Doing Business in Japan Without a Local Office",
+    description:
+      "How overseas software companies enter Japan before hiring locally: how trust is evaluated, localizing the buying process, a realistic first ninety days, and what to defer.",
+    lead:
+      "Japanese buyers evaluate continuity before they evaluate features. Who answers when something breaks, how long you will still be here, whether the invoice will satisfy their accounting team, and whether anyone can explain the product in Japanese to the people who will actually use it. A strong product with none of those answers loses to a weaker one that has them.",
+    sections: [
+      {
+        h: "Trust is evaluated before the product",
+        blocks: [
+          ["p", "The early questions are rarely about capability. They are about risk, and they are often asked indirectly or not at all — which means an unanswered one can quietly end a deal without you learning why."],
+          ["ul", [
+            "Who do we contact, in Japanese, when something goes wrong?",
+            "Will this company still be serving Japan in three years?",
+            "Can we get an invoice our accounting department will accept without a conversation?",
+            "Is there anyone who can train our staff in Japanese?",
+            "Has anyone in Japan used this, and can we hear about it?"
+          ]],
+          ["note", "The last question is the hardest for a new entrant and the most valuable to solve. One reference customer willing to be named changes the conversation more than any amount of localization."]
+        ]
+      },
+      {
+        h: "The buying process needs localizing, not just the website",
+        blocks: [
+          ["p", "Deals stall in procurement, security review and finance far more often than in the sales conversation. Those are the surfaces least likely to have been translated, and the ones where an imported document is most obviously imported."],
+          ["ul", [
+            "Security and privacy documentation that a Japanese IT department can read without translating it themselves.",
+            "Contract and cancellation terms in language that does not require legal counsel to interpret.",
+            "Invoice and payment terms that match Japanese practice, including the qualified invoice registration question.",
+            "An onboarding plan that names who does what, because implementation responsibility is scrutinised closely.",
+            "A clear escalation path with a name attached to it."
+          ]],
+          ["p", "Preparing these before they are asked for compresses the deal cycle noticeably, because each one otherwise becomes a round trip measured in weeks."]
+        ]
+      },
+      {
+        h: "A realistic first ninety days",
+        blocks: [
+          ["p", "The goal of the first quarter is evidence, not revenue. Specifically: evidence about whether Japanese buyers want this, what they object to, and what it would cost to serve them properly."],
+          ["table", {
+            head: ["Period", "Focus", "What you should have at the end"],
+            rows: [
+              ["Days 1–30", "Scope and buyer-facing surfaces", "A localized sales path, a glossary, and a written list of the objections you expect"],
+              ["Days 31–60", "Real conversations", "Pilot discussions, the objections you actually met, and product gaps in writing"],
+              ["Days 61–90", "Operate and decide", "Support and billing tested against a real customer, and a go / no-go with numbers behind it"]
+            ]
+          }],
+          ["p", "If at day 90 you cannot say what the three most common objections were, the quarter was spent on preparation rather than learning, and another quarter of preparation will not fix that."]
+        ]
+      },
+      {
+        h: "AI products need local implementation help",
+        blocks: [
+          ["p", "For AI tools the gap is rarely comprehension of what the product does. It is translating that into a workflow inside an organisation that has approval steps, established processes and a strong preference for predictable outcomes."],
+          ["ul", [
+            "Concrete use cases described in the customer's own vocabulary, not in generic capability terms.",
+            "Worked examples in Japanese, including the prompts or configurations that produce them.",
+            "An answer to where the data goes and who can see it, prepared before it is asked.",
+            "Training material aimed at the people who will use it daily, not at the executive who signed."
+          ]],
+          ["p", "Adoption inside the account is where AI deals succeed or quietly lapse at renewal, and it is almost entirely a local-language, local-practice problem."]
+        ]
+      },
+      {
+        h: "Do not build the operation before the evidence",
+        blocks: [
+          ["p", "The expensive mistake is committing to an entity, an office and local hires on the strength of enthusiasm rather than signal. The reverse mistake — refusing to commit anything and wondering why nothing progresses — is equally common."],
+          ["ul", [
+            "Defer: incorporation, an office, permanent local hires, channel partner programmes, event sponsorship.",
+            "Commit early: a localized sales path, someone who can answer in Japanese, invoicing that works, and a way to capture what you learn.",
+            "Decide at 90 days, with the objections and the pilot outcomes in front of you."
+          ]],
+          ["p", "A Japan operating partner exists to make that sequencing possible: enough local presence to be credible and to learn, without the fixed cost of a local team you cannot yet justify."]
+        ]
+      }
+    ],
+    cta: {
+      heading: "Want a Tokyo-side desk for the first ninety days?",
+      body: "GuideTech operates the local layer while you test the market: Japanese customer communication, supplier and partner follow-up, invoicing questions, and a weekly written report to headquarters in English.",
+      href: "/japan-partner/en/launch-partner",
+      text: "See the launch partner service"
+    },
+    faq: [
+      ["Do we need a Japanese entity to start?", "Usually not for testing demand. It becomes necessary when you need to invoice domestically at scale, hire locally, or open accounts that require a registered company."],
+      ["What should happen in the first ninety days?", "Localize the buyer-facing path, hold real conversations, test support and billing against a pilot, and reach a go / no-go decision supported by the objections you actually encountered."],
+      ["How important are reference customers?", "Very. One named reference changes the conversation more than an equivalent spend on marketing, which is why the first pilot should be chosen partly on whether they might agree to be named."],
+      ["Can we run Japan from overseas indefinitely?", "For some segments, yes, with a local partner covering language and continuity. For enterprise buyers who require on-site presence, it becomes a ceiling you will eventually hit."]
+    ],
+    related: ["software-localization-japan-guide", "japanese-translation-agency-vs-localization-partner", "japanese-translation-services-pricing-guide"]
+  }
+];
+
+/* Spanish tree. Mirrors the four software / market-entry guides, paired by
+   hreflang. The sourcing guides stay English-only for now. */
+const esPosts = [
+  {
+    slug: "traduccion-japones-servicios-precios",
+    en: "japanese-translation-services-pricing-guide",
+    seoTitle: "Precio de la Traducción al Japonés",
+    seoDescription:
+      "Qué cubre realmente una tarifa por palabra, por qué el software se cotiza de otra forma, qué determina el precio y cómo comparar presupuestos.",
+    kw: "precio traducción japonés",
+    title: "Traducción al Japonés: Qué Cubre Realmente el Precio",
+    description:
+      "Guía práctica de precios de traducción al japonés para equipos de software: qué incluye una tarifa por palabra, por qué el producto se cotiza distinto y cómo comparar.",
+    lead:
+      "Casi todos los presupuestos de traducción al japonés llegan como una cifra por palabra, lo que los hace parecer comparables. Normalmente no lo son. Dos proveedores pueden cotizar la misma tarifa y entregar trabajos que difieren enormemente en el tiempo que después consumen a su equipo. La tarifa es la parte más barata de la decisión.",
+    sections: [
+      {
+        h: "Qué cubre una tarifa por palabra",
+        blocks: [
+          ["p", "Una tarifa estándar cubre traducir el texto entregado, una pasada de edición y coordinación ligera. Es un servicio real y, para el material adecuado, es exactamente lo que hay que comprar. Lo que no cubre es todo lo que ocurre porque el texto pertenece a un producto y no a un documento."],
+          ["ul", [
+            "<strong>Suele incluir:</strong> traducción de lo que usted envía, edición, coherencia terminológica dentro del archivo y entrega en el formato recibido.",
+            "<strong>Suele no incluir:</strong> preguntar qué significa una cadena, mirar dónde aparece, decidir el tono por pantalla, comprobar que el japonés cabe en el botón o mantener un glosario entre versiones.",
+            "<strong>Suele quedar sin aclarar:</strong> quién es dueño de la memoria de traducción y qué pasa cuando usted cambia el texto original después de la entrega."
+          ]],
+          ["note", "La pregunta más útil no es la tarifa, sino: «si una cadena es ambigua, ¿qué hacen ustedes?». La respuesta separa a un proveedor que preguntará de uno que adivinará, y adivinar es lo que genera retrabajo."]
+        ]
+      },
+      {
+        h: "Dónde el software deja atrás la tarifa por palabra",
+        blocks: [
+          ["p", "Un documento es lineal y se explica solo. Una cadena de producto no. Las mismas tres palabras pueden ser un botón, un título, un error y una notificación, y el japonés no se resuelve igual en los cuatro casos."],
+          ["table", {
+            head: ["Material", "Modelo de precio razonable", "Motivo"],
+            rows: [
+              ["Políticas, manuales, marketing largo", "Por palabra de origen", "Lineal y de baja ambigüedad"],
+              ["Web y landing pages", "Por palabra o por página", "Requiere algo de contexto, pero la superficie es visible"],
+              ["Cadenas de interfaz", "Por proyecto o por sprint", "Contexto, límites de longitud y tono dominan el esfuerzo"],
+              ["Soporte y centro de ayuda", "Por proyecto y luego mensual", "Cambia con el producto y con los tickets reales"],
+              ["Versiones continuas", "Cuota mensual", "El trabajo es mantenimiento, no entrega"]
+            ]
+          }],
+          ["p", "Si un proveedor cotiza por palabra para cadenas de interfaz sin pedir ver la interfaz, eso ya dice bastante sobre cómo irá el proyecto."]
+        ]
+      },
+      {
+        h: "Qué determina realmente el precio",
+        blocks: [
+          ["ul", [
+            "<strong>Ambigüedad.</strong> Con qué frecuencia el traductor tiene que parar y preguntar. Es la variable oculta más grande y depende de usted: capturas y una línea de contexto por cadena la reducen más que ninguna otra cosa.",
+            "<strong>Decisiones de tono.</strong> El japonés obliga a elegir registro. Decidirlo una vez en un glosario es barato; volver a decidirlo en cada pantalla y cada versión es caro y produce un producto incoherente.",
+            "<strong>Límites de longitud.</strong> Una etiqueta que debe caber en 8 caracteres es otro trabajo distinto de un párrafo.",
+            "<strong>Profundidad de revisión.</strong> Traducción, traducción con edición, o ambas más QA dentro de la interfaz: tres precios y tres resultados distintos.",
+            "<strong>Plazo.</strong> Comprimir el calendario encarece y además elimina la pasada de coherencia que mantiene estable la terminología."
+          ]]
+        ]
+      },
+      {
+        h: "Cómo comparar presupuestos que no son comparables",
+        blocks: [
+          ["p", "Ponga a los proveedores en los mismos ejes antes de comparar cifras. Estas cinco preguntas producen respuestas fáciles de alinear y difíciles de maquillar."],
+          ["sample", {
+            title: "Cinco preguntas que hacen comparables los presupuestos",
+            rows: [
+              ["Contexto", "¿Revisarán capturas o el producto en marcha?", "Sí / No"],
+              ["Archivos", "¿Trabajan directamente con archivos de cadenas?", "Sí / No"],
+              ["Glosario", "¿Mantienen terminología entre versiones?", "Quién es dueño"],
+              ["Continuidad", "¿El mismo traductor en la siguiente versión?", "Sí / Según disponibilidad"],
+              ["Posventa", "¿Qué ocurre si cambiamos el texto original?", "Tarifa / Incluido"]
+            ]
+          }],
+          ["p", "Una tarifa baja junto a un «no» en contexto y archivos no es una ganga: es el precio de otro servicio distinto del que usted necesita, y la diferencia reaparece como horas internas de revisión."]
+        ]
+      },
+      {
+        h: "Presupuestar un primer lanzamiento en japonés",
+        blocks: [
+          ["p", "Presupueste por superficie y no por número de palabras, porque las superficies son lo que el comprador encuentra y lo que su equipo tendrá que mantener."],
+          ["ul", [
+            "Las páginas que sostienen la propuesta y el formulario que las cierra.",
+            "El onboarding y la primera sesión dentro del producto, donde la confusión sale más cara.",
+            "Facturación y planes, que finanzas y compras leen con lupa.",
+            "Macros de soporte para las diez preguntas que ya sabe que le harán.",
+            "Lo que pedirá la revisión legal o de seguridad del comprador japonés."
+          ]],
+          ["p", "Y reserve presupuesto. La segunda ronda se gasta mejor que la primera, porque para entonces las preguntas reales de clientes reales habrán mostrado qué redacción está fallando."]
+        ]
+      }
+    ],
+    cta: {
+      heading: "¿Quiere un presupuesto construido desde sus superficies reales?",
+      body: "GuideTech dimensiona el trabajo lingüístico a partir de lo que verá un comprador, no de un recuento de palabras, y dice con claridad cuándo una agencia por palabra es la mejor compra.",
+      href: "/japan-partner/es/contact",
+      text: "Hablemos del alcance"
+    },
+    faq: [
+      ["¿Cuál es una tarifa normal por palabra al japonés?", "Varía mucho según materia, profundidad de revisión y plazo, así que cualquier cifra publicada será incorrecta para alguna de esas combinaciones. Iguale primero el alcance con las cinco preguntas anteriores."],
+      ["¿La tarifa por palabra sirve alguna vez para software?", "Sí, para documentación, políticas y marketing largo. Encaja mal en cadenas de interfaz, donde el contexto y los límites de longitud dominan el trabajo."],
+      ["¿Hay que traducir todo antes de validar demanda?", "No. Traduzca lo necesario para vender, incorporar, dar soporte y facturar a un cliente piloto, y amplíe después."],
+      ["¿Quién debe ser dueño del glosario?", "Usted, con el proveedor manteniéndolo. Si vive solo dentro de la herramienta del proveedor, cambiar de proveedor obliga a volver a decidir toda la terminología."]
+    ],
+    related: ["localizacion-software-japon", "agencia-traduccion-japones-vs-partner-localizacion", "hacer-negocios-en-japon-empresas-software"]
+  },
+
+  {
+    slug: "localizacion-software-japon",
+    en: "software-localization-japan-guide",
+    seoTitle: "Localización de Software en Japón",
+    seoDescription:
+      "Localizar producto para Japón: partir del contexto y no de la lista de cadenas, el registro como decisión de producto, formatos locales, facturación y QA en la interfaz.",
+    kw: "localización de software en Japón",
+    title: "Localización de Software en Japón: Guía de Trabajo",
+    description:
+      "Cómo localizar un producto para usuarios de empresa japoneses: contexto de producto, tono como decisión de producto, formatos locales, expectativas de facturación y QA real.",
+    lead:
+      "Un producto puede estar íntegramente en japonés y seguir pareciendo extranjero. Las etiquetas desbordan los botones, los errores suenan secos, las fechas aparecen en un orden poco familiar y la pantalla de facturación usa palabras que ningún departamento financiero japonés emplearía. Nada de eso es un error de traducción: es lo que ocurre cuando el japonés se trata como una capa de contenido final en lugar de como un conjunto de decisiones de producto.",
+    sections: [
+      {
+        h: "Partir del contexto, no de la lista de cadenas",
+        blocks: [
+          ["p", "El traductor necesita tres cosas que una hoja de cálculo no transmite: quién mira esta pantalla, en qué estado está y qué ocurre después. Sin ellas, incluso un japonés correcto produce peor experiencia, porque el registro será inadecuado y la longitud quedará sin controlar."],
+          ["ul", [
+            "Exporte las cadenas con una captura o al menos el nombre de la pantalla.",
+            "Marque las cadenas con límite de longitud e indique cuál es.",
+            "Señale nombres propios, nombres de funciones y lo que se deja deliberadamente en inglés.",
+            "Diga quién es el usuario en esa pantalla: un administrador y alguien en prueba gratuita reciben japonés distinto."
+          ]],
+          ["note", "Si aportar contexto parece demasiado trabajo, eso anticipa el tamaño de la revisión que hará después. El contexto no es un extra: es la especificación."]
+        ]
+      },
+      {
+        h: "El tono es una decisión de producto",
+        blocks: [
+          ["p", "El japonés obliga a elegir registro en cada frase. Demasiado informal resulta descuidado para un comprador corporativo; demasiado formal hace que un producto moderno parezca burocrático. La respuesta correcta cambia según la superficie y debe decidirse una vez y por escrito."],
+          ["table", {
+            head: ["Superficie", "Qué está haciendo el usuario", "Registro que suele funcionar"],
+            rows: [
+              ["Páginas de marketing", "Decidir si le interesa", "Seguro, claro, sin rigidez"],
+              ["Onboarding", "Intentar no perderse", "Cercano e instructivo"],
+              ["Errores y validación", "Bloqueado y molesto", "Disculpa breve y solución concreta"],
+              ["Facturación y planes", "Bajo escrutinio de finanzas", "Formal y preciso, con vocabulario contable"],
+              ["Respuestas de soporte", "Esperando", "Cortés y sin ambigüedad sobre el siguiente paso"]
+            ]
+          }],
+          ["p", "Estas decisiones van en el glosario junto a la terminología. Un glosario que solo define sustantivos no impedirá que dos traductores produzcan dos productos distintos."]
+        ]
+      },
+      {
+        h: "Los formatos locales son señales de confianza",
+        blocks: [
+          ["p", "Fechas, campos de nombre, códigos postales, direcciones, moneda e impuestos no son cosmética. Son el punto donde un usuario japonés decide, en segundos, si el producto se construyó para él o simplemente se tradujo."],
+          ["ul", [
+            "Nombres: apellido primero, y en contextos de empresa se espera un campo separado para la lectura fonética.",
+            "Direcciones: el orden japonés va de mayor a menor, y el autocompletado por código postal se da por supuesto.",
+            "Fechas: el calendario de eras sigue apareciendo en documentos oficiales y financieros.",
+            "Moneda: el yen no tiene decimales, así que un precio con dos decimales se lee como importado.",
+            "Impuestos: cómo se muestra el precio con y sin impuestos está regulado en consumo y se vigila de cerca en B2B."
+          ]]
+        ]
+      },
+      {
+        h: "Canales y facturación tienen sus propias expectativas",
+        blocks: [
+          ["p", "Dos áreas sorprenden más que el idioma. La primera es la comunicación: LINE es un canal de trabajo normal en algunos segmentos y está ausente en otros, y la decisión debe seguir a su cliente. La segunda es el dinero."],
+          ["ul", [
+            "La transferencia bancaria sigue siendo habitual en B2B japonés, y facturar después de la entrega es lo normal.",
+            "El sistema de factura cualificada hace que la redacción de su factura y su registro afecten a la posición fiscal de su cliente.",
+            "Los plazos de pago suelen ser más largos de lo que espera un equipo SaaS extranjero, y exigir tarjeta guardada puede frenar una operación que iba a cerrarse."
+          ]],
+          ["note", "Nada de esto hay que resolverlo antes de un piloto, pero sí antes de la primera factura, y la respuesta pertenece al japonés del producto, no solo a un documento interno."]
+        ]
+      },
+      {
+        h: "El QA tiene que hacerse dentro de la interfaz",
+        blocks: [
+          ["p", "Revisar cadenas en una hoja detecta errores de vocabulario y se pierde todo lo demás. Los fallos que dañan la confianza son de maquetación, estado y tono, y solo se ven en el producto en marcha."],
+          ["ul", [
+            "Recorra los flujos reales: registro, estados vacíos, errores de validación, navegación, emails y centro de ayuda.",
+            "Compruebe el viewport más estrecho que soporte. El japonés no corta como el inglés.",
+            "Lea los mensajes de error en voz alta: la sequedad invisible en pantalla se vuelve evidente al pronunciarla.",
+            "Documente incidencias con captura y propuesta de corrección."
+          ]],
+          ["p", "Presupueste esta pasada explícitamente. Es la primera que se recorta cuando un lanzamiento se retrasa y la que decide si la versión japonesa parece terminada."]
+        ]
+      }
+    ],
+    cta: {
+      heading: "¿Necesita la revisión dentro de la interfaz, hecha desde Tokio?",
+      body: "GuideTech revisa el producto en marcha y no la lista de cadenas: registro por superficie, longitud y maquetación, formatos y lenguaje de facturación, con capturas y correcciones accionables.",
+      href: "/japan-partner/es/localization",
+      text: "Ver el servicio de localización"
+    },
+    faq: [
+      ["¿Basta la traducción automática para cadenas de producto?", "Para un primer borrador de texto de bajo riesgo puede bastar, siempre que después alguien competente vea las cadenas en contexto. Para facturación, errores y lo que lee el equipo legal del comprador, la revisión es el trabajo."],
+      ["¿Necesitamos LINE?", "Solo si sus clientes lo usan profesionalmente. Es normal en unos segmentos y ausente en otros, así que conviene decidirlo, no suponerlo."],
+      ["¿Podemos lanzar con la web en japonés y el producto en inglés?", "Sí para validar demanda. Para pilotos de pago, onboarding, facturación y soporte suelen necesitar japonés, porque ahí se forman las objeciones internas."],
+      ["¿Cuánto cambia la interfaz tras la primera pasada?", "Más de lo que se espera. Los tickets reales y las objeciones comerciales revelan textos que internamente parecían correctos."]
+    ],
+    related: ["traduccion-japones-servicios-precios", "agencia-traduccion-japones-vs-partner-localizacion", "hacer-negocios-en-japon-empresas-software"]
+  },
+
+  {
+    slug: "agencia-traduccion-japones-vs-partner-localizacion",
+    en: "japanese-translation-agency-vs-localization-partner",
+    seoTitle: "Agencia vs Partner de Localización",
+    seoDescription:
+      "Qué hace bien una agencia de traducción al japonés, qué decisiones de producto no puede tomar por usted, y cuándo conviene un partner de localización.",
+    kw: "agencia de traducción japonés",
+    title: "Agencia de Traducción vs Partner de Localización",
+    description:
+      "Qué hace bien una agencia, qué decisiones no puede tomar en su nombre, qué aporta un partner de localización y cómo elegir entre ambos.",
+    lead:
+      "Son compras distintas, y equivocarse sale caro en las dos direcciones. Contratar un partner para lo que una agencia hace mejor es pagar por un criterio que no necesitaba. Contratar una agencia para lo que exige criterio es recibir japonés correcto que aun así falla dentro del producto.",
+    sections: [
+      {
+        h: "Lo que una agencia está diseñada para hacer bien",
+        blocks: [
+          ["p", "Las agencias están optimizadas para volumen y coherencia sobre material definido. Es una fortaleza real y es lo que conviene comprar cuando el material está efectivamente definido."],
+          ["ul", [
+            "Volumen con fecha límite, coordinado entre varios traductores sin que la calidad se disperse.",
+            "Especialistas por materia bajo demanda, incluidos registros legal, médico o técnico difíciles de conseguir por su cuenta.",
+            "Gestión terminológica y procesos de calidad establecidos, con trazabilidad.",
+            "Traducciones juradas cuando la contraparte las exige."
+          ]],
+          ["p", "Para políticas, manuales, contratos y marketing largo, esta es la compra correcta y normalmente la más barata."]
+        ]
+      },
+      {
+        h: "Las decisiones que una agencia no puede tomar por usted",
+        blocks: [
+          ["p", "La localización de software genera continuamente preguntas que no son lingüísticas. Una agencia no suele estar autorizada a responderlas, y hace bien, porque responderlas exige conocer su estrategia de producto."],
+          ["ul", [
+            "¿Este mensaje de error debe disculparse, y con qué intensidad?",
+            "¿El nombre de esta función se queda en inglés o necesita un equivalente japonés que los clientes digan en voz alta?",
+            "¿La etiqueta de facturación sigue el vocabulario contable o el del producto cuando ambos difieren?",
+            "¿El onboarding debe mencionar un flujo que solo existe en empresas japonesas?",
+            "De estas cuarenta pantallas, ¿cuáles importan para un piloto y cuáles pueden esperar?"
+          ]],
+          ["note", "Ninguna de estas es una pregunta sobre japonés. Son preguntas de producto, ventas y operaciones que aparecen en japonés, y por eso llegan sin responder desde un proveedor puramente lingüístico."]
+        ]
+      },
+      {
+        h: "Qué aporta un partner de localización",
+        blocks: [
+          ["table", {
+            head: ["", "Agencia de traducción", "Partner de localización"],
+            rows: [
+              ["Necesita", "Un archivo de origen cerrado", "Acceso al producto y a las personas"],
+              ["Trabaja desde", "Texto", "Contexto, flujos y restricciones"],
+              ["Decide", "Redacción", "Redacción, registro, prioridad y alcance"],
+              ["Entrega", "Texto traducido", "Texto, glosario, notas de QA y recomendaciones"],
+              ["Tras la entrega", "Siguiente pedido", "Continúa entre versiones y tickets"],
+              ["Ideal para", "Material definido en volumen", "Entrada de mercado con alcance aún abierto"]
+            ]
+          }],
+          ["p", "La diferencia práctica está en quién hace el análisis. Con una agencia, su equipo convierte la realidad del producto en un briefing. Con un partner, esa conversión es el servicio."]
+        ]
+      },
+      {
+        h: "Por qué el trabajo no termina en el lanzamiento",
+        blocks: [
+          ["p", "La primera versión es cuando empieza a llegar la información útil. Los clientes preguntan cosas que el glosario no previó, ventas encuentra objeciones que exigen nueva redacción, y el producto genera cadenas nuevas cada sprint."],
+          ["p", "Si el trabajo lingüístico se detiene en la entrega, la experiencia japonesa empieza a degradarse de inmediato: las funciones nuevas llegan en inglés y el registro elegido se erosiona mensaje a mensaje. Seis meses después el producto se lee como a medio localizar, que es peor que estar claramente en inglés, porque parece inacabado en vez de extranjero."]
+        ]
+      },
+      {
+        h: "Cómo elegir, y cuándo usar ambos",
+        blocks: [
+          ["ul", [
+            "<strong>Contrate una agencia</strong> cuando el alcance está definido, el material es lineal y ya sabe qué quiere decir.",
+            "<strong>Contrate un partner</strong> cuando Japón es una entrada de mercado, cuando el alcance aún se está descubriendo o cuando el trabajo debe continuar tras el lanzamiento.",
+            "<strong>Use ambos</strong> en régimen estable: el partner gestiona glosario, superficies de producto y decisiones; la agencia absorbe volumen documental contra ese glosario."
+          ]],
+          ["p", "El error a evitar es contratar una agencia para una entrada de mercado y concluir del resultado que la localización no funciona. Lo que no funcionó fue pedirle decisiones de producto a un proveedor de texto."]
+        ]
+      }
+    ],
+    cta: {
+      heading: "¿No sabe cuál necesita?",
+      body: "Cuéntenos qué quiere lanzar y para cuándo. Si una tarifa de agencia es la mejor compra para su material, se lo diremos: esa respuesta cuesta una llamada de 30 minutos y evita un proyecto mal dimensionado.",
+      href: "/japan-partner/es/contact",
+      text: "Consultar qué modelo encaja"
+    },
+    faq: [
+      ["¿GuideTech es una agencia de traducción?", "No. Trabajamos como partner de localización y operación en Japón. Para volumen documental una agencia suele ser mejor y más barata, y lo decimos cuando es el caso."],
+      ["¿Una agencia puede localizar software?", "Algunas sí, sobre todo las grandes con equipos de ingeniería de localización. Verifique específicamente que revisan contexto, trabajan con archivos de cadenas y siguen disponibles tras el lanzamiento."],
+      ["¿Qué localizamos primero?", "El recorrido de venta, la primera sesión en el producto, la facturación y las macros de soporte para las preguntas que ya sabe que llegarán."],
+      ["¿Podemos cambiar de proveedor después?", "Sí, y es mucho más fácil si usted es dueño del glosario y de la memoria de traducción desde el principio. Déjelo explícito en el primer contrato."]
+    ],
+    related: ["localizacion-software-japon", "traduccion-japones-servicios-precios", "hacer-negocios-en-japon-empresas-software"]
+  },
+
+  {
+    slug: "hacer-negocios-en-japon-empresas-software",
+    en: "doing-business-in-japan-for-software-companies",
+    seoTitle: "Hacer Negocios en Japón: 90 Días",
+    seoDescription:
+      "Guía de los primeros 90 días para empresas de software que entran en Japón sin oficina local: confianza, proceso de compra, secuencia realista y qué no construir aún.",
+    kw: "hacer negocios en Japón",
+    title: "Hacer Negocios en Japón sin Oficina Local",
+    description:
+      "Cómo entran en Japón las empresas de software antes de contratar localmente: cómo se evalúa la confianza, cómo localizar el proceso de compra y qué posponer.",
+    lead:
+      "El comprador japonés evalúa continuidad antes que funcionalidad. Quién responde cuando algo falla, cuánto tiempo seguirá usted aquí, si la factura satisfará a su departamento contable y si alguien puede explicar el producto en japonés a quienes lo van a usar. Un producto potente sin esas respuestas pierde frente a otro más débil que sí las tiene.",
+    sections: [
+      {
+        h: "La confianza se evalúa antes que el producto",
+        blocks: [
+          ["p", "Las primeras preguntas rara vez son sobre capacidad. Son sobre riesgo, y a menudo se formulan de forma indirecta o no se formulan, lo que significa que una pregunta sin responder puede cerrar una operación sin que usted sepa por qué."],
+          ["ul", [
+            "¿A quién contactamos, en japonés, cuando algo va mal?",
+            "¿Esta empresa seguirá atendiendo Japón dentro de tres años?",
+            "¿Podemos obtener una factura que contabilidad acepte sin discusión?",
+            "¿Hay alguien que pueda formar a nuestro personal en japonés?",
+            "¿Alguien en Japón lo ha usado, y podemos hablar con ellos?"
+          ]],
+          ["note", "La última pregunta es la más difícil para quien acaba de entrar y la más valiosa de resolver. Un solo cliente dispuesto a dar su nombre cambia la conversación más que cualquier inversión en marketing."]
+        ]
+      },
+      {
+        h: "Hay que localizar el proceso de compra, no solo la web",
+        blocks: [
+          ["p", "Las operaciones se atascan en compras, revisión de seguridad y finanzas mucho más que en la conversación comercial. Son precisamente las superficies con menos probabilidad de estar traducidas."],
+          ["ul", [
+            "Documentación de seguridad y privacidad legible por un departamento de IT japonés sin que tenga que traducirla.",
+            "Condiciones contractuales y de cancelación que no exijan un abogado para interpretarse.",
+            "Facturación y plazos de pago acordes a la práctica japonesa, incluida la cuestión del registro de factura cualificada.",
+            "Un plan de implantación que diga quién hace qué.",
+            "Una vía de escalado con un nombre asociado."
+          ]],
+          ["p", "Preparar esto antes de que lo pidan acorta el ciclo de venta de forma perceptible, porque cada punto se convierte si no en una ida y vuelta de semanas."]
+        ]
+      },
+      {
+        h: "Unos primeros noventa días realistas",
+        blocks: [
+          ["p", "El objetivo del primer trimestre es evidencia, no facturación: si los compradores japoneses quieren esto, qué objetan y cuánto costaría atenderlos bien."],
+          ["table", {
+            head: ["Periodo", "Foco", "Qué debe tener al final"],
+            rows: [
+              ["Días 1–30", "Alcance y superficies de venta", "Recorrido comercial localizado, glosario y lista escrita de objeciones previstas"],
+              ["Días 31–60", "Conversaciones reales", "Pilotos en marcha, objeciones reales y carencias de producto por escrito"],
+              ["Días 61–90", "Operar y decidir", "Soporte y facturación probados con un cliente real, y una decisión con números detrás"]
+            ]
+          }],
+          ["p", "Si el día 90 no puede nombrar las tres objeciones más frecuentes, el trimestre se fue en preparación y no en aprendizaje, y otro trimestre de preparación no lo arreglará."]
+        ]
+      },
+      {
+        h: "La IA necesita ayuda de implantación local",
+        blocks: [
+          ["p", "En herramientas de IA la brecha no suele ser entender qué hace el producto, sino traducirlo a un flujo dentro de una organización con pasos de aprobación y fuerte preferencia por resultados predecibles."],
+          ["ul", [
+            "Casos de uso concretos descritos con el vocabulario del cliente.",
+            "Ejemplos resueltos en japonés, incluidos los prompts o configuraciones que los producen.",
+            "Una respuesta preparada sobre dónde van los datos y quién puede verlos.",
+            "Material de formación dirigido a quienes lo usarán a diario, no a quien firmó."
+          ]],
+          ["p", "La adopción dentro de la cuenta es donde las operaciones de IA se consolidan o caducan en la renovación, y es casi por completo un problema de idioma y práctica local."]
+        ]
+      },
+      {
+        h: "No construya la operación antes que la evidencia",
+        blocks: [
+          ["p", "El error caro es comprometerse con entidad, oficina y contrataciones locales por entusiasmo y no por señal. El error contrario —no comprometer nada y extrañarse de que no avance— es igual de frecuente."],
+          ["ul", [
+            "Posponga: constitución de sociedad, oficina, contrataciones fijas, programas de canal y patrocinio de eventos.",
+            "Comprometa pronto: recorrido comercial localizado, alguien que responda en japonés, facturación que funcione y una forma de registrar lo aprendido.",
+            "Decida a los 90 días, con las objeciones y los pilotos delante."
+          ]],
+          ["p", "Un partner operativo en Japón existe precisamente para permitir esa secuencia: presencia local suficiente para ser creíble y aprender, sin el coste fijo de un equipo que todavía no puede justificar."]
+        ]
+      }
+    ],
+    cta: {
+      heading: "¿Quiere un desk en Tokio para los primeros noventa días?",
+      body: "GuideTech opera la capa local mientras usted prueba el mercado: comunicación con clientes en japonés, seguimiento de proveedores y socios, dudas de facturación y un informe semanal por escrito a la central.",
+      href: "/japan-partner/es/launch-partner",
+      text: "Ver el servicio de lanzamiento"
+    },
+    faq: [
+      ["¿Necesitamos una sociedad japonesa para empezar?", "Normalmente no para validar demanda. Se vuelve necesaria cuando hay que facturar localmente a escala, contratar o abrir cuentas que exigen empresa registrada."],
+      ["¿Qué debe pasar en los primeros noventa días?", "Localizar el recorrido comercial, mantener conversaciones reales, probar soporte y facturación con un piloto y llegar a una decisión respaldada por las objeciones encontradas."],
+      ["¿Cuánto importan las referencias de clientes?", "Mucho. Una referencia con nombre cambia la conversación más que un gasto equivalente en marketing."],
+      ["¿Se puede operar Japón indefinidamente desde fuera?", "En algunos segmentos sí, con un partner local que cubra idioma y continuidad. Con compradores corporativos que exigen presencia, acaba siendo un techo."]
+    ],
+    related: ["localizacion-software-japon", "agencia-traduccion-japones-vs-partner-localizacion", "traduccion-japones-servicios-precios"]
   }
 ];
 
@@ -875,7 +1623,13 @@ const legacyPosts = [
  * Rendering
  * ------------------------------------------------------------------ */
 
-const bySlug = new Map(posts.map((p) => [p.slug, p]));
+const allPosts = [...posts, ...softwarePosts];
+// esPosts is declared below; the map is built lazily so related-link lookups
+// resolve in both trees.
+const bySlug = new Map();
+function indexPosts() {
+  for (const post of [...allPosts, ...esPosts]) bySlug.set(post.slug, post);
+}
 
 function esc(text) {
   return String(text).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -897,15 +1651,16 @@ function write(file, html) {
   console.log(`wrote ${file}`);
 }
 
-function head({ title, description, canonical, schemas, ogType = "website", ogImage = "/assets/japan-partner/images/og-default.webp" }) {
+function head({ title, description, canonical, schemas, ogType = "website", ogImage = "/assets/japan-partner/images/og-default.webp", lang = "en", alternates = null }) {
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="${lang}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
   <link rel="canonical" href="${site}${canonical}">
+${alternates ? alternates.map((a) => `  <link rel="alternate" hreflang="${a.lang}" href="${site}${a.url}">`).join("\n") + "\n" : ""}
   <meta property="og:type" content="${ogType}">
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
@@ -922,31 +1677,42 @@ ${schemas.map((s) => `<script type="application/ld+json">${json(s)}</script>`).j
 </head>`;
 }
 
-function header(current) {
+const NAV = {
+  en: { services: "Services", launch: "Launch Partner", sourcing: "Supplier Sourcing", loc: "Localization",
+        pricing: "Pricing", work: "Work", guides: "Guides", about: "About", contact: "Contact" },
+  es: { services: "Servicios", launch: "Partner Japón", sourcing: "Proveedores", loc: "Localización",
+        pricing: "Precios", work: "Experiencia", guides: "Guías", about: "About", contact: "Contacto" }
+};
+
+function header(current, lang = "en") {
+  const t = NAV[lang];
+  const b = `/japan-partner/${lang}`;
   return `<body>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="/japan-partner/en/"><strong>${serviceName}</strong><span>by GuideTech</span></a>
-    <div class="lang-switch"><a class="current" href="/japan-partner/en/">EN</a><a class="" href="/japan-partner/es/">ES</a></div>
+    <a class="brand" href="${b}/"><strong>${serviceName}</strong><span>by GuideTech</span></a>
+    <div class="lang-switch"><a class="${lang === "en" ? "current" : ""}" href="/japan-partner/en/">EN</a><a class="${lang === "es" ? "current" : ""}" href="/japan-partner/es/">ES</a></div>
     <button class="mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>☰</button>
     <nav class="nav" data-nav>
-      <div class="nav-item"><a class="" href="/japan-partner/en/launch-partner">Services</a><div class="dropdown"><a href="/japan-partner/en/launch-partner">Launch Partner</a><a href="/japan-partner/en/supplier-sourcing">Supplier Sourcing</a><a href="/japan-partner/en/localization">Localization</a></div></div>
-      <a class="" href="/japan-partner/en/pricing">Pricing</a>
-      <a class="" href="/japan-partner/en/work">Work</a>
-      <a class="${current === "blog" ? "current" : ""}" href="/japan-partner/en/blog/">Guides</a>
-      <a class="" href="/japan-partner/en/about">About</a>
-      <a class="header-cta" href="/japan-partner/en/contact">Contact</a>
+      <div class="nav-item"><a class="" href="${b}/launch-partner">${t.services}</a><div class="dropdown"><a href="${b}/launch-partner">${t.launch}</a><a href="${b}/supplier-sourcing">${t.sourcing}</a><a href="${b}/localization">${t.loc}</a></div></div>
+      <a class="" href="${b}/pricing">${t.pricing}</a>
+      <a class="" href="${b}/work">${t.work}</a>
+      <a class="${current === "blog" ? "current" : ""}" href="${b}/blog/">${t.guides}</a>
+      <a class="" href="${b}/about">${t.about}</a>
+      <a class="header-cta" href="${b}/contact">${t.contact}</a>
     </nav>
   </div>
 </header>`;
 }
 
-const footer = `<footer class="footer">
+function footer(lang = "en") {
+  const b = `/japan-partner/${lang}`;
+  return `<footer class="footer">
   <div class="wrap">
     <div class="footer-grid">
       <div><h2>${serviceName}</h2><p>Your local partner in Japan for supplier sourcing, localization, and operations. Operated by <a href="https://guidetech.jp">GuideTech</a> in Tokyo, Shibuya.</p></div>
-      <div><h3>Services</h3><div class="footer-links"><a href="/japan-partner/en/launch-partner">Japan Launch Partner</a><a href="/japan-partner/en/supplier-sourcing">Supplier Sourcing</a><a href="/japan-partner/en/localization">Software Localization</a><a href="/japan-partner/en/pricing">Pricing</a></div></div>
-      <div><h3>Company</h3><div class="footer-links"><a href="/japan-partner/en/work">Work</a><a href="/japan-partner/en/about">About</a><a href="/japan-partner/en/contact">Contact</a></div></div>
+      <div><h3>${NAV[lang].services}</h3><div class="footer-links"><a href="${b}/launch-partner">${NAV[lang].launch}</a><a href="${b}/supplier-sourcing">${NAV[lang].sourcing}</a><a href="${b}/localization">${NAV[lang].loc}</a><a href="${b}/pricing">${NAV[lang].pricing}</a></div></div>
+      <div><h3>GuideTech</h3><div class="footer-links"><a href="${b}/work">${NAV[lang].work}</a><a href="${b}/about">${NAV[lang].about}</a><a href="${b}/contact">${NAV[lang].contact}</a></div></div>
       <div><h3>Languages</h3><div class="footer-links"><a href="/japan-partner/en/">English</a><a href="/japan-partner/es/">Español</a></div></div>
     </div>
     <div class="footer-bottom">Operated by GuideTech. © 2026 GuideTech Inc.</div>
@@ -955,6 +1721,7 @@ const footer = `<footer class="footer">
 <script src="/assets/japan-partner/script.js"></script>
 </body>
 </html>`;
+}
 
 function renderBlock(block) {
   const [kind, value] = block;
@@ -1019,12 +1786,13 @@ function thumb(slug) {
     "japanese-translation-agency-vs-localization-partner": "blog-agency-vs-partner.webp",
     "doing-business-in-japan-for-software-companies": "blog-doing-business.webp"
   };
-  return legacy[slug]
-    ? `/assets/japan-partner/images/${legacy[slug]}`
-    : `/assets/japan-partner/images/blog/${slug}.webp`;
+  if (legacy[slug]) return `/assets/japan-partner/images/${legacy[slug]}`;
+  const es = esPosts.find((p) => p.slug === slug);
+  if (es) return `/assets/japan-partner/images/${legacy[es.en] || "og-default.webp"}`;
+  return `/assets/japan-partner/images/blog/${slug}.webp`;
 }
 
-function articleSchemas(post, url) {
+function articleSchemas(post, url, lang = "en") {
   return [
     // The Organization entity is repeated on every page rather than only on the
     // index, so the @id references below always resolve on the page itself.
@@ -1038,7 +1806,7 @@ function articleSchemas(post, url) {
       author: { "@id": `${site}/#organization` },
       publisher: { "@id": `${site}/#organization` },
       isAccessibleForFree: true,
-      inLanguage: "en",
+      inLanguage: lang,
       datePublished: today,
       dateModified: today,
       mainEntityOfPage: `${site}${url}`
@@ -1064,34 +1832,55 @@ function articleSchemas(post, url) {
   ];
 }
 
-function renderArticle(post) {
-  const url = `/${OUT_DIR}/${post.slug}`; // canonical is extensionless; the file itself stays .html
+const UI = {
+  en: { inGuide: "In this guide", faq: "Frequently asked questions", related: "Related guides",
+        by: (d) => `By ${serviceName} · Updated ${d}` },
+  es: { inGuide: "En esta guía", faq: "Preguntas frecuentes", related: "Guías relacionadas",
+        by: (d) => `Por ${serviceName} · Actualizado ${d}` }
+};
+
+/** hreflang pair for the four guides that exist in both languages. */
+const esByEn = new Map(esPosts.map((p) => [p.en, p.slug]));
+function pairFor(post, lang) {
+  const enSlug = lang === "en" ? post.slug : post.en;
+  const esSlug = lang === "en" ? esByEn.get(post.slug) : post.slug;
+  if (!enSlug || !esSlug) return null;
+  return [
+    { lang: "en", url: `/${OUT_DIR}/${enSlug}` },
+    { lang: "es", url: `/japan-partner/es/blog/${esSlug}` }
+  ];
+}
+
+function renderArticle(post, lang = "en") {
+  const ui = UI[lang];
+  const dir = lang === "en" ? OUT_DIR : "japan-partner/es/blog";
+  const url = `/${dir}/${post.slug}`; // canonical is extensionless; the file itself stays .html
   const sections = post.sections
     .map((section, i) => `<h2 id="section-${i + 1}">${section.h}</h2>${section.blocks.map(renderBlock).join("")}`)
     .join("");
 
   const cta = `<div class="article-cta"><h3>${post.cta.heading}</h3><p>${post.cta.body}</p><p><a class="button" href="${post.cta.href}">${post.cta.text}</a></p></div>`;
 
-  const faq = `<h2 id="faq">Frequently asked questions</h2><div class="faq">${post.faq
+  const faq = `<h2 id="faq">${ui.faq}</h2><div class="faq">${post.faq
     .map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`)
     .join("")}</div>`;
 
   const related = post.related.length
-    ? `<h2>Related guides</h2><ul class="check-list">${post.related
+    ? `<h2>${ui.related}</h2><ul class="check-list">${post.related
         .map((slug) => {
           const target = bySlug.get(slug);
-          return `<li><a href="/${OUT_DIR}/${slug}">${target.title}</a></li>`;
+          return `<li><a href="/${dir}/${slug}">${target.title}</a></li>`;
         })
         .join("")}</ul>`
     : "";
 
-  const toc = `<aside class="toc"><strong>In this guide</strong>${post.sections
+  const toc = `<aside class="toc"><strong>${ui.inGuide}</strong>${post.sections
     .map((section, i) => `<a href="#section-${i + 1}">${section.h}</a>`)
-    .join("")}<a href="#faq">Frequently asked questions</a><a href="${post.cta.href}">${post.cta.text}</a></aside>`;
+    .join("")}<a href="#faq">${ui.faq}</a><a href="${post.cta.href}">${post.cta.text}</a></aside>`;
 
   const cover = `<figure class="article-cover"><img src="${thumb(post.slug)}" alt="${esc(post.title)}" width="1200" height="675" fetchpriority="high"></figure>`;
 
-  const body = `<section class="section alt"><div class="wrap article-layout"><article class="article"><p class="eyebrow">${post.kw}</p><h1>${post.title}</h1><p class="article-meta">By ${serviceName} · Updated ${today}</p>${cover}<p>${post.lead}</p>${sections}${cta}${faq}${related}</article>${toc}</div></section>`;
+  const body = `<section class="section alt"><div class="wrap article-layout"><article class="article"><p class="eyebrow">${post.kw}</p><h1>${post.title}</h1><p class="article-meta">${ui.by(today)}</p>${cover}<p>${post.lead}</p>${sections}${cta}${faq}${related}</article>${toc}</div></section>`;
 
   return `${head({
     title: `${post.seoTitle || post.title} | GuideTech`,
@@ -1099,19 +1888,26 @@ function renderArticle(post) {
     canonical: url,
     ogType: "article",
     ogImage: thumb(post.slug),
-    schemas: articleSchemas(post, url)
+    lang,
+    alternates: pairFor(post, lang),
+    schemas: articleSchemas(post, url, lang)
   })}
-${header("blog")}
+${header("blog", lang)}
 ${body}
-${footer}`;
+${footer(lang)}`;
 }
 
 /* ------------------------------------------------------------------ *
  * Write article pages
  * ------------------------------------------------------------------ */
 
-for (const post of posts) {
-  write(`${OUT_DIR}/${post.slug}.html`, renderArticle(post));
+indexPosts();
+
+for (const post of allPosts) {
+  write(`${OUT_DIR}/${post.slug}.html`, renderArticle(post, "en"));
+}
+for (const post of esPosts) {
+  write(`japan-partner/es/blog/${post.slug}.html`, renderArticle(post, "es"));
 }
 
 /* ------------------------------------------------------------------ *
@@ -1157,7 +1953,7 @@ ${header("blog")}
     posts
   )}</div></section>
 <section class="section alt"><div class="wrap"><div class="section-head"><h2>Selling and operating in Japan</h2><p>Localization, pricing and the first ninety days for overseas software companies entering the Japanese market.</p></div>${cardsFor(
-    legacyPosts
+    softwarePosts
   )}</div></section>
 ${footer}`
 );
@@ -1188,25 +1984,56 @@ const staticUrls = [
   "/japan-partner/es/blog/"
 ];
 
-const esPostSlugs = [
-  "traduccion-japones-servicios-precios",
-  "localizacion-software-japon",
-  "agencia-traduccion-japones-vs-partner-localizacion",
-  "hacer-negocios-en-japon-empresas-software"
-];
+const esPostSlugs = esPosts.map((p) => p.slug);
 
 const sitemapUrls = [
   ...staticUrls,
   ...posts.map((p) => `/${OUT_DIR}/${p.slug}`),
-  ...legacyPosts.map((p) => `/${OUT_DIR}/${p.slug}`),
+  ...softwarePosts.map((p) => `/${OUT_DIR}/${p.slug}`),
   ...esPostSlugs.map((slug) => `/japan-partner/es/blog/${slug}`)
 ];
+
+write(
+  "japan-partner/es/blog/index.html",
+  `${head({
+    title: "Guías sobre Japón | GuideTech",
+    description:
+      "Guías prácticas desde Tokio para empresas de software que entran en Japón: precios de traducción, localización de producto, agencia frente a partner y primeros 90 días.",
+    canonical: "/japan-partner/es/blog/",
+    lang: "es",
+    alternates: [
+      { lang: "en", url: `/${OUT_DIR}/` },
+      { lang: "es", url: "/japan-partner/es/blog/" }
+    ],
+    ogImage: "/assets/japan-partner/images/og-default.webp",
+    schemas: [
+      organization(),
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${site}/` },
+          { "@type": "ListItem", position: 2, name: "Guías", item: `${site}/japan-partner/es/blog/` }
+        ]
+      }
+    ]
+  })}
+${header("blog", "es")}
+<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><p class="eyebrow">${serviceName}</p><h1>Guías para entrar en Japón</h1><p>Escritas desde Tokio para equipos de software que quieren vender, dar soporte y facturar en Japón antes de contratar localmente.</p></div><aside class="hero-panel"><strong>Para quién</strong><ul><li>Empresas SaaS y de IA que exploran Japón</li><li>Equipos sin oficina ni personal local</li><li>Responsables de producto y de expansión</li></ul></aside></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><h2>Vender y operar en Japón</h2><p>Precios, localización de producto, elección de proveedor y secuencia de los primeros noventa días.</p></div><div class="grid two">${esPosts
+    .map(
+      (post) =>
+        `<article class="card"><a class="card-thumb" href="/japan-partner/es/blog/${post.slug}"><img src="${thumb(post.slug)}" alt="${esc(post.title)}" width="1200" height="675" loading="lazy"></a><p class="eyebrow">${post.kw}</p><h3><a href="/japan-partner/es/blog/${post.slug}">${post.title}</a></h3><p>${post.description}</p></article>`
+    )
+    .join("")}</div></div></section>
+${footer("es")}`
+);
 
 /* ------------------------------------------------------------------ *
  * RSS feed
  * ------------------------------------------------------------------ */
 
-const feedItems = [...posts, ...legacyPosts];
+const feedItems = allPosts;
 write(
   `${OUT_DIR}/feed.xml`,
   `<?xml version="1.0" encoding="UTF-8"?>
@@ -1269,4 +2096,4 @@ ${sitemapUrls.map((url) => `  <url><loc>${site}${url}</loc><lastmod>${today}</la
 `
 );
 
-console.log(`\n${posts.length} article(s), 1 index, 1 sitemap written.`);
+console.log(`\n${allPosts.length} article(s), 1 index, 1 sitemap written.`);

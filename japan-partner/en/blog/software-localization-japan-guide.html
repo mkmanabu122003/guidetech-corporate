@@ -4,36 +4,72 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Software Localization Japan Guide | GuideTech</title>
-  <meta name="description" content="A practical software localization Japan guide covering UI, honorific tone, local formats, LINE, payments, invoices, support, and launch readiness.">
+  <meta name="description" content="Localizing software for Japan: working from product context, choosing a register, local formats, LINE and invoice expectations, and in-interface QA.">
   <link rel="canonical" href="https://guidetech.jp/japan-partner/en/blog/software-localization-japan-guide">
   <link rel="alternate" hreflang="en" href="https://guidetech.jp/japan-partner/en/blog/software-localization-japan-guide">
   <link rel="alternate" hreflang="es" href="https://guidetech.jp/japan-partner/es/blog/localizacion-software-japon">
-  <link rel="alternate" hreflang="x-default" href="https://guidetech.jp/japan-partner/">
-  <meta property="og:type" content="website">
+
+  <meta property="og:type" content="article">
   <meta property="og:title" content="Software Localization Japan Guide | GuideTech">
-  <meta property="og:description" content="A practical software localization Japan guide covering UI, honorific tone, local formats, LINE, payments, invoices, support, and launch readiness.">
+  <meta property="og:description" content="Localizing software for Japan: working from product context, choosing a register, local formats, LINE and invoice expectations, and in-interface QA.">
   <meta property="og:url" content="https://guidetech.jp/japan-partner/en/blog/software-localization-japan-guide">
-  <meta property="og:image" content="https://guidetech.jp/assets/japan-partner/images/og-default.webp">
+  <meta property="og:image" content="https://guidetech.jp/assets/japan-partner/images/blog-localization.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../assets/japan-partner/style.css">
-  <script type="application/ld+json">{
+  <link rel="stylesheet" href="/assets/japan-partner/style.css">
+  <link rel="alternate" type="application/rss+xml" title="GuideTech Japan sourcing guides" href="/japan-partner/en/blog/feed.xml">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://guidetech.jp/#organization",
+  "name": "GuideTech",
+  "alternateName": "GuideTech Japan Partner",
+  "url": "https://guidetech.jp",
+  "description": "Tokyo-based local operating partner for overseas companies working with Japan: supplier sourcing and verification, localization, Japanese-language communication and reporting to headquarters.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Japan"
+  },
+  "knowsLanguage": [
+    "ja",
+    "en",
+    "es"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Shibuya-ku",
+    "addressRegion": "Tokyo",
+    "addressCountry": "JP"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "url": "https://guidetech.jp/japan-partner/en/contact",
+    "availableLanguage": [
+      "English",
+      "Japanese",
+      "Spanish"
+    ]
+  }
+}</script>
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Software Localization Japan Guide for AI and SaaS Companies",
-  "description": "A practical software localization Japan guide covering UI, honorific tone, local formats, LINE, payments, invoices, support, and launch readiness.",
+  "headline": "Software Localization for Japan: A Working Guide",
+  "description": "How to localize a product for Japanese business users: product context over string lists, tone as a product decision, local formats, billing expectations and in-interface QA.",
+  "image": "https://guidetech.jp/assets/japan-partner/images/blog-localization.webp",
   "author": {
-    "@type": "Organization",
-    "name": "GuideTech Japan Partner team"
+    "@id": "https://guidetech.jp/#organization"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "GuideTech"
+    "@id": "https://guidetech.jp/#organization"
   },
-  "datePublished": "2026-08-08",
-  "dateModified": "2026-08-08",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-09",
   "mainEntityOfPage": "https://guidetech.jp/japan-partner/en/blog/software-localization-japan-guide"
 }</script>
 <script type="application/ld+json">{
@@ -42,26 +78,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is software localization for Japan?",
+      "name": "Is machine translation good enough for Japanese product strings?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is the adaptation of product language, UI behavior, formats, support, and launch operations for Japanese business users."
+        "text": "For a first draft of low-risk text it can be, provided a competent reviewer sees the strings in context afterwards. For billing, errors and anything a buyer's legal team reads, the review is the work and skipping it is where the cost reappears."
       }
     },
     {
       "@type": "Question",
-      "name": "Do we need LINE integration?",
+      "name": "Do we need LINE?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not always. But the decision should be made consciously based on customer segment and support model."
+        "text": "Only if your customers use it for business. It is normal in some segments and absent in others, so make it a deliberate decision rather than an assumption in either direction."
       }
     },
     {
       "@type": "Question",
-      "name": "Can we start with the website only?",
+      "name": "Can we launch with the website localized and the product in English?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, if the goal is demand testing. For paid pilots, support and billing surfaces usually need localization too."
+        "text": "Yes, for demand testing. For paid pilots the onboarding, billing and support surfaces usually need Japanese too, because that is where a buyer's internal objections form."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does the interface change after the first pass?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "More than teams expect. Real support tickets and sales objections consistently reveal wording that tested fine internally, which is why the follow-up round matters."
       }
     }
   ]
@@ -85,7 +129,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Software Localization Japan Guide for AI and SaaS Companies",
+      "name": "Software Localization for Japan: A Working Guide",
       "item": "https://guidetech.jp/japan-partner/en/blog/software-localization-japan-guide"
     }
   ]
@@ -116,13 +160,13 @@
     </nav>
   </div>
 </header>
-<section class="section alt"><div class="wrap article-layout"><article class="article"><p class="eyebrow">software localization japan</p><h1>Software Localization Japan Guide for AI and SaaS Companies</h1><p class="article-meta">By GuideTech Japan Partner team · Updated 2026-08-08</p><figure class="article-cover"><img src="/assets/japan-partner/images/blog-localization.webp" alt="Software Localization Japan Guide for AI and SaaS Companies visual guide" width="1200" height="630" loading="lazy"></figure><p>Software localization Japan projects fail when teams treat Japanese as a final content layer. The product may be translated, but the experience still feels foreign: button labels overflow, support macros sound cold, dates and names appear in unfamiliar order, and billing language does not match how Japanese companies buy software.</p><div class="diagram"><h3>Localization layers</h3><div class="matrix"><div class="matrix-cell"><strong>UI</strong><p class="note">Labels, layout, empty states</p></div><div class="matrix-cell"><strong>Tone</strong><p class="note">Honorifics, support, errors</p></div><div class="matrix-cell"><strong>Format</strong><p class="note">Dates, names, invoices</p></div><div class="matrix-cell"><strong>Support</strong><p class="note">Macros, help, escalation</p></div></div></div><h2 id="section-1">Start with product context</h2><p>The translator needs to know who is using the product, what state the user is in, and what action the interface expects. Japanese can be compact in some places and longer in others. Without screenshots, role definitions, and flow context, even accurate text can damage usability.</p><p>For early-stage AI and SaaS companies, the practical test is not whether a sentence is translated. It is whether Japanese buyers can understand the value, complete onboarding, ask questions, and approve the purchase without feeling that the product is still outside the market.</p><p>Each decision should be recorded in a living glossary: feature names, support tone, billing terms, use-case examples, and words that should remain in English. That system reduces rework when new screens, campaigns, or customer questions appear.</p><p>The first version should be credible enough to sell and learn. After that, sales conversations, support tickets, and implementation questions show which parts of localization deserve deeper investment.</p><p>It is also important to separate urgent from complete. A company does not need to localize the entire product before starting serious conversations, but the surfaces a Japanese buyer sees must feel coherent, reliable, and operable.</p><p>Internal teams should receive actionable notes, not only final text. When a wording choice depends on an interface limitation, a support policy, or a Japanese billing practice, product, sales, and operations need to understand the reason.</p><p>Final review should happen inside the real flow whenever possible. Many issues appear only when the text is seen in buttons, modals, emails, tables, or mobile screens, especially when Japanese changes hierarchy or line length.</p><h2 id="section-2">Design honorific tone deliberately</h2><p>Japanese business language has levels. Too casual can feel careless. Too formal can make a modern AI product feel slow and distant. The right tone depends on whether the screen is onboarding, error recovery, analytics, billing, support, or administration. A product glossary should define tone as well as terminology.</p><p>For early-stage AI and SaaS companies, the practical test is not whether a sentence is translated. It is whether Japanese buyers can understand the value, complete onboarding, ask questions, and approve the purchase without feeling that the product is still outside the market.</p><p>Each decision should be recorded in a living glossary: feature names, support tone, billing terms, use-case examples, and words that should remain in English. That system reduces rework when new screens, campaigns, or customer questions appear.</p><p>The first version should be credible enough to sell and learn. After that, sales conversations, support tickets, and implementation questions show which parts of localization deserve deeper investment.</p><p>It is also important to separate urgent from complete. A company does not need to localize the entire product before starting serious conversations, but the surfaces a Japanese buyer sees must feel coherent, reliable, and operable.</p><p>Internal teams should receive actionable notes, not only final text. When a wording choice depends on an interface limitation, a support policy, or a Japanese billing practice, product, sales, and operations need to understand the reason.</p><p>Final review should happen inside the real flow whenever possible. Many issues appear only when the text is seen in buttons, modals, emails, tables, or mobile screens, especially when Japanese changes hierarchy or line length.</p><h2 id="section-3">Local formats are product details</h2><p>Dates, postal codes, addresses, personal names, company names, currency, tax labels, and phone fields affect trust. Japanese users expect fields to behave in familiar ways. A checkout screen that ignores local formats can feel unready even when the core product is strong.</p><p>For early-stage AI and SaaS companies, the practical test is not whether a sentence is translated. It is whether Japanese buyers can understand the value, complete onboarding, ask questions, and approve the purchase without feeling that the product is still outside the market.</p><p>Each decision should be recorded in a living glossary: feature names, support tone, billing terms, use-case examples, and words that should remain in English. That system reduces rework when new screens, campaigns, or customer questions appear.</p><p>The first version should be credible enough to sell and learn. After that, sales conversations, support tickets, and implementation questions show which parts of localization deserve deeper investment.</p><p>It is also important to separate urgent from complete. A company does not need to localize the entire product before starting serious conversations, but the surfaces a Japanese buyer sees must feel coherent, reliable, and operable.</p><p>Internal teams should receive actionable notes, not only final text. When a wording choice depends on an interface limitation, a support policy, or a Japanese billing practice, product, sales, and operations need to understand the reason.</p><p>Final review should happen inside the real flow whenever possible. Many issues appear only when the text is seen in buttons, modals, emails, tables, or mobile screens, especially when Japanese changes hierarchy or line length.</p><h2 id="section-4">LINE, payments, and invoices</h2><p>Japan has channel expectations that may not appear in an English product roadmap. LINE is often part of customer communication. Bank transfer and invoice workflows remain important in B2B. The invoice system and qualified invoice registration topics should be represented carefully in billing and support language.</p><p>For early-stage AI and SaaS companies, the practical test is not whether a sentence is translated. It is whether Japanese buyers can understand the value, complete onboarding, ask questions, and approve the purchase without feeling that the product is still outside the market.</p><p>Each decision should be recorded in a living glossary: feature names, support tone, billing terms, use-case examples, and words that should remain in English. That system reduces rework when new screens, campaigns, or customer questions appear.</p><p>The first version should be credible enough to sell and learn. After that, sales conversations, support tickets, and implementation questions show which parts of localization deserve deeper investment.</p><p>It is also important to separate urgent from complete. A company does not need to localize the entire product before starting serious conversations, but the surfaces a Japanese buyer sees must feel coherent, reliable, and operable.</p><p>Internal teams should receive actionable notes, not only final text. When a wording choice depends on an interface limitation, a support policy, or a Japanese billing practice, product, sales, and operations need to understand the reason.</p><p>Final review should happen inside the real flow whenever possible. Many issues appear only when the text is seen in buttons, modals, emails, tables, or mobile screens, especially when Japanese changes hierarchy or line length.</p><h2 id="section-5">QA inside the interface</h2><p>String review in a spreadsheet is not enough. The team should inspect screens, empty states, navigation, validation errors, email templates, and help center paths. Screenshots and short recordings accelerate review because the issue is often layout, state, or tone rather than vocabulary.</p><p>For early-stage AI and SaaS companies, the practical test is not whether a sentence is translated. It is whether Japanese buyers can understand the value, complete onboarding, ask questions, and approve the purchase without feeling that the product is still outside the market.</p><p>Each decision should be recorded in a living glossary: feature names, support tone, billing terms, use-case examples, and words that should remain in English. That system reduces rework when new screens, campaigns, or customer questions appear.</p><p>The first version should be credible enough to sell and learn. After that, sales conversations, support tickets, and implementation questions show which parts of localization deserve deeper investment.</p><p>It is also important to separate urgent from complete. A company does not need to localize the entire product before starting serious conversations, but the surfaces a Japanese buyer sees must feel coherent, reliable, and operable.</p><p>Internal teams should receive actionable notes, not only final text. When a wording choice depends on an interface limitation, a support policy, or a Japanese billing practice, product, sales, and operations need to understand the reason.</p><p>Final review should happen inside the real flow whenever possible. Many issues appear only when the text is seen in buttons, modals, emails, tables, or mobile screens, especially when Japanese changes hierarchy or line length.</p><h2>How GuideTech approaches this</h2><p>GuideTech keeps localization close to launch reality. We prefer a smaller set of high-trust surfaces over a broad translation dump. The first version should help your team sell, learn, support, and improve. When the evidence grows, the localized surface can grow with it.</p><p><a href="/japan-partner/en/localization">Explore localization service</a></p><h2>FAQ</h2><div class="faq"><details><summary>What is software localization for Japan?</summary><p>It is the adaptation of product language, UI behavior, formats, support, and launch operations for Japanese business users.</p></details><details><summary>Do we need LINE integration?</summary><p>Not always. But the decision should be made consciously based on customer segment and support model.</p></details><details><summary>Can we start with the website only?</summary><p>Yes, if the goal is demand testing. For paid pilots, support and billing surfaces usually need localization too.</p></details></div></article><aside class="toc"><strong>In this guide</strong><a href="#section-1">Start with product context</a><a href="#section-2">Design honorific tone deliberately</a><a href="#section-3">Local formats are product details</a><a href="#section-4">LINE, payments, and invoices</a><a href="#section-5">QA inside the interface</a><a href="/japan-partner/en/localization">Explore localization service</a></aside></div></section>
+<section class="section alt"><div class="wrap article-layout"><article class="article"><p class="eyebrow">software localization japan</p><h1>Software Localization for Japan: A Working Guide</h1><p class="article-meta">By GuideTech Japan Partner · Updated 2026-08-09</p><figure class="article-cover"><img src="/assets/japan-partner/images/blog-localization.webp" alt="Software Localization for Japan: A Working Guide" width="1200" height="675" fetchpriority="high"></figure><p>A product can be entirely in Japanese and still feel foreign. Labels overflow their buttons, error messages sound blunt, dates arrive in an unfamiliar order, and the billing screen uses words no Japanese finance team would use. None of that is a translation error. It is what happens when Japanese is treated as a content layer applied at the end rather than as a set of product decisions.</p><h2 id="section-1">Start from product context, not from the string list</h2><p>The translator needs three things that a spreadsheet of strings cannot carry: who is looking at this screen, what state they are in, and what happens next. Without them, even accurate Japanese produces a worse experience, because the register will be wrong and the length will be unconstrained.</p><ul class="check-list"><li>Export strings with a screenshot or a screen name attached, even an imperfect one.</li><li>Mark the strings that have hard length limits, and say what the limit is.</li><li>Flag anything that is a proper noun, a feature name, or deliberately kept in English.</li><li>Say who the user is on that screen. An administrator and a first-time trial user get different Japanese.</li></ul><p class="note">If supplying context feels like too much work, that is a signal about the size of the review you will otherwise do later. The context is not overhead; it is the specification.</p><h2 id="section-2">Tone is a product decision, not a translator's preference</h2><p>Japanese forces a choice of register on every sentence. Too casual reads as careless to a corporate buyer; too formal makes a modern product feel bureaucratic and slow. The right answer differs by surface, and it should be decided once and written down rather than re-litigated per string.</p><div class="table-wrap"><table><thead><tr><th>Surface</th><th>What the user is doing</th><th>Register that usually works</th></tr></thead><tbody><tr><td><strong>Marketing pages</strong></td><td>Deciding whether to care</td><td>Confident, plain, not stiff</td></tr><tr><td><strong>Onboarding</strong></td><td>Trying not to get lost</td><td>Warm and instructional</td></tr><tr><td><strong>Errors and validation</strong></td><td>Blocked and irritated</td><td>Apologetic, concrete about the fix</td></tr><tr><td><strong>Billing and plans</strong></td><td>Being scrutinised by finance</td><td>Formal and precise; match accounting vocabulary</td></tr><tr><td><strong>Support replies</strong></td><td>Waiting on you</td><td>Polite, unambiguous about what happens next</td></tr></tbody></table></div><p>Put these decisions in the glossary alongside terminology. A glossary that defines only nouns will not stop two translators from producing two different products.</p><h2 id="section-3">Local formats are trust signals</h2><p>Dates, name fields, postal codes, addresses, currency and tax labels are not cosmetic. They are where a Japanese user decides whether the product was built for them or merely translated for them, and the judgement happens in seconds.</p><ul class="check-list"><li>Name fields: family name first, and a separate field for the phonetic reading is expected in many business contexts.</li><li>Addresses: the Japanese order runs largest to smallest, and postal code lookup that auto-fills the address is a normal expectation rather than a nicety.</li><li>Dates: era-based years still appear on official and financial documents even where the interface uses the Western calendar.</li><li>Currency: yen has no minor unit, so a price rendered with two decimal places reads as an import.</li><li>Tax: display conventions for tax-inclusive and tax-exclusive pricing are regulated in consumer contexts and closely watched in B2B.</li></ul><h2 id="section-4">Channels and billing carry their own expectations</h2><p>Two areas surprise overseas teams more than the language itself. The first is communication: LINE is a normal business channel for some segments and entirely absent from others, and the decision should follow your customer rather than your roadmap. The second is money.</p><ul class="check-list"><li>Bank transfer remains common in Japanese B2B, and invoicing after delivery is the default rather than the exception.</li><li>The qualified invoice system means your invoice wording and registration status matter to your customer's own tax position. Get the terminology right on the billing screen and the document, not just in the help centre.</li><li>Payment terms are often longer than overseas SaaS teams expect, and asking for card-on-file from a corporate buyer can stall a deal that was otherwise closing.</li></ul><p class="note">None of this needs to be solved before a pilot. It does need to be answered before the first invoice, and the answer belongs in the product's Japanese, not only in an internal document.</p><h2 id="section-5">QA has to happen inside the interface</h2><p>Reviewing strings in a spreadsheet catches vocabulary errors and misses everything else. The failures that damage trust are layout, state and tone, and they are only visible in the running product.</p><ul class="check-list"><li>Walk the real flows: sign-up, empty states, validation errors, navigation, emails and the help centre path.</li><li>Check the narrowest viewport you support. Japanese does not wrap the way English does, and a label that fits on desktop can break a mobile control.</li><li>Read the error messages aloud. Bluntness that is invisible on screen becomes obvious when spoken.</li><li>Capture issues as screenshots with a suggested fix. A list of strings without screens produces another round of guessing.</li></ul><p>Budget this pass explicitly. It is routinely cut when a release slips, and it is the pass that determines whether the Japanese version feels finished.</p><div class="article-cta"><h3>Need the in-interface pass done from Tokyo?</h3><p>GuideTech reviews the running product rather than the string list: register per surface, length and layout, format and billing language, with screenshots and suggested fixes your engineers can act on.</p><p><a class="button" href="/japan-partner/en/localization">See the localization service</a></p></div><h2 id="faq">Frequently asked questions</h2><div class="faq"><details><summary>Is machine translation good enough for Japanese product strings?</summary><p>For a first draft of low-risk text it can be, provided a competent reviewer sees the strings in context afterwards. For billing, errors and anything a buyer's legal team reads, the review is the work and skipping it is where the cost reappears.</p></details><details><summary>Do we need LINE?</summary><p>Only if your customers use it for business. It is normal in some segments and absent in others, so make it a deliberate decision rather than an assumption in either direction.</p></details><details><summary>Can we launch with the website localized and the product in English?</summary><p>Yes, for demand testing. For paid pilots the onboarding, billing and support surfaces usually need Japanese too, because that is where a buyer's internal objections form.</p></details><details><summary>How much does the interface change after the first pass?</summary><p>More than teams expect. Real support tickets and sales objections consistently reveal wording that tested fine internally, which is why the follow-up round matters.</p></details></div><h2>Related guides</h2><ul class="check-list"><li><a href="/japan-partner/en/blog/japanese-translation-services-pricing-guide">Japanese Translation Services: What the Price Actually Covers</a></li><li><a href="/japan-partner/en/blog/japanese-translation-agency-vs-localization-partner">Japanese Translation Agency vs Localization Partner</a></li><li><a href="/japan-partner/en/blog/doing-business-in-japan-for-software-companies">Doing Business in Japan Without a Local Office</a></li></ul></article><aside class="toc"><strong>In this guide</strong><a href="#section-1">Start from product context, not from the string list</a><a href="#section-2">Tone is a product decision, not a translator's preference</a><a href="#section-3">Local formats are trust signals</a><a href="#section-4">Channels and billing carry their own expectations</a><a href="#section-5">QA has to happen inside the interface</a><a href="#faq">Frequently asked questions</a><a href="/japan-partner/en/localization">See the localization service</a></aside></div></section>
 <footer class="footer">
   <div class="wrap">
     <div class="footer-grid">
-      <div><h2>GuideTech Japan Partner</h2><p>Your local partner in Japan for software launch, localization, supplier sourcing, and operations. Operated by <a href="https://guidetech.jp">GuideTech</a> in Tokyo, Shibuya.</p></div>
-      <div><h3>Services</h3><div class="footer-links"><a href="/japan-partner/en/launch-partner">Japan Launch Partner</a><a href="/japan-partner/en/supplier-sourcing">Supplier Sourcing</a><a href="/japan-partner/en/localization">Software Localization</a><a href="/japan-partner/en/pricing">Pricing</a></div></div>
-      <div><h3>Company</h3><div class="footer-links"><a href="/japan-partner/en/work">Work</a><a href="/japan-partner/en/about">About</a><a href="/japan-partner/en/contact">Contact</a></div></div>
+      <div><h2>GuideTech Japan Partner</h2><p>Your local partner in Japan for supplier sourcing, localization, and operations. Operated by <a href="https://guidetech.jp">GuideTech</a> in Tokyo, Shibuya.</p></div>
+      <div><h3>Services</h3><div class="footer-links"><a href="/japan-partner/en/launch-partner">Launch Partner</a><a href="/japan-partner/en/supplier-sourcing">Supplier Sourcing</a><a href="/japan-partner/en/localization">Localization</a><a href="/japan-partner/en/pricing">Pricing</a></div></div>
+      <div><h3>GuideTech</h3><div class="footer-links"><a href="/japan-partner/en/work">Work</a><a href="/japan-partner/en/about">About</a><a href="/japan-partner/en/contact">Contact</a></div></div>
       <div><h3>Languages</h3><div class="footer-links"><a href="/japan-partner/en/">English</a><a href="/japan-partner/es/">Español</a></div></div>
     </div>
     <div class="footer-bottom">Operated by GuideTech. © 2026 GuideTech Inc.</div>
