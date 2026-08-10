@@ -1978,7 +1978,7 @@ ${header("blog")}
 <section class="section alt"><div class="wrap"><div class="section-head"><h2>Selling and operating in Japan</h2><p>Localization, pricing and the first ninety days for overseas software companies entering the Japanese market.</p></div>${cardsFor(
     softwarePosts
   )}</div></section>
-${footer}`
+${footer("en")}`
 );
 
 /* ------------------------------------------------------------------ *

@@ -64,6 +64,15 @@ for (const f of allPages) {
   if (hits) fail("placeholder", `${f}: ${[...new Set(hits)].join(", ").slice(0, 120)}`);
 }
 
+/* --- 1b. no un-interpolated template expressions ---------------------- */
+// A template literal that referenced a function instead of calling it shipped
+// `${b}` into href attributes on a live page, and rule 2 missed it because the
+// broken href did not start with a slash.
+for (const f of allPages) {
+  const hits = read(f).match(/\$\{[^}]{1,60}\}/g);
+  if (hits) fail("uninterpolated-template", `${f}: ${[...new Set(hits)].slice(0, 4).join(", ")}`);
+}
+
 /* --- 2. internal links resolve, and are canonical (extensionless) ------ */
 let linkCount = 0;
 for (const f of allPages) {
