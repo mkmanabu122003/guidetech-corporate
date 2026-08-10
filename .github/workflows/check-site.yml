@@ -1,0 +1,30 @@
+name: Site checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # The generated pages must match what the generator produces. If they
+      # drift, someone edited output instead of the source.
+      - name: Regenerate and confirm no drift
+        run: |
+          node scripts/generate-sourcing-articles.mjs
+          node scripts/apply-analytics.mjs
+          if ! git diff --quiet; then
+            echo "::error::Generated output is out of date. Run the generators and commit the result."
+            git --no-pager diff --stat
+            exit 1
+          fi
+
+      - name: Check the published site
+        run: node scripts/check-site.mjs

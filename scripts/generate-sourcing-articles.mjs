@@ -1136,7 +1136,7 @@ const softwarePosts = [
     slug: "doing-business-in-japan-for-software-companies",
     seoTitle: "Doing Business in Japan: First 90 Days",
     seoDescription:
-      "A first-90-days guide for overseas software companies entering Japan without a local office: trust, the buying process, realistic sequencing and what not to build yet.",
+      "A first-90-days guide for software companies entering Japan without a local office: trust, the buying process and what to defer.",
     kw: "doing business in japan",
     title: "Doing Business in Japan Without a Local Office",
     description:
@@ -1338,7 +1338,7 @@ const esPosts = [
     en: "software-localization-japan-guide",
     seoTitle: "Localización de Software en Japón",
     seoDescription:
-      "Localizar producto para Japón: partir del contexto y no de la lista de cadenas, el registro como decisión de producto, formatos locales, facturación y QA en la interfaz.",
+      "Localizar producto para Japón: contexto en lugar de lista de cadenas, tono por superficie, formatos locales, facturación y QA real.",
     kw: "localización de software en Japón",
     title: "Localización de Software en Japón: Guía de Trabajo",
     description:
@@ -1526,7 +1526,7 @@ const esPosts = [
     en: "doing-business-in-japan-for-software-companies",
     seoTitle: "Hacer Negocios en Japón: 90 Días",
     seoDescription:
-      "Guía de los primeros 90 días para empresas de software que entran en Japón sin oficina local: confianza, proceso de compra, secuencia realista y qué no construir aún.",
+      "Guía de los primeros 90 días para software que entra en Japón sin oficina local: confianza, proceso de compra y qué posponer.",
     kw: "hacer negocios en Japón",
     title: "Hacer Negocios en Japón sin Oficina Local",
     description:
@@ -2002,7 +2002,7 @@ write(
   `${head({
     title: "Guías sobre Japón | GuideTech",
     description:
-      "Guías prácticas desde Tokio para empresas de software que entran en Japón: precios de traducción, localización de producto, agencia frente a partner y primeros 90 días.",
+      "Guías desde Tokio para empresas de software que entran en Japón: precios, localización de producto, agencia frente a partner y 90 días.",
     canonical: "/japan-partner/es/blog/",
     lang: "es",
     alternates: [
