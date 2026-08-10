@@ -343,6 +343,7 @@
       letter-spacing: 0;
     }
 
+    .hidden { position: absolute; left: -9999px; }
     .section-more { margin: 30px 0 0; text-align: center; }
     .section-more a { color: var(--blue); font-size: 14px; font-weight: 900; }
     .section-more a:hover { color: var(--blue-2); }
@@ -1198,21 +1199,16 @@
         <div>
           <h2>Get a free Japan readiness review.</h2>
           <p>Tell us what you are selling, what Japan signals you already see, and what local support you need first.</p>
-          <form class="contact-form" name="japan-partner-readiness" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="japan-partner-readiness">
-            <input type="hidden" name="bot-field">
+          <form class="contact-form" name="japan-partner-contact" method="POST" action="/japan-partner/en/thanks" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="japan-partner-contact">
+            <p class="hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
             <input name="organization" placeholder="Organization">
             <input name="name" placeholder="Name*" required>
             <input name="email" type="email" placeholder="Email*" required>
             <input name="website" type="url" placeholder="Company or product URL">
-            <select name="support_needed">
-              <option value="">Support needed</option>
-              <option>Localization</option>
-              <option>Supplier or partner sourcing</option>
-              <option>Japanese customer communication</option>
-              <option>Monthly Japan desk</option>
-              <option>Other</option>
-            </select>
+            <select name="inquiry_type" required><option value="" disabled selected>What do you need?*</option><option value="Supplier sourcing">Supplier sourcing / product sourcing</option><option value="Supplier verification">Supplier verification</option><option value="Localization">Localization</option><option value="Japan desk">Monthly Japan desk</option><option value="Other">Other</option></select>
+            <select name="project_size"><option value="" disabled selected>First order or project size</option><option value="Under 5k">Under US$5,000</option><option value="5k-25k">US$5,000 – 25,000</option><option value="25k-100k">US$25,000 – 100,000</option><option value="Over 100k">Over US$100,000</option><option value="Unsure">Not sure yet</option></select>
+            <select name="timeline"><option value="" disabled selected>When do you want to start?</option><option value="Now">Ready now</option><option value="1-3 months">Within 1–3 months</option><option value="3-6 months">In 3–6 months</option><option value="Researching">Researching only</option></select>
             <textarea name="message" placeholder="What are you trying to do in Japan?*" required></textarea>
             <button class="button" type="submit">Request review</button>
           </form>

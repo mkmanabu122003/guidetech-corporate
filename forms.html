@@ -11,7 +11,6 @@
   truth. Keep the field names in sync with the live forms:
     guidetech-contact       -> contact.html, index.html
     japan-partner-contact   -> japan-partner/en/contact.html, japan-partner/es/contact.html
-    japan-partner-readiness -> japan-partner/en/index.html
 -->
 <body>
   <form name="guidetech-contact" method="POST" action="/thanks.html" netlify netlify-honeypot="bot-field" hidden>
@@ -28,30 +27,16 @@
     </select>
     <textarea name="message"></textarea>
   </form>
-  <form name="japan-partner-contact" method="POST" action="/japan-partner/en/thanks.html" netlify netlify-honeypot="bot-field" hidden>
+  <form name="japan-partner-contact" method="POST" action="/japan-partner/en/thanks" netlify netlify-honeypot="bot-field" hidden>
     <input name="bot-field">
     <input type="hidden" name="form-name" value="japan-partner-contact">
     <input name="organization" type="text">
     <input name="name" type="text">
     <input name="email" type="email">
-    <select name="inquiry_type">
-      <option value="Supplier sourcing / product sourcing">Supplier sourcing / product sourcing</option>
-      <option value="Supplier verification">Supplier verification</option>
-      <option value="Translation">Translation</option>
-      <option value="Localization">Localization</option>
-      <option value="Launch Partner">Launch Partner</option>
-      <option value="Other">Other</option>
-    </select>
-    <textarea name="message"></textarea>
-  </form>
-  <form name="japan-partner-readiness" method="POST" action="/japan-partner/en/thanks.html" netlify netlify-honeypot="bot-field" hidden>
-    <input name="bot-field">
-    <input type="hidden" name="form-name" value="japan-partner-readiness">
-    <input name="organization" type="text">
-    <input name="name" type="text">
-    <input name="email" type="email">
-    <input name="website" type="text">
-    <input name="support_needed" type="text">
+    <input name="website" type="url">
+    <select name="inquiry_type"><option value="" disabled selected>What do you need?*</option><option value="Supplier sourcing">Supplier sourcing / product sourcing</option><option value="Supplier verification">Supplier verification</option><option value="Localization">Localization</option><option value="Japan desk">Monthly Japan desk</option><option value="Other">Other</option></select>
+    <select name="project_size"><option value="" disabled selected>First order or project size</option><option value="Under 5k">Under US$5,000</option><option value="5k-25k">US$5,000 – 25,000</option><option value="25k-100k">US$25,000 – 100,000</option><option value="Over 100k">Over US$100,000</option><option value="Unsure">Not sure yet</option></select>
+    <select name="timeline"><option value="" disabled selected>When do you want to start?</option><option value="Now">Ready now</option><option value="1-3 months">Within 1–3 months</option><option value="3-6 months">In 3–6 months</option><option value="Researching">Researching only</option></select>
     <textarea name="message"></textarea>
   </form>
 </body>
