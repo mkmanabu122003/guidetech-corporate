@@ -13,7 +13,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { site, serviceName, today, analyticsBlock } from "./site-config.mjs";
+import { site, serviceName, today, analyticsBlock, author, entryOffer } from "./site-config.mjs";
 
 const root = process.cwd();
 const OUT_DIR = "japan-partner/en/blog";
@@ -1770,12 +1770,30 @@ function organization() {
       addressRegion: "Tokyo",
       addressCountry: "JP"
     },
+    sameAs: [author.linkedin].filter(Boolean),
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "sales",
       url: `${site}/japan-partner/en/contact`,
       availableLanguage: ["English", "Japanese", "Spanish"]
     }
+  };
+}
+
+/** Person entity for the named author, or null while the byline is anonymous. */
+function person() {
+  if (!author.name) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${site}/#author`,
+    name: author.name,
+    jobTitle: author.role || undefined,
+    description: author.bio || undefined,
+    image: author.photo ? `${site}${author.photo}` : undefined,
+    knowsLanguage: author.languages,
+    worksFor: { "@id": `${site}/#organization` },
+    sameAs: [author.linkedin].filter(Boolean)
   };
 }
 
@@ -1801,13 +1819,14 @@ function articleSchemas(post, url, lang = "en") {
     // The Organization entity is repeated on every page rather than only on the
     // index, so the @id references below always resolve on the page itself.
     organization(),
+    ...(person() ? [person()] : []),
     {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: post.title,
       description: post.description,
       image: `${site}${thumb(post.slug)}`,
-      author: { "@id": `${site}/#organization` },
+      author: { "@id": `${site}/#${author.name ? "author" : "organization"}` },
       publisher: { "@id": `${site}/#organization` },
       isAccessibleForFree: true,
       inLanguage: lang,
@@ -1838,9 +1857,9 @@ function articleSchemas(post, url, lang = "en") {
 
 const UI = {
   en: { inGuide: "In this guide", faq: "Frequently asked questions", related: "Related guides",
-        by: (d) => `By ${serviceName} · Updated ${d}` },
+        by: (d) => `By ${author.name || serviceName}${author.role ? `, ${author.role}` : ""} · Updated ${d}` },
   es: { inGuide: "En esta guía", faq: "Preguntas frecuentes", related: "Guías relacionadas",
-        by: (d) => `Por ${serviceName} · Actualizado ${d}` }
+        by: (d) => `Por ${author.name || serviceName}${author.role ? `, ${author.role}` : ""} · Actualizado ${d}` }
 };
 
 /** hreflang pair for the four guides that exist in both languages. */
@@ -1992,6 +2011,7 @@ const esPostSlugs = esPosts.map((p) => p.slug);
 
 const sitemapUrls = [
   ...staticUrls,
+  ...(entryOffer.enabled && entryOffer.price ? ["/japan-partner/en/supplier-verification-report"] : []),
   ...posts.map((p) => `/${OUT_DIR}/${p.slug}`),
   ...softwarePosts.map((p) => `/${OUT_DIR}/${p.slug}`),
   ...esPostSlugs.map((slug) => `/japan-partner/es/blog/${slug}`)
@@ -2032,6 +2052,60 @@ ${header("blog", "es")}
     .join("")}</div></div></section>
 ${footer("es")}`
 );
+
+/* ------------------------------------------------------------------ *
+ * Entry offer page
+ *
+ * Only written when entryOffer.enabled is true and a price is set. A published
+ * price is the point of the page; without one it would just be the contact
+ * page with extra steps.
+ * ------------------------------------------------------------------ */
+
+if (entryOffer.enabled && entryOffer.price) {
+  const url = "/japan-partner/en/supplier-verification-report";
+  write(
+    "japan-partner/en/supplier-verification-report.html",
+    `${head({
+      title: `${entryOffer.name} | GuideTech`,
+      description: `A fixed-price check on one Japanese company before you pay them: registers, licences and public red flags, with a written recommendation in ${entryOffer.turnaround || "days"}.`,
+      canonical: url,
+      ogImage: thumb("how-to-verify-a-japanese-company"),
+      schemas: [
+        organization(),
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: entryOffer.name,
+          description: "A fixed-price verification of one Japanese company using public records, with a written recommendation.",
+          provider: { "@id": `${site}/#organization` },
+          areaServed: { "@type": "Country", name: "Japan" },
+          url: `${site}${url}`,
+          offers: {
+            "@type": "Offer",
+            price: entryOffer.price.replace(/[^0-9.]/g, ""),
+            priceCurrency: entryOffer.price.trim().startsWith("¥") ? "JPY" : "USD",
+            availability: "https://schema.org/InStock",
+            url: `${site}${url}`
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: `${site}/` },
+            { "@type": "ListItem", position: 2, name: entryOffer.name, item: `${site}${url}` }
+          ]
+        }
+      ]
+    })}
+${header("")}
+<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><p class="eyebrow">${entryOffer.price} · ${entryOffer.turnaround}</p><h1>${entryOffer.name}</h1><p>Before you send money to a company you have never met, in a country whose registers you cannot read, have someone check who they actually are. Fixed price, one company, a written recommendation you can act on.</p><div class="hero-actions"><a class="button" href="/japan-partner/en/contact">Order a report</a><a class="button secondary" href="/${OUT_DIR}/how-to-verify-a-japanese-company">Read how the checks work</a></div></div><aside class="hero-panel"><strong>What you get</strong><ul><li>${entryOffer.turnaround} turnaround</li><li>One company, fully checked</li><li>A proceed / staged payment / walk away call</li></ul></aside></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><h2>What the report covers</h2><p>The same checks described in our verification guide, run for you by someone who reads the registers in Japanese.</p></div><ul class="check-list">${entryOffer.scope.map((x) => `<li>${x}</li>`).join("")}</ul></div></section>
+<section class="section alt"><div class="wrap"><div class="section-head"><h2>What it does not cover</h2><p>Stated plainly, so the price means something.</p></div><ul class="check-list">${entryOffer.excludes.map((x) => `<li>${x}</li>`).join("")}</ul></div></section>
+<section class="section"><div class="wrap"><div class="article-cta"><h3>Order a ${entryOffer.name}</h3><p>Send us the company name and any address or website you have. If we cannot find enough to write a useful report, we will say so before charging you.</p><p><a class="button" href="/japan-partner/en/contact">Order a report</a></p></div></div></section>
+${footer("en")}`
+  );
+}
 
 /* ------------------------------------------------------------------ *
  * RSS feed

@@ -81,3 +81,53 @@ export function analyticsBlock({ indent = "  " } = {}) {
   lines.push(ANALYTICS_END);
   return lines.map((line) => indent + line).join("\n");
 }
+
+/* ------------------------------------------------------------------ *
+ * Author and entry offer
+ *
+ * These three blanks are the highest-leverage items on the site and each
+ * needs a real value from you rather than a guess from a generator.
+ * Filling one in and re-running the generators publishes it everywhere.
+ * ------------------------------------------------------------------ */
+
+/**
+ * The named person behind the guides. An anonymous "team" byline costs you on
+ * three fronts at once: E-E-A-T, AI citation, and a visitor deciding whether to
+ * trust someone in Japan to verify a supplier for them.
+ *
+ * Leave `name` empty and the site keeps the current organisation byline.
+ */
+export const author = {
+  name: "",            // e.g. "Manabu Kawahara"
+  role: "",            // e.g. "Founder, GuideTech"
+  bio: "",             // 1-2 sentences: what you have actually done in Japan, in specifics
+  photo: "",           // e.g. "/assets/japan-partner/images/author.webp" — a real photo, not AI
+  linkedin: "",        // profile URL, used in sameAs so the entity resolves off-site
+  languages: ["Japanese", "English"]
+};
+
+/**
+ * Fixed-price entry offer. "Book a free call" asks a cold overseas visitor for
+ * time before they know anything about you; a defined deliverable at a
+ * published price converts organic traffic and qualifies the lead in one step.
+ *
+ * Leave `price` empty and the page stays quote-based.
+ */
+export const entryOffer = {
+  enabled: false,
+  name: "Supplier Verification Report",
+  price: "",           // e.g. "US$450" or "¥60,000"
+  turnaround: "",      // e.g. "5 business days"
+  scope: [
+    "Corporate number and registered address checked against the National Tax Agency register",
+    "Commercial register extract obtained and read, with capital, incorporation date and directors",
+    "Category licences confirmed where they apply",
+    "Public red flags: bankruptcy notices, address and name history, domain age",
+    "A written recommendation: proceed, proceed with staged payment, or walk away"
+  ],
+  excludes: [
+    "A credit report, which we can obtain separately at cost",
+    "A site visit, quoted separately",
+    "Any judgement about product quality"
+  ]
+};
